@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		911E47D42B87363600796D1A /* AISightQuestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47D32B87363600796D1A /* AISightQuestApp.swift */; };
+		911E47D62B87363600796D1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47D52B87363600796D1A /* ContentView.swift */; };
+		911E47D82B87363600796D1A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47D72B87363600796D1A /* Item.swift */; };
+		911E47DA2B87363800796D1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 911E47D92B87363800796D1A /* Assets.xcassets */; };
+		911E47DD2B87363800796D1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 911E47DC2B87363800796D1A /* Preview Assets.xcassets */; };
+		911E47E72B87363800796D1A /* AISightQuestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47E62B87363800796D1A /* AISightQuestTests.swift */; };
+		911E47F12B87363800796D1A /* AISightQuestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47F02B87363800796D1A /* AISightQuestUITests.swift */; };
+		911E47F32B87363800796D1A /* AISightQuestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47F22B87363800796D1A /* AISightQuestUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		911E47E32B87363800796D1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 911E47C82B87363600796D1A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 911E47CF2B87363600796D1A;
+			remoteInfo = AISightQuest;
+		};
+		911E47ED2B87363800796D1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 911E47C82B87363600796D1A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 911E47CF2B87363600796D1A;
+			remoteInfo = AISightQuest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		911E47D02B87363600796D1A /* AISightQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AISightQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		911E47D32B87363600796D1A /* AISightQuestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISightQuestApp.swift; sourceTree = "<group>"; };
+		911E47D52B87363600796D1A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		911E47D72B87363600796D1A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		911E47D92B87363800796D1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		911E47DC2B87363800796D1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		911E47E22B87363800796D1A /* AISightQuestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AISightQuestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		911E47E62B87363800796D1A /* AISightQuestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISightQuestTests.swift; sourceTree = "<group>"; };
+		911E47EC2B87363800796D1A /* AISightQuestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AISightQuestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		911E47F02B87363800796D1A /* AISightQuestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISightQuestUITests.swift; sourceTree = "<group>"; };
+		911E47F22B87363800796D1A /* AISightQuestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISightQuestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		911E47CD2B87363600796D1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		911E47DF2B87363800796D1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		911E47E92B87363800796D1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		911E47C72B87363600796D1A = {
+			isa = PBXGroup;
+			children = (
+				911E47D22B87363600796D1A /* AISightQuest */,
+				911E47E52B87363800796D1A /* AISightQuestTests */,
+				911E47EF2B87363800796D1A /* AISightQuestUITests */,
+				911E47D12B87363600796D1A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		911E47D12B87363600796D1A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				911E47D02B87363600796D1A /* AISightQuest.app */,
+				911E47E22B87363800796D1A /* AISightQuestTests.xctest */,
+				911E47EC2B87363800796D1A /* AISightQuestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		911E47D22B87363600796D1A /* AISightQuest */ = {
+			isa = PBXGroup;
+			children = (
+				911E47D32B87363600796D1A /* AISightQuestApp.swift */,
+				911E47D52B87363600796D1A /* ContentView.swift */,
+				911E47D72B87363600796D1A /* Item.swift */,
+				911E47D92B87363800796D1A /* Assets.xcassets */,
+				911E47DB2B87363800796D1A /* Preview Content */,
+			);
+			path = AISightQuest;
+			sourceTree = "<group>";
+		};
+		911E47DB2B87363800796D1A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				911E47DC2B87363800796D1A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		911E47E52B87363800796D1A /* AISightQuestTests */ = {
+			isa = PBXGroup;
+			children = (
+				911E47E62B87363800796D1A /* AISightQuestTests.swift */,
+			);
+			path = AISightQuestTests;
+			sourceTree = "<group>";
+		};
+		911E47EF2B87363800796D1A /* AISightQuestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				911E47F02B87363800796D1A /* AISightQuestUITests.swift */,
+				911E47F22B87363800796D1A /* AISightQuestUITestsLaunchTests.swift */,
+			);
+			path = AISightQuestUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		911E47CF2B87363600796D1A /* AISightQuest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 911E47F62B87363800796D1A /* Build configuration list for PBXNativeTarget "AISightQuest" */;
+			buildPhases = (
+				911E47CC2B87363600796D1A /* Sources */,
+				911E47CD2B87363600796D1A /* Frameworks */,
+				911E47CE2B87363600796D1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AISightQuest;
+			productName = AISightQuest;
+			productReference = 911E47D02B87363600796D1A /* AISightQuest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		911E47E12B87363800796D1A /* AISightQuestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 911E47F92B87363800796D1A /* Build configuration list for PBXNativeTarget "AISightQuestTests" */;
+			buildPhases = (
+				911E47DE2B87363800796D1A /* Sources */,
+				911E47DF2B87363800796D1A /* Frameworks */,
+				911E47E02B87363800796D1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				911E47E42B87363800796D1A /* PBXTargetDependency */,
+			);
+			name = AISightQuestTests;
+			productName = AISightQuestTests;
+			productReference = 911E47E22B87363800796D1A /* AISightQuestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		911E47EB2B87363800796D1A /* AISightQuestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 911E47FC2B87363800796D1A /* Build configuration list for PBXNativeTarget "AISightQuestUITests" */;
+			buildPhases = (
+				911E47E82B87363800796D1A /* Sources */,
+				911E47E92B87363800796D1A /* Frameworks */,
+				911E47EA2B87363800796D1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				911E47EE2B87363800796D1A /* PBXTargetDependency */,
+			);
+			name = AISightQuestUITests;
+			productName = AISightQuestUITests;
+			productReference = 911E47EC2B87363800796D1A /* AISightQuestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		911E47C82B87363600796D1A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					911E47CF2B87363600796D1A = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					911E47E12B87363800796D1A = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 911E47CF2B87363600796D1A;
+					};
+					911E47EB2B87363800796D1A = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 911E47CF2B87363600796D1A;
+					};
+				};
+			};
+			buildConfigurationList = 911E47CB2B87363600796D1A /* Build configuration list for PBXProject "AISightQuest" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 911E47C72B87363600796D1A;
+			productRefGroup = 911E47D12B87363600796D1A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				911E47CF2B87363600796D1A /* AISightQuest */,
+				911E47E12B87363800796D1A /* AISightQuestTests */,
+				911E47EB2B87363800796D1A /* AISightQuestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		911E47CE2B87363600796D1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				911E47DD2B87363800796D1A /* Preview Assets.xcassets in Resources */,
+				911E47DA2B87363800796D1A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		911E47E02B87363800796D1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		911E47EA2B87363800796D1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		911E47CC2B87363600796D1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				911E47D62B87363600796D1A /* ContentView.swift in Sources */,
+				911E47D82B87363600796D1A /* Item.swift in Sources */,
+				911E47D42B87363600796D1A /* AISightQuestApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		911E47DE2B87363800796D1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				911E47E72B87363800796D1A /* AISightQuestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		911E47E82B87363800796D1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				911E47F12B87363800796D1A /* AISightQuestUITests.swift in Sources */,
+				911E47F32B87363800796D1A /* AISightQuestUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		911E47E42B87363800796D1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 911E47CF2B87363600796D1A /* AISightQuest */;
+			targetProxy = 911E47E32B87363800796D1A /* PBXContainerItemProxy */;
+		};
+		911E47EE2B87363800796D1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 911E47CF2B87363600796D1A /* AISightQuest */;
+			targetProxy = 911E47ED2B87363800796D1A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		911E47F42B87363800796D1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		911E47F52B87363800796D1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		911E47F72B87363800796D1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AISightQuest/Preview Content\"";
+				DEVELOPMENT_TEAM = X8S7NK9ZBV;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mehdi.AISightQuest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		911E47F82B87363800796D1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AISightQuest/Preview Content\"";
+				DEVELOPMENT_TEAM = X8S7NK9ZBV;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mehdi.AISightQuest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		911E47FA2B87363800796D1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X8S7NK9ZBV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mehdi.AISightQuestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AISightQuest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AISightQuest";
+			};
+			name = Debug;
+		};
+		911E47FB2B87363800796D1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X8S7NK9ZBV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mehdi.AISightQuestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AISightQuest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AISightQuest";
+			};
+			name = Release;
+		};
+		911E47FD2B87363800796D1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X8S7NK9ZBV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mehdi.AISightQuestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AISightQuest;
+			};
+			name = Debug;
+		};
+		911E47FE2B87363800796D1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X8S7NK9ZBV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mehdi.AISightQuestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AISightQuest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		911E47CB2B87363600796D1A /* Build configuration list for PBXProject "AISightQuest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				911E47F42B87363800796D1A /* Debug */,
+				911E47F52B87363800796D1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		911E47F62B87363800796D1A /* Build configuration list for PBXNativeTarget "AISightQuest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				911E47F72B87363800796D1A /* Debug */,
+				911E47F82B87363800796D1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		911E47F92B87363800796D1A /* Build configuration list for PBXNativeTarget "AISightQuestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				911E47FA2B87363800796D1A /* Debug */,
+				911E47FB2B87363800796D1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		911E47FC2B87363800796D1A /* Build configuration list for PBXNativeTarget "AISightQuestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				911E47FD2B87363800796D1A /* Debug */,
+				911E47FE2B87363800796D1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 911E47C82B87363600796D1A /* Project object */;
+}
