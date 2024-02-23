@@ -12,7 +12,7 @@ import SwiftData
 struct AISightQuestApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Session.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,8 +25,7 @@ struct AISightQuestApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainframeView(viewModel: MainframeView.ViewModel(modelContext: sharedModelContainer.mainContext))
         }
-        .modelContainer(sharedModelContainer)
     }
 }
