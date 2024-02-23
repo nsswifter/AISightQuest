@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainView.swift
 //  AISightQuest
 //
 //  Created by Mehdi Karami on 2/22/24.
@@ -8,19 +8,22 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+// MARK: - Main View
+
+struct MainView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @Query private var sessions: [Session]
 
     
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(items) { item in
+                ForEach(sessions) { session in
                     NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        // TODO: Route to Session View
+                        Text(session.text)
                     } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                        Text(session.name)
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -42,7 +45,7 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(timestamp: Date())
+            let newItem = Session(name: "hi")
             modelContext.insert(newItem)
         }
     }
@@ -50,13 +53,17 @@ struct ContentView: View {
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             for index in offsets {
-                modelContext.delete(items[index])
+                modelContext.delete(sessions[index])
             }
         }
     }
 }
 
+// MARK: - Main View Preview
+
+#if DEBUG
 #Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+    MainView()
+        .modelContainer(for: Session.self, inMemory: true)
 }
+#endif
