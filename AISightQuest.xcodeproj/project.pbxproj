@@ -15,6 +15,8 @@
 		911E47E72B87363800796D1A /* AISightQuestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47E62B87363800796D1A /* AISightQuestTests.swift */; };
 		911E47F12B87363800796D1A /* AISightQuestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47F02B87363800796D1A /* AISightQuestUITests.swift */; };
 		911E47F32B87363800796D1A /* AISightQuestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47F22B87363800796D1A /* AISightQuestUITestsLaunchTests.swift */; };
+		916128C92B890BEB001094E5 /* SessionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916128C82B890BEB001094E5 /* SessionRow.swift */; };
+		919439C42B88DEA4006654C2 /* MainframeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919439C32B88DEA4006654C2 /* MainframeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		911E47EC2B87363800796D1A /* AISightQuestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AISightQuestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		911E47F02B87363800796D1A /* AISightQuestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISightQuestUITests.swift; sourceTree = "<group>"; };
 		911E47F22B87363800796D1A /* AISightQuestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISightQuestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		916128C82B890BEB001094E5 /* SessionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRow.swift; sourceTree = "<group>"; };
+		919439C32B88DEA4006654C2 /* MainframeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,7 @@
 			children = (
 				919439C02B88B305006654C2 /* Model */,
 				919439C12B88B31F006654C2 /* View */,
+				919439C22B88DE55006654C2 /* ViewModel */,
 			);
 			path = Mainframe;
 			sourceTree = "<group>";
@@ -174,8 +179,17 @@
 			isa = PBXGroup;
 			children = (
 				911E47D52B87363600796D1A /* MainframeView.swift */,
+				916128C82B890BEB001094E5 /* SessionRow.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		919439C22B88DE55006654C2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				919439C32B88DEA4006654C2 /* MainframeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,8 +323,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				911E47D62B87363600796D1A /* MainframeView.swift in Sources */,
+				916128C92B890BEB001094E5 /* SessionRow.swift in Sources */,
 				911E47D82B87363600796D1A /* Session.swift in Sources */,
 				911E47D42B87363600796D1A /* AISightQuestApp.swift in Sources */,
+				919439C42B88DEA4006654C2 /* MainframeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
