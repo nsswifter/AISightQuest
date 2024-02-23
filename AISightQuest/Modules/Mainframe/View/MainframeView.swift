@@ -11,50 +11,45 @@ import SwiftData
 // MARK: - Mainframe View
 
 struct MainframeView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var sessions: [Session]
+    @State private(set) var viewModel: ViewModel
 
-    
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(sessions) { session in
+                ForEach($viewModel.sessions) { session in
                     NavigationLink {
                         // TODO: Route to Session View
-                        Text(session.text)
+                        Text(session.text.wrappedValue)
                     } label: {
-                        Text(session.name)
+                        SessionRow(session: session)
                     }
                 }
-                .onDelete(perform: deleteItems)
+                .onDelete { indexSet in
+                    withAnimation {
+                        viewModel.deleteSession(indexSet: indexSet)
+                    }
+                }
             }
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .topBarLeading) {
                     EditButton()
+                        .foregroundStyle(.darkBlue500)
                 }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        viewModel.addSession(name: "New Session", lastChange: Date())
+                    } label: {
+                        HStack {
+                            Image(systemName: "plus")
+                            Text("New Session")
+                        }
+                        .foregroundStyle(.darkBlue500)
                     }
                 }
             }
         } detail: {
             Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Session(name: "hi")
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(sessions[index])
-            }
         }
     }
 }
@@ -63,7 +58,8 @@ struct MainframeView: View {
 
 #if DEBUG
 #Preview {
-    MainframeView()
-        .modelContainer(for: Session.self, inMemory: true)
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let modelContainer = try! ModelContainer(for: Session.self, configurations: config)
+    return MainframeView(viewModel: MainframeView.ViewModel(modelContext: modelContainer.mainContext))
 }
 #endif

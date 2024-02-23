@@ -25,8 +25,7 @@ struct AISightQuestApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MainframeView()
+            MainframeView(viewModel: MainframeView.ViewModel(modelContext: sharedModelContainer.mainContext))
         }
-        .modelContainer(sharedModelContainer)
     }
 }
