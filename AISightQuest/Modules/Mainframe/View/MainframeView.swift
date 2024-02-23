@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  MainframeView.swift
 //  AISightQuest
 //
 //  Created by Mehdi Karami on 2/22/24.
@@ -8,9 +8,9 @@
 import SwiftUI
 import SwiftData
 
-// MARK: - Main View
+// MARK: - Mainframe View
 
-struct MainView: View {
+struct MainframeView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var sessions: [Session]
 
@@ -59,11 +59,11 @@ struct MainView: View {
     }
 }
 
-// MARK: - Main View Preview
+// MARK: - Mainframe View Preview
 
 #if DEBUG
 #Preview {
-    MainView()
+    MainframeView()
         .modelContainer(for: Session.self, inMemory: true)
 }
 #endif

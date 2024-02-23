@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		911E47D42B87363600796D1A /* AISightQuestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47D32B87363600796D1A /* AISightQuestApp.swift */; };
-		911E47D62B87363600796D1A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47D52B87363600796D1A /* MainView.swift */; };
+		911E47D62B87363600796D1A /* MainframeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47D52B87363600796D1A /* MainframeView.swift */; };
 		911E47D82B87363600796D1A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47D72B87363600796D1A /* Session.swift */; };
 		911E47DA2B87363800796D1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 911E47D92B87363800796D1A /* Assets.xcassets */; };
 		911E47DD2B87363800796D1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 911E47DC2B87363800796D1A /* Preview Assets.xcassets */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		911E47D02B87363600796D1A /* AISightQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AISightQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		911E47D32B87363600796D1A /* AISightQuestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISightQuestApp.swift; sourceTree = "<group>"; };
-		911E47D52B87363600796D1A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		911E47D52B87363600796D1A /* MainframeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeView.swift; sourceTree = "<group>"; };
 		911E47D72B87363600796D1A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		911E47D92B87363800796D1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		911E47DC2B87363800796D1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -140,8 +140,7 @@
 		918EFFA92B88A62D0012BCE0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				911E47D52B87363600796D1A /* MainView.swift */,
-				911E47D72B87363600796D1A /* Session.swift */,
+				919439BF2B88B2FC006654C2 /* Mainframe */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -152,6 +151,31 @@
 				911E47D32B87363600796D1A /* AISightQuestApp.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		919439BF2B88B2FC006654C2 /* Mainframe */ = {
+			isa = PBXGroup;
+			children = (
+				919439C02B88B305006654C2 /* Model */,
+				919439C12B88B31F006654C2 /* View */,
+			);
+			path = Mainframe;
+			sourceTree = "<group>";
+		};
+		919439C02B88B305006654C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				911E47D72B87363600796D1A /* Session.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		919439C12B88B31F006654C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				911E47D52B87363600796D1A /* MainframeView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				911E47D62B87363600796D1A /* MainView.swift in Sources */,
+				911E47D62B87363600796D1A /* MainframeView.swift in Sources */,
 				911E47D82B87363600796D1A /* Session.swift in Sources */,
 				911E47D42B87363600796D1A /* AISightQuestApp.swift in Sources */,
 			);
