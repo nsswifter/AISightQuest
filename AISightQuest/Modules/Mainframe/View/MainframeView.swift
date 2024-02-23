@@ -49,7 +49,7 @@ struct MainframeView: View {
                 }
             }
         } detail: {
-            Text("Select an item")
+            Text("Select a Session")
         }
     }
 }

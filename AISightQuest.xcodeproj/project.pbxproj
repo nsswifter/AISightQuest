@@ -17,6 +17,7 @@
 		911E47F32B87363800796D1A /* AISightQuestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47F22B87363800796D1A /* AISightQuestUITestsLaunchTests.swift */; };
 		916128C92B890BEB001094E5 /* SessionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916128C82B890BEB001094E5 /* SessionRow.swift */; };
 		919439C42B88DEA4006654C2 /* MainframeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919439C32B88DEA4006654C2 /* MainframeViewModel.swift */; };
+		91EF21EC2B894AF700FBFEC3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		911E47F22B87363800796D1A /* AISightQuestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISightQuestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		916128C82B890BEB001094E5 /* SessionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRow.swift; sourceTree = "<group>"; };
 		919439C32B88DEA4006654C2 /* MainframeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeViewModel.swift; sourceTree = "<group>"; };
+		91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				911E47D92B87363800796D1A /* Assets.xcassets */,
+				91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */,
 				911E47DB2B87363800796D1A /* Preview Content */,
 			);
 			path = Resources;
@@ -298,6 +301,7 @@
 			files = (
 				911E47DD2B87363800796D1A /* Preview Assets.xcassets in Resources */,
 				911E47DA2B87363800796D1A /* Assets.xcassets in Resources */,
+				91EF21EC2B894AF700FBFEC3 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
