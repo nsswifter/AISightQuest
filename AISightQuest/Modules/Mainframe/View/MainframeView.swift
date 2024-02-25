@@ -18,7 +18,7 @@ struct MainframeView: View {
         List {
             ForEach($viewModel.sessions) { session in
                 Button {
-                    navigationState.routes.append(Routes.mainframe(.session))
+                    navigationState.routes.append(Routes.mainframe(.session(modelContext: viewModel.modelContext)))
                 } label: {
                     SessionRow(session: session)
                 }

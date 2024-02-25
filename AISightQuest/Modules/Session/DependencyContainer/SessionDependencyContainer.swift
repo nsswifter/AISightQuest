@@ -8,7 +8,7 @@
 import SwiftData
 
 final class SessionDependencyContainer {
-    @MainActor func makeSessionView(modelContainer: ModelContainer) -> MainframeView {
-        MainframeView(viewModel: MainframeView.ViewModel(modelContext: modelContainer.mainContext))
+    @MainActor func makeSessionView(modelContext: ModelContext) -> SessionView {
+        SessionView(viewModel: SessionView.ViewModel(modelContext: modelContext))
     }
 }

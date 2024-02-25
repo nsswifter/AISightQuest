@@ -14,6 +14,8 @@ import SwiftUI
         switch destination {
         case .mainframe(let routes):
             MainframeRouter(routes: routes).configure()
+        case .session(let routes):
+            SessionRouter(routes: routes).configure()
         }
     }
 }

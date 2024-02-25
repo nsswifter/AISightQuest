@@ -10,5 +10,5 @@ import SwiftData
 typealias SessionFactory = SessionViewFactory
 
 protocol SessionViewFactory {
-    func makeSessionView(modelContainer: ModelContainer) -> MainframeView
+    func makeSessionView(modelContainer: ModelContainer) -> SessionView
 }
