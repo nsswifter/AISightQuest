@@ -17,6 +17,12 @@
 		911E47F32B87363800796D1A /* AISightQuestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47F22B87363800796D1A /* AISightQuestUITestsLaunchTests.swift */; };
 		916128C92B890BEB001094E5 /* SessionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916128C82B890BEB001094E5 /* SessionRow.swift */; };
 		919439C42B88DEA4006654C2 /* MainframeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919439C32B88DEA4006654C2 /* MainframeViewModel.swift */; };
+		91C5CB782B8B57AB00132C1E /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB772B8B57AB00132C1E /* Routes.swift */; };
+		91C5CB7B2B8B581100132C1E /* MainframeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7A2B8B581100132C1E /* MainframeRouter.swift */; };
+		91C5CB7D2B8B589F00132C1E /* MainframeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7C2B8B589F00132C1E /* MainframeFactory.swift */; };
+		91C5CB7F2B8B58E000132C1E /* MainframeDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7E2B8B58E000132C1E /* MainframeDependencyContainer.swift */; };
+		91C5CB822B8B5A1300132C1E /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB812B8B5A1300132C1E /* NavigationState.swift */; };
+		91C5CB842B8B5A2900132C1E /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB832B8B5A2900132C1E /* ViewFactory.swift */; };
 		91EF21EC2B894AF700FBFEC3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +57,12 @@
 		911E47F22B87363800796D1A /* AISightQuestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISightQuestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		916128C82B890BEB001094E5 /* SessionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRow.swift; sourceTree = "<group>"; };
 		919439C32B88DEA4006654C2 /* MainframeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeViewModel.swift; sourceTree = "<group>"; };
+		91C5CB772B8B57AB00132C1E /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Routes.swift; path = ../../../../../../../Applications/Routes.swift; sourceTree = "<group>"; };
+		91C5CB7A2B8B581100132C1E /* MainframeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeRouter.swift; sourceTree = "<group>"; };
+		91C5CB7C2B8B589F00132C1E /* MainframeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeFactory.swift; sourceTree = "<group>"; };
+		91C5CB7E2B8B58E000132C1E /* MainframeDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeDependencyContainer.swift; sourceTree = "<group>"; };
+		91C5CB812B8B5A1300132C1E /* NavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationState.swift; sourceTree = "<group>"; };
+		91C5CB832B8B5A2900132C1E /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
 		91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +114,7 @@
 		911E47D22B87363600796D1A /* AISightQuest */ = {
 			isa = PBXGroup;
 			children = (
+				911E47D32B87363600796D1A /* AISightQuestApp.swift */,
 				918EFFAA2B88A6380012BCE0 /* Common */,
 				918EFFA92B88A62D0012BCE0 /* Modules */,
 				918EFFA82B88A5EA0012BCE0 /* Resources */,
@@ -155,7 +168,9 @@
 		918EFFAA2B88A6380012BCE0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				911E47D32B87363600796D1A /* AISightQuestApp.swift */,
+				91C5CB812B8B5A1300132C1E /* NavigationState.swift */,
+				91C5CB772B8B57AB00132C1E /* Routes.swift */,
+				91C5CB832B8B5A2900132C1E /* ViewFactory.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -163,6 +178,8 @@
 		919439BF2B88B2FC006654C2 /* Mainframe */ = {
 			isa = PBXGroup;
 			children = (
+				91C5CB7A2B8B581100132C1E /* MainframeRouter.swift */,
+				91C5CB802B8B58E300132C1E /* DependencyContainer */,
 				919439C02B88B305006654C2 /* Model */,
 				919439C12B88B31F006654C2 /* View */,
 				919439C22B88DE55006654C2 /* ViewModel */,
@@ -193,6 +210,15 @@
 				919439C32B88DEA4006654C2 /* MainframeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		91C5CB802B8B58E300132C1E /* DependencyContainer */ = {
+			isa = PBXGroup;
+			children = (
+				91C5CB7E2B8B58E000132C1E /* MainframeDependencyContainer.swift */,
+				91C5CB7C2B8B589F00132C1E /* MainframeFactory.swift */,
+			);
+			path = DependencyContainer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,10 +353,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				911E47D62B87363600796D1A /* MainframeView.swift in Sources */,
+				91C5CB7D2B8B589F00132C1E /* MainframeFactory.swift in Sources */,
+				91C5CB782B8B57AB00132C1E /* Routes.swift in Sources */,
 				916128C92B890BEB001094E5 /* SessionRow.swift in Sources */,
 				911E47D82B87363600796D1A /* Session.swift in Sources */,
 				911E47D42B87363600796D1A /* AISightQuestApp.swift in Sources */,
+				91C5CB7B2B8B581100132C1E /* MainframeRouter.swift in Sources */,
 				919439C42B88DEA4006654C2 /* MainframeViewModel.swift in Sources */,
+				91C5CB7F2B8B58E000132C1E /* MainframeDependencyContainer.swift in Sources */,
+				91C5CB842B8B5A2900132C1E /* ViewFactory.swift in Sources */,
+				91C5CB822B8B5A1300132C1E /* NavigationState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
