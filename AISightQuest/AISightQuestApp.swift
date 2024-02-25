@@ -35,6 +35,7 @@ struct AISightQuestApp: App {
                         }
                     }
             }
+            .environmentObject(navigationState)
         }
     }
 }

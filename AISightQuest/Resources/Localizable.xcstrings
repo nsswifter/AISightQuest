@@ -20,16 +20,6 @@
           }
         }
       }
-    },
-    "Select a Session" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Select a Session"
-          }
-        }
-      }
     }
   },
   "version" : "1.0"

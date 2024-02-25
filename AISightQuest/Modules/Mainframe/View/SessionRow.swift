@@ -27,6 +27,7 @@ struct SessionRow: View {
                     }
             } else {
                 Text(session.name)
+                    .foregroundStyle(.black)
                     .contextMenu {
                         Button("Rename") {
                             shouldRename = true
