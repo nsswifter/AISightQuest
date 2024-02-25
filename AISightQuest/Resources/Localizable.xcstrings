@@ -11,6 +11,16 @@
         }
       }
     },
+    "Question Text Field" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What would you like to know?"
+          }
+        }
+      }
+    },
     "Rename" : {
       "localizations" : {
         "en" : {
@@ -21,12 +31,12 @@
         }
       }
     },
-    "Select a Session" : {
+    "Scan" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Select a Session"
+            "value" : "Scan Document"
           }
         }
       }

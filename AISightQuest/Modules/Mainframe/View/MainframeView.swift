@@ -12,44 +12,35 @@ import SwiftData
 
 struct MainframeView: View {
     @State private(set) var viewModel: ViewModel
+    @EnvironmentObject private var navigationState: NavigationState
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach($viewModel.sessions) { session in
-                    NavigationLink {
-                        // TODO: Route to Session View
-                        Text(session.text.wrappedValue)
-                    } label: {
-                        SessionRow(session: session)
-                    }
-                }
-                .onDelete { indexSet in
-                    withAnimation {
-                        viewModel.deleteSession(indexSet: indexSet)
-                    }
+        List {
+            ForEach(Array($viewModel.sessions.enumerated()), id: \.element.id) { index, session in
+                Button {
+                    navigationState.routes.append(Routes.mainframe(.session(modelContext: viewModel.modelContext, sessionIndex: index)))
+                } label: {
+                    SessionRow(session: session)
                 }
             }
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    EditButton()
-                        .foregroundStyle(.darkBlue500)
-                }
-                
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        viewModel.addSession(name: "New Session", lastChange: Date())
-                    } label: {
-                        HStack {
-                            Image(systemName: "plus")
-                            Text("New Session")
-                        }
-                        .foregroundStyle(.darkBlue500)
-                    }
+            .onDelete { indexSet in
+                withAnimation {
+                    viewModel.deleteSession(indexSet: indexSet)
                 }
             }
-        } detail: {
-            Text("Select a Session")
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    viewModel.addSession(name: "New Session", lastChange: Date())
+                } label: {
+                    HStack {
+                        Image(systemName: "plus")
+                        Text("New Session")
+                    }
+                    .foregroundStyle(.darkBlue500)
+                }
+            }
         }
     }
 }
