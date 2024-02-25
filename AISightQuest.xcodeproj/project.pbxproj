@@ -16,6 +16,8 @@
 		911E47F12B87363800796D1A /* AISightQuestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47F02B87363800796D1A /* AISightQuestUITests.swift */; };
 		911E47F32B87363800796D1A /* AISightQuestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47F22B87363800796D1A /* AISightQuestUITestsLaunchTests.swift */; };
 		916128C92B890BEB001094E5 /* SessionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916128C82B890BEB001094E5 /* SessionRow.swift */; };
+		918391A22B8B94990085FF17 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918391A12B8B94990085FF17 /* ScannerView.swift */; };
+		918391A52B8B95960085FF17 /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918391A42B8B95960085FF17 /* TextRecognizer.swift */; };
 		919439C42B88DEA4006654C2 /* MainframeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919439C32B88DEA4006654C2 /* MainframeViewModel.swift */; };
 		91C5CB782B8B57AB00132C1E /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB772B8B57AB00132C1E /* Routes.swift */; };
 		91C5CB7B2B8B581100132C1E /* MainframeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7A2B8B581100132C1E /* MainframeRouter.swift */; };
@@ -63,6 +65,8 @@
 		911E47F02B87363800796D1A /* AISightQuestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISightQuestUITests.swift; sourceTree = "<group>"; };
 		911E47F22B87363800796D1A /* AISightQuestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISightQuestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		916128C82B890BEB001094E5 /* SessionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRow.swift; sourceTree = "<group>"; };
+		918391A12B8B94990085FF17 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		918391A42B8B95960085FF17 /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
 		919439C32B88DEA4006654C2 /* MainframeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeViewModel.swift; sourceTree = "<group>"; };
 		91C5CB772B8B57AB00132C1E /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Routes.swift; path = ../../../../../../../Applications/Routes.swift; sourceTree = "<group>"; };
 		91C5CB7A2B8B581100132C1E /* MainframeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeRouter.swift; sourceTree = "<group>"; };
@@ -161,6 +165,14 @@
 			path = AISightQuestUITests;
 			sourceTree = "<group>";
 		};
+		918391A32B8B95880085FF17 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				918391A42B8B95960085FF17 /* TextRecognizer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		918EFFA82B88A5EA0012BCE0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				91C5CB872B8B62F100132C1E /* DependencyContainer */,
+				918391A32B8B95880085FF17 /* Model */,
 				91C5CB922B8B661F00132C1E /* Router */,
 				91C5CB8C2B8B650D00132C1E /* View */,
 				91C5CB8F2B8B653A00132C1E /* ViewModel */,
@@ -270,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				91C5CB8D2B8B651800132C1E /* SessionView.swift */,
+				918391A12B8B94990085FF17 /* ScannerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -430,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91C5CB8B2B8B630800132C1E /* SessionFactory.swift in Sources */,
+				918391A22B8B94990085FF17 /* ScannerView.swift in Sources */,
 				91C5CB912B8B654700132C1E /* SessionViewModel.swift in Sources */,
 				911E47D62B87363600796D1A /* MainframeView.swift in Sources */,
 				91C5CB942B8B662700132C1E /* SessionRouter.swift in Sources */,
@@ -440,6 +455,7 @@
 				911E47D42B87363600796D1A /* AISightQuestApp.swift in Sources */,
 				91C5CB8E2B8B651800132C1E /* SessionView.swift in Sources */,
 				91C5CB892B8B62FC00132C1E /* SessionDependencyContainer.swift in Sources */,
+				918391A52B8B95960085FF17 /* TextRecognizer.swift in Sources */,
 				91C5CB962B8B6D2A00132C1E /* ModelContextExtension.swift in Sources */,
 				91C5CB7B2B8B581100132C1E /* MainframeRouter.swift in Sources */,
 				919439C42B88DEA4006654C2 /* MainframeViewModel.swift in Sources */,
@@ -613,6 +629,7 @@
 				DEVELOPMENT_TEAM = X8S7NK9ZBV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access to scan documents";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -642,6 +659,7 @@
 				DEVELOPMENT_TEAM = X8S7NK9ZBV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access to scan documents";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
