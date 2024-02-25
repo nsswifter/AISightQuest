@@ -1,9 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Hello, World!" : {
-
-    },
     "New Session" : {
       "localizations" : {
         "en" : {
@@ -14,12 +11,32 @@
         }
       }
     },
+    "Question Text Field" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What would you like to know?"
+          }
+        }
+      }
+    },
     "Rename" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rename"
+          }
+        }
+      }
+    },
+    "Scan" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scan a Document"
           }
         }
       }
