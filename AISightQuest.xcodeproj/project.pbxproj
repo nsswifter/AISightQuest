@@ -29,6 +29,7 @@
 		91C5CB912B8B654700132C1E /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB902B8B654700132C1E /* SessionViewModel.swift */; };
 		91C5CB942B8B662700132C1E /* SessionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB932B8B662700132C1E /* SessionRouter.swift */; };
 		91C5CB962B8B6D2A00132C1E /* ModelContextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB952B8B6D2A00132C1E /* ModelContextExtension.swift */; };
+		91C5CB992B8B757700132C1E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB982B8B757700132C1E /* View.swift */; };
 		91EF21EC2B894AF700FBFEC3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		91C5CB902B8B654700132C1E /* SessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewModel.swift; sourceTree = "<group>"; };
 		91C5CB932B8B662700132C1E /* SessionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRouter.swift; sourceTree = "<group>"; };
 		91C5CB952B8B6D2A00132C1E /* ModelContextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContextExtension.swift; sourceTree = "<group>"; };
+		91C5CB982B8B757700132C1E /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 				91C5CB812B8B5A1300132C1E /* NavigationState.swift */,
 				91C5CB772B8B57AB00132C1E /* Routes.swift */,
 				91C5CB832B8B5A2900132C1E /* ViewFactory.swift */,
+				91C5CB972B8B756D00132C1E /* Extensions */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -285,6 +288,14 @@
 				91C5CB932B8B662700132C1E /* SessionRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		91C5CB972B8B756D00132C1E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				91C5CB982B8B757700132C1E /* View.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,6 +443,7 @@
 				91C5CB962B8B6D2A00132C1E /* ModelContextExtension.swift in Sources */,
 				91C5CB7B2B8B581100132C1E /* MainframeRouter.swift in Sources */,
 				919439C42B88DEA4006654C2 /* MainframeViewModel.swift in Sources */,
+				91C5CB992B8B757700132C1E /* View.swift in Sources */,
 				91C5CB7F2B8B58E000132C1E /* MainframeDependencyContainer.swift in Sources */,
 				91C5CB842B8B5A2900132C1E /* ViewFactory.swift in Sources */,
 				91C5CB822B8B5A1300132C1E /* NavigationState.swift in Sources */,

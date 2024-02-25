@@ -22,6 +22,7 @@ struct SessionRow: View {
             if shouldRename {
                 TextField("New Session", text: $session.name)
                     .focused($isTextFieldFocused)
+                    .submitLabel(.done)
                     .onSubmit() {
                         shouldRename = false
                     }
@@ -35,6 +36,9 @@ struct SessionRow: View {
                         }
                     }
             }
+        }
+        .onKeyboardHide {
+            shouldRename = false
         }
     }
 }
