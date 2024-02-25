@@ -30,11 +30,6 @@ struct MainframeView: View {
             }
         }
         .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                EditButton()
-                    .foregroundStyle(.darkBlue500)
-            }
-            
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
                     viewModel.addSession(name: "New Session", lastChange: Date())
