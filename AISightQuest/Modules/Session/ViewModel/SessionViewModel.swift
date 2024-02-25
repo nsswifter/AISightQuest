@@ -6,8 +6,6 @@
 //
 
 import Foundation
-
-import Foundation
 import SwiftData
 
 extension SessionView {
@@ -17,13 +15,15 @@ extension SessionView {
     @Observable
     class ViewModel {
         var modelContext: ModelContext
+        let sessionIndex: Int
         var sessions: [Session] = []
 
-        init(modelContext: ModelContext) {
+        init(modelContext: ModelContext, sessionIndex: Int) {
             self.modelContext = modelContext
+            self.sessionIndex = sessionIndex
             fetchData()
         }
-
+        
         func fetchData() {
             do {
                 let descriptor = FetchDescriptor<Session>(sortBy: [SortDescriptor(\.lastChange, order: .reverse)])

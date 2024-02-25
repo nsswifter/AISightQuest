@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 enum MainframeRoutes: Hashable {
-    case session(modelContext: ModelContext)
+    case session(modelContext: ModelContext, sessionIndex: Int)
 }
 
 struct MainframeRouter {
@@ -18,8 +18,8 @@ struct MainframeRouter {
     @MainActor @ViewBuilder
     func configure() -> some View {
         switch routes {
-        case .session(let modelContext):
-            SessionDependencyContainer().makeSessionView(modelContext: modelContext)
+        case .session(let modelContext, let sessionIndex):
+            SessionDependencyContainer().makeSessionView(modelContext: modelContext, sessionIndex: sessionIndex)
         }
     }
 }
