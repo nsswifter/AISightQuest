@@ -26,7 +26,7 @@ struct SessionView: View {
             Button {
                 isShowingScannerSheet = true
             } label: {
-                Label("Scan", systemImage: "camera")
+                Label("Scan", systemImage: "camera.viewfinder")
                     .foregroundColor(.black)
                     .font(.title2)
             }

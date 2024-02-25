@@ -15,7 +15,7 @@ struct SessionRow: View {
 
     var body: some View {
         HStack {
-            Image(systemName: shouldRename ? "pencil" : "swift")
+            Image(systemName: shouldRename ? "square.and.pencil.circle" : "doc.viewfinder.fill")
                 .foregroundStyle(.lilac500)
                 .font(.title3)
 
