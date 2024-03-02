@@ -38,6 +38,7 @@
 		91ECF9262B93E51E00517B67 /* BERTVocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF9212B93E51E00517B67 /* BERTVocabulary.swift */; };
 		91ECF9272B93E51E00517B67 /* TokenizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF9222B93E51E00517B67 /* TokenizedString.swift */; };
 		91ECF92A2B93E57000517B67 /* bert-base-uncased-vocab.txt in Resources */ = {isa = PBXBuildFile; fileRef = 91ECF9292B93E56F00517B67 /* bert-base-uncased-vocab.txt */; };
+		91ECF92D2B93E62300517B67 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF92C2B93E62300517B67 /* TextView.swift */; };
 		91EF21EC2B894AF700FBFEC3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		91ECF9212B93E51E00517B67 /* BERTVocabulary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BERTVocabulary.swift; sourceTree = "<group>"; };
 		91ECF9222B93E51E00517B67 /* TokenizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenizedString.swift; sourceTree = "<group>"; };
 		91ECF9292B93E56F00517B67 /* bert-base-uncased-vocab.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "bert-base-uncased-vocab.txt"; sourceTree = "<group>"; };
+		91ECF92C2B93E62300517B67 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -213,6 +215,7 @@
 				91ECF91B2B93E48600517B67 /* Routes.swift */,
 				91C5CB832B8B5A2900132C1E /* ViewFactory.swift */,
 				91C5CB972B8B756D00132C1E /* Extensions */,
+				91ECF92B2B93E60E00517B67 /* View */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -344,6 +347,14 @@
 				91ECF9292B93E56F00517B67 /* bert-base-uncased-vocab.txt */,
 			);
 			path = "BERT Core ML Model Resources";
+			sourceTree = "<group>";
+		};
+		91ECF92B2B93E60E00517B67 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				91ECF92C2B93E62300517B67 /* TextView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,6 +492,7 @@
 				91C5CB8B2B8B630800132C1E /* SessionFactory.swift in Sources */,
 				91ECF9272B93E51E00517B67 /* TokenizedString.swift in Sources */,
 				91ECF9232B93E51E00517B67 /* BERT.swift in Sources */,
+				91ECF92D2B93E62300517B67 /* TextView.swift in Sources */,
 				91ECF9252B93E51E00517B67 /* BERTOutput.swift in Sources */,
 				91ECF91C2B93E48600517B67 /* Routes.swift in Sources */,
 				91ECF9262B93E51E00517B67 /* BERTVocabulary.swift in Sources */,
