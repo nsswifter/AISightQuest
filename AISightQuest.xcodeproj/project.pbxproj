@@ -19,7 +19,6 @@
 		918391A22B8B94990085FF17 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918391A12B8B94990085FF17 /* ScannerView.swift */; };
 		918391A52B8B95960085FF17 /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918391A42B8B95960085FF17 /* TextRecognizer.swift */; };
 		919439C42B88DEA4006654C2 /* MainframeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919439C32B88DEA4006654C2 /* MainframeViewModel.swift */; };
-		91C5CB782B8B57AB00132C1E /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB772B8B57AB00132C1E /* Routes.swift */; };
 		91C5CB7B2B8B581100132C1E /* MainframeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7A2B8B581100132C1E /* MainframeRouter.swift */; };
 		91C5CB7D2B8B589F00132C1E /* MainframeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7C2B8B589F00132C1E /* MainframeFactory.swift */; };
 		91C5CB7F2B8B58E000132C1E /* MainframeDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7E2B8B58E000132C1E /* MainframeDependencyContainer.swift */; };
@@ -32,6 +31,7 @@
 		91C5CB942B8B662700132C1E /* SessionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB932B8B662700132C1E /* SessionRouter.swift */; };
 		91C5CB962B8B6D2A00132C1E /* ModelContextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB952B8B6D2A00132C1E /* ModelContextExtension.swift */; };
 		91C5CB992B8B757700132C1E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB982B8B757700132C1E /* View.swift */; };
+		91ECF9062B93DEFE00517B67 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF9052B93DEFE00517B67 /* Routes.swift */; };
 		91EF21EC2B894AF700FBFEC3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
@@ -68,7 +68,6 @@
 		918391A12B8B94990085FF17 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		918391A42B8B95960085FF17 /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
 		919439C32B88DEA4006654C2 /* MainframeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeViewModel.swift; sourceTree = "<group>"; };
-		91C5CB772B8B57AB00132C1E /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Routes.swift; path = ../../../../../../../Applications/Routes.swift; sourceTree = "<group>"; };
 		91C5CB7A2B8B581100132C1E /* MainframeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeRouter.swift; sourceTree = "<group>"; };
 		91C5CB7C2B8B589F00132C1E /* MainframeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeFactory.swift; sourceTree = "<group>"; };
 		91C5CB7E2B8B58E000132C1E /* MainframeDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeDependencyContainer.swift; sourceTree = "<group>"; };
@@ -81,6 +80,7 @@
 		91C5CB932B8B662700132C1E /* SessionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRouter.swift; sourceTree = "<group>"; };
 		91C5CB952B8B6D2A00132C1E /* ModelContextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContextExtension.swift; sourceTree = "<group>"; };
 		91C5CB982B8B757700132C1E /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		91ECF9052B93DEFE00517B67 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,7 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				91C5CB812B8B5A1300132C1E /* NavigationState.swift */,
-				91C5CB772B8B57AB00132C1E /* Routes.swift */,
+				91ECF9052B93DEFE00517B67 /* Routes.swift */,
 				91C5CB832B8B5A2900132C1E /* ViewFactory.swift */,
 				91C5CB972B8B756D00132C1E /* Extensions */,
 			);
@@ -449,7 +449,6 @@
 				911E47D62B87363600796D1A /* MainframeView.swift in Sources */,
 				91C5CB942B8B662700132C1E /* SessionRouter.swift in Sources */,
 				91C5CB7D2B8B589F00132C1E /* MainframeFactory.swift in Sources */,
-				91C5CB782B8B57AB00132C1E /* Routes.swift in Sources */,
 				916128C92B890BEB001094E5 /* SessionRow.swift in Sources */,
 				911E47D82B87363600796D1A /* Session.swift in Sources */,
 				911E47D42B87363600796D1A /* AISightQuestApp.swift in Sources */,
@@ -459,6 +458,7 @@
 				91C5CB962B8B6D2A00132C1E /* ModelContextExtension.swift in Sources */,
 				91C5CB7B2B8B581100132C1E /* MainframeRouter.swift in Sources */,
 				919439C42B88DEA4006654C2 /* MainframeViewModel.swift in Sources */,
+				91ECF9062B93DEFE00517B67 /* Routes.swift in Sources */,
 				91C5CB992B8B757700132C1E /* View.swift in Sources */,
 				91C5CB7F2B8B58E000132C1E /* MainframeDependencyContainer.swift in Sources */,
 				91C5CB842B8B5A2900132C1E /* ViewFactory.swift in Sources */,
