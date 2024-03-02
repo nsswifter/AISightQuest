@@ -32,6 +32,12 @@
 		91C5CB962B8B6D2A00132C1E /* ModelContextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB952B8B6D2A00132C1E /* ModelContextExtension.swift */; };
 		91C5CB992B8B757700132C1E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB982B8B757700132C1E /* View.swift */; };
 		91ECF91C2B93E48600517B67 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF91B2B93E48600517B67 /* Routes.swift */; };
+		91ECF9232B93E51E00517B67 /* BERT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF91E2B93E51E00517B67 /* BERT.swift */; };
+		91ECF9242B93E51E00517B67 /* BERTInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF91F2B93E51E00517B67 /* BERTInput.swift */; };
+		91ECF9252B93E51E00517B67 /* BERTOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF9202B93E51E00517B67 /* BERTOutput.swift */; };
+		91ECF9262B93E51E00517B67 /* BERTVocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF9212B93E51E00517B67 /* BERTVocabulary.swift */; };
+		91ECF9272B93E51E00517B67 /* TokenizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF9222B93E51E00517B67 /* TokenizedString.swift */; };
+		91ECF92A2B93E57000517B67 /* bert-base-uncased-vocab.txt in Resources */ = {isa = PBXBuildFile; fileRef = 91ECF9292B93E56F00517B67 /* bert-base-uncased-vocab.txt */; };
 		91EF21EC2B894AF700FBFEC3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +87,12 @@
 		91C5CB952B8B6D2A00132C1E /* ModelContextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContextExtension.swift; sourceTree = "<group>"; };
 		91C5CB982B8B757700132C1E /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		91ECF91B2B93E48600517B67 /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		91ECF91E2B93E51E00517B67 /* BERT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BERT.swift; sourceTree = "<group>"; };
+		91ECF91F2B93E51E00517B67 /* BERTInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BERTInput.swift; sourceTree = "<group>"; };
+		91ECF9202B93E51E00517B67 /* BERTOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BERTOutput.swift; sourceTree = "<group>"; };
+		91ECF9212B93E51E00517B67 /* BERTVocabulary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BERTVocabulary.swift; sourceTree = "<group>"; };
+		91ECF9222B93E51E00517B67 /* TokenizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenizedString.swift; sourceTree = "<group>"; };
+		91ECF9292B93E56F00517B67 /* bert-base-uncased-vocab.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "bert-base-uncased-vocab.txt"; sourceTree = "<group>"; };
 		91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				918391A42B8B95960085FF17 /* TextRecognizer.swift */,
+				91ECF91D2B93E51E00517B67 /* BERT Core ML Model */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,6 +191,7 @@
 			children = (
 				911E47D92B87363800796D1A /* Assets.xcassets */,
 				91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */,
+				91ECF9282B93E56F00517B67 /* BERT Core ML Model Resources */,
 				911E47DB2B87363800796D1A /* Preview Content */,
 			);
 			path = Resources;
@@ -312,6 +326,26 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		91ECF91D2B93E51E00517B67 /* BERT Core ML Model */ = {
+			isa = PBXGroup;
+			children = (
+				91ECF91E2B93E51E00517B67 /* BERT.swift */,
+				91ECF91F2B93E51E00517B67 /* BERTInput.swift */,
+				91ECF9202B93E51E00517B67 /* BERTOutput.swift */,
+				91ECF9212B93E51E00517B67 /* BERTVocabulary.swift */,
+				91ECF9222B93E51E00517B67 /* TokenizedString.swift */,
+			);
+			path = "BERT Core ML Model";
+			sourceTree = "<group>";
+		};
+		91ECF9282B93E56F00517B67 /* BERT Core ML Model Resources */ = {
+			isa = PBXGroup;
+			children = (
+				91ECF9292B93E56F00517B67 /* bert-base-uncased-vocab.txt */,
+			);
+			path = "BERT Core ML Model Resources";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -418,6 +452,7 @@
 			files = (
 				911E47DD2B87363800796D1A /* Preview Assets.xcassets in Resources */,
 				911E47DA2B87363800796D1A /* Assets.xcassets in Resources */,
+				91ECF92A2B93E57000517B67 /* bert-base-uncased-vocab.txt in Resources */,
 				91EF21EC2B894AF700FBFEC3 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,13 +479,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				91C5CB8B2B8B630800132C1E /* SessionFactory.swift in Sources */,
+				91ECF9272B93E51E00517B67 /* TokenizedString.swift in Sources */,
+				91ECF9232B93E51E00517B67 /* BERT.swift in Sources */,
+				91ECF9252B93E51E00517B67 /* BERTOutput.swift in Sources */,
 				91ECF91C2B93E48600517B67 /* Routes.swift in Sources */,
+				91ECF9262B93E51E00517B67 /* BERTVocabulary.swift in Sources */,
 				918391A22B8B94990085FF17 /* ScannerView.swift in Sources */,
 				91C5CB912B8B654700132C1E /* SessionViewModel.swift in Sources */,
 				911E47D62B87363600796D1A /* MainframeView.swift in Sources */,
 				91C5CB942B8B662700132C1E /* SessionRouter.swift in Sources */,
 				91C5CB7D2B8B589F00132C1E /* MainframeFactory.swift in Sources */,
 				916128C92B890BEB001094E5 /* SessionRow.swift in Sources */,
+				91ECF9242B93E51E00517B67 /* BERTInput.swift in Sources */,
 				911E47D82B87363600796D1A /* Session.swift in Sources */,
 				911E47D42B87363600796D1A /* AISightQuestApp.swift in Sources */,
 				91C5CB8E2B8B651800132C1E /* SessionView.swift in Sources */,
