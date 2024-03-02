@@ -33,13 +33,17 @@ struct TextView: UIViewRepresentable {
     
     class Coordinator: NSObject, UITextViewDelegate {
         @Binding var innerAttributedText: NSAttributedString
-        
+        private var textViewDidChangeSelectionTask: Task<Void, Error>?
+
         init(innerAttributedText: Binding<NSAttributedString>) {
             self._innerAttributedText = innerAttributedText
         }
         
         func textViewDidChangeSelection(_ textView: UITextView) {
-            innerAttributedText = textView.attributedText
+            textViewDidChangeSelectionTask?.cancel()
+            textViewDidChangeSelectionTask = Task {
+                innerAttributedText = textView.attributedText
+            }
         }
     }
 }
