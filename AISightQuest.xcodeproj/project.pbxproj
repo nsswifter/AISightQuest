@@ -38,6 +38,7 @@
 		91ECF9102B93DFB800517B67 /* BERTVocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF90B2B93DFB800517B67 /* BERTVocabulary.swift */; };
 		91ECF9112B93DFB800517B67 /* TokenizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF90C2B93DFB800517B67 /* TokenizedString.swift */; };
 		91ECF9152B93E04100517B67 /* bert-base-uncased-vocab.txt in Resources */ = {isa = PBXBuildFile; fileRef = 91ECF9142B93E04100517B67 /* bert-base-uncased-vocab.txt */; };
+		91ECF91A2B93E0E600517B67 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF9192B93E0E600517B67 /* TextView.swift */; };
 		91EF21EC2B894AF700FBFEC3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		91ECF90B2B93DFB800517B67 /* BERTVocabulary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BERTVocabulary.swift; sourceTree = "<group>"; };
 		91ECF90C2B93DFB800517B67 /* TokenizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenizedString.swift; sourceTree = "<group>"; };
 		91ECF9142B93E04100517B67 /* bert-base-uncased-vocab.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "bert-base-uncased-vocab.txt"; sourceTree = "<group>"; };
+		91ECF9192B93E0E600517B67 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -212,6 +214,7 @@
 				91C5CB812B8B5A1300132C1E /* NavigationState.swift */,
 				91ECF9052B93DEFE00517B67 /* Routes.swift */,
 				91C5CB832B8B5A2900132C1E /* ViewFactory.swift */,
+				91ECF9182B93E0DD00517B67 /* View */,
 				91C5CB972B8B756D00132C1E /* Extensions */,
 			);
 			path = Common;
@@ -345,6 +348,14 @@
 				91ECF9142B93E04100517B67 /* bert-base-uncased-vocab.txt */,
 			);
 			path = "BERT Core ML Model Resources";
+			sourceTree = "<group>";
+		};
+		91ECF9182B93E0DD00517B67 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				91ECF9192B93E0E600517B67 /* TextView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -502,6 +513,7 @@
 				91ECF9062B93DEFE00517B67 /* Routes.swift in Sources */,
 				91C5CB992B8B757700132C1E /* View.swift in Sources */,
 				91C5CB7F2B8B58E000132C1E /* MainframeDependencyContainer.swift in Sources */,
+				91ECF91A2B93E0E600517B67 /* TextView.swift in Sources */,
 				91C5CB842B8B5A2900132C1E /* ViewFactory.swift in Sources */,
 				91C5CB822B8B5A1300132C1E /* NavigationState.swift in Sources */,
 			);
