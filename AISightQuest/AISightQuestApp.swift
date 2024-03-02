@@ -35,6 +35,7 @@ struct AISightQuestApp: App {
                         }
                     }
             }
+            .tint(.darkBlue500)
             .environmentObject(navigationState)
         }
     }
