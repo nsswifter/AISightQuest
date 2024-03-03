@@ -24,6 +24,11 @@
 		919F8D0F2B94CA90003E735A /* IntroDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D0E2B94CA90003E735A /* IntroDependencyContainer.swift */; };
 		919F8D112B94CB01003E735A /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D102B94CB01003E735A /* IntroView.swift */; };
 		919F8D132B94CB28003E735A /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D122B94CB28003E735A /* IntroViewModel.swift */; };
+		919F8D1B2B94CC7C003E735A /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D1A2B94CC7C003E735A /* SplashViewModel.swift */; };
+		919F8D1D2B94CC85003E735A /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D1C2B94CC85003E735A /* SplashView.swift */; };
+		919F8D1F2B94CC8F003E735A /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D1E2B94CC8F003E735A /* SplashRouter.swift */; };
+		919F8D212B94CC9B003E735A /* SplashFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D202B94CC9B003E735A /* SplashFactory.swift */; };
+		919F8D232B94CCA5003E735A /* SplashDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D222B94CCA5003E735A /* SplashDependencyContainer.swift */; };
 		91C5CB7B2B8B581100132C1E /* MainframeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7A2B8B581100132C1E /* MainframeRouter.swift */; };
 		91C5CB7D2B8B589F00132C1E /* MainframeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7C2B8B589F00132C1E /* MainframeFactory.swift */; };
 		91C5CB7F2B8B58E000132C1E /* MainframeDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7E2B8B58E000132C1E /* MainframeDependencyContainer.swift */; };
@@ -85,6 +90,11 @@
 		919F8D0E2B94CA90003E735A /* IntroDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroDependencyContainer.swift; sourceTree = "<group>"; };
 		919F8D102B94CB01003E735A /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		919F8D122B94CB28003E735A /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
+		919F8D1A2B94CC7C003E735A /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		919F8D1C2B94CC85003E735A /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		919F8D1E2B94CC8F003E735A /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
+		919F8D202B94CC9B003E735A /* SplashFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFactory.swift; sourceTree = "<group>"; };
+		919F8D222B94CCA5003E735A /* SplashDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDependencyContainer.swift; sourceTree = "<group>"; };
 		91C5CB7A2B8B581100132C1E /* MainframeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeRouter.swift; sourceTree = "<group>"; };
 		91C5CB7C2B8B589F00132C1E /* MainframeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeFactory.swift; sourceTree = "<group>"; };
 		91C5CB7E2B8B58E000132C1E /* MainframeDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeDependencyContainer.swift; sourceTree = "<group>"; };
@@ -212,6 +222,7 @@
 		918EFFA92B88A62D0012BCE0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				919F8D142B94CC48003E735A /* Splash */,
 				919F8D042B94C887003E735A /* Intro */,
 				91C5CB852B8B62D600132C1E /* Session */,
 				919439BF2B88B2FC006654C2 /* Mainframe */,
@@ -319,6 +330,58 @@
 				919F8D0A2B94C905003E735A /* IntroRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		919F8D142B94CC48003E735A /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				919F8D152B94CC4F003E735A /* DependencyContainer */,
+				919F8D162B94CC57003E735A /* Model */,
+				919F8D172B94CC5E003E735A /* Router */,
+				919F8D182B94CC65003E735A /* View */,
+				919F8D192B94CC69003E735A /* ViewModel */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		919F8D152B94CC4F003E735A /* DependencyContainer */ = {
+			isa = PBXGroup;
+			children = (
+				919F8D222B94CCA5003E735A /* SplashDependencyContainer.swift */,
+				919F8D202B94CC9B003E735A /* SplashFactory.swift */,
+			);
+			path = DependencyContainer;
+			sourceTree = "<group>";
+		};
+		919F8D162B94CC57003E735A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		919F8D172B94CC5E003E735A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				919F8D1E2B94CC8F003E735A /* SplashRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		919F8D182B94CC65003E735A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				919F8D1C2B94CC85003E735A /* SplashView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		919F8D192B94CC69003E735A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				919F8D1A2B94CC7C003E735A /* SplashViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		91C5CB802B8B58E300132C1E /* DependencyContainer */ = {
@@ -567,18 +630,23 @@
 				911E47D62B87363600796D1A /* MainframeView.swift in Sources */,
 				91C5CB942B8B662700132C1E /* SessionRouter.swift in Sources */,
 				91C5CB7D2B8B589F00132C1E /* MainframeFactory.swift in Sources */,
+				919F8D1B2B94CC7C003E735A /* SplashViewModel.swift in Sources */,
 				916128C92B890BEB001094E5 /* SessionRow.swift in Sources */,
 				91ECF9242B93E51E00517B67 /* BERTInput.swift in Sources */,
+				919F8D1D2B94CC85003E735A /* SplashView.swift in Sources */,
 				911E47D82B87363600796D1A /* Session.swift in Sources */,
 				911E47D42B87363600796D1A /* AISightQuestApp.swift in Sources */,
 				91C5CB8E2B8B651800132C1E /* SessionView.swift in Sources */,
 				91C5CB892B8B62FC00132C1E /* SessionDependencyContainer.swift in Sources */,
 				918391A52B8B95960085FF17 /* TextRecognizer.swift in Sources */,
+				919F8D212B94CC9B003E735A /* SplashFactory.swift in Sources */,
 				91C5CB962B8B6D2A00132C1E /* ModelContextExtension.swift in Sources */,
 				91C5CB7B2B8B581100132C1E /* MainframeRouter.swift in Sources */,
 				919F8D112B94CB01003E735A /* IntroView.swift in Sources */,
 				919439C42B88DEA4006654C2 /* MainframeViewModel.swift in Sources */,
 				91C5CB992B8B757700132C1E /* View.swift in Sources */,
+				919F8D232B94CCA5003E735A /* SplashDependencyContainer.swift in Sources */,
+				919F8D1F2B94CC8F003E735A /* SplashRouter.swift in Sources */,
 				91C5CB7F2B8B58E000132C1E /* MainframeDependencyContainer.swift in Sources */,
 				91C5CB842B8B5A2900132C1E /* ViewFactory.swift in Sources */,
 				91C5CB822B8B5A1300132C1E /* NavigationState.swift in Sources */,
