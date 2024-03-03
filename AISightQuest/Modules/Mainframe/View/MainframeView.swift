@@ -42,6 +42,7 @@ struct MainframeView: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden()
     }
 }
 

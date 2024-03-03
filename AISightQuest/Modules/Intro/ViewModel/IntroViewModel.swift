@@ -14,10 +14,12 @@ extension IntroView {
     
     @Observable
     class ViewModel {
+        var storageManager: StorageManagerProtocol
         var modelContext: ModelContext
         var sessions: [Session] = []
 
-        init(modelContext: ModelContext) {
+        init(storageManager: StorageManagerProtocol, modelContext: ModelContext) {
+            self.storageManager = storageManager
             self.modelContext = modelContext
             fetchData()
         }
@@ -29,6 +31,14 @@ extension IntroView {
             } catch {
                 print("Fetch failed")
             }
+        }
+        
+        func getIsFirstOpen() -> Bool {
+            storageManager.getIsFirstOpen()
+        }
+        
+        func setIsFirstOpen(to value: Bool) {
+            storageManager.setIsFirstOpen(to: value)
         }
     }
 }

@@ -16,6 +16,7 @@ struct IntroView: View {
 
     var body: some View {
         Text("Hello, World!")
+            .navigationBarBackButtonHidden()
     }
 }
 
@@ -25,6 +26,7 @@ struct IntroView: View {
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let modelContainer = try! ModelContainer(for: Session.self, configurations: config)
-    return IntroView(viewModel: IntroView.ViewModel(modelContext: modelContainer.mainContext))
+    return IntroView(viewModel: IntroView.ViewModel(storageManager: StorageManager(),
+                                                    modelContext: modelContainer.mainContext))
 }
 #endif

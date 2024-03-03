@@ -14,11 +14,12 @@ extension SplashView {
     
     @Observable
     class ViewModel {
+        var storageManager: StorageManagerProtocol
         var modelContext: ModelContext
         var sessions: [Session] = []
-        var isFirstTimeOpen = true
 
-        init(modelContext: ModelContext) {
+        init(storageManager: StorageManagerProtocol, modelContext: ModelContext) {
+            self.storageManager = storageManager
             self.modelContext = modelContext
             fetchData()
         }
@@ -30,6 +31,14 @@ extension SplashView {
             } catch {
                 print("Fetch failed")
             }
+        }
+        
+        func getIsFirstOpen() -> Bool {
+            storageManager.getIsFirstOpen()
+        }
+        
+        func setIsFirstOpen(to value: Bool) {
+            storageManager.setIsFirstOpen(to: value)
         }
     }
 }

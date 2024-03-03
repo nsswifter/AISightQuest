@@ -23,7 +23,6 @@ struct SplashRouter {
             IntroDependencyContainer().makeIntroView(modelContext: modelContext)
         case .mainframe(let modelContext):
             MainframeDependencyContainer().makeMainframeView(modelContext: modelContext)
-            
         }
     }
 }

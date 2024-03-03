@@ -8,7 +8,8 @@
 import SwiftData
 
 final class SplashDependencyContainer {
-    @MainActor func makeSplashView(modelContext: ModelContext, sessionIndex: Int) -> SplashView {
-        SplashView(viewModel: SplashView.ViewModel(modelContext: modelContext))
+    @MainActor func makeSplashView(modelContext: ModelContext) -> SplashView {
+        SplashView(viewModel: SplashView.ViewModel(storageManager: StorageManager(),
+                                                   modelContext: modelContext))
     }
 }

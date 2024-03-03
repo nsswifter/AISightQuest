@@ -20,8 +20,7 @@ struct SplashView: View {
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline:.now() + 3) {
                     withAnimation(.easeOut(duration: 0.5)) {
-                        if viewModel.isFirstTimeOpen {
-                            viewModel.isFirstTimeOpen = false
+                        if viewModel.getIsFirstOpen() {
                             navigationState.routes.append(Routes.splash(.intro(modelContext: viewModel.modelContext)))
                         } else {
                             navigationState.routes.append(Routes.splash(.mainframe(modelContext: viewModel.modelContext)))
@@ -38,6 +37,7 @@ struct SplashView: View {
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let modelContainer = try! ModelContainer(for: Session.self, configurations: config)
-    return SplashView(viewModel: SplashView.ViewModel(modelContext: modelContainer.mainContext))
+    return SplashView(viewModel: SplashView.ViewModel(storageManager: StorageManager(),
+                                                      modelContext: modelContainer.mainContext))
 }
 #endif
