@@ -19,6 +19,7 @@
 		918391A22B8B94990085FF17 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918391A12B8B94990085FF17 /* ScannerView.swift */; };
 		918391A52B8B95960085FF17 /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918391A42B8B95960085FF17 /* TextRecognizer.swift */; };
 		919439C42B88DEA4006654C2 /* MainframeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919439C32B88DEA4006654C2 /* MainframeViewModel.swift */; };
+		919F8D0B2B94C905003E735A /* IntroRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D0A2B94C905003E735A /* IntroRouter.swift */; };
 		91C5CB7B2B8B581100132C1E /* MainframeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7A2B8B581100132C1E /* MainframeRouter.swift */; };
 		91C5CB7D2B8B589F00132C1E /* MainframeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7C2B8B589F00132C1E /* MainframeFactory.swift */; };
 		91C5CB7F2B8B58E000132C1E /* MainframeDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7E2B8B58E000132C1E /* MainframeDependencyContainer.swift */; };
@@ -75,6 +76,7 @@
 		918391A12B8B94990085FF17 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		918391A42B8B95960085FF17 /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
 		919439C32B88DEA4006654C2 /* MainframeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeViewModel.swift; sourceTree = "<group>"; };
+		919F8D0A2B94C905003E735A /* IntroRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroRouter.swift; sourceTree = "<group>"; };
 		91C5CB7A2B8B581100132C1E /* MainframeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeRouter.swift; sourceTree = "<group>"; };
 		91C5CB7C2B8B589F00132C1E /* MainframeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeFactory.swift; sourceTree = "<group>"; };
 		91C5CB7E2B8B58E000132C1E /* MainframeDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeDependencyContainer.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		918EFFA92B88A62D0012BCE0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				919F8D042B94C887003E735A /* Intro */,
 				91C5CB852B8B62D600132C1E /* Session */,
 				919439BF2B88B2FC006654C2 /* Mainframe */,
 			);
@@ -256,6 +259,54 @@
 				919439C32B88DEA4006654C2 /* MainframeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		919F8D042B94C887003E735A /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				919F8D082B94C8BD003E735A /* DependencyContainer */,
+				919F8D052B94C89D003E735A /* Model */,
+				919F8D092B94C8CC003E735A /* Router */,
+				919F8D062B94C8A9003E735A /* View */,
+				919F8D072B94C8B1003E735A /* ViewModel */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		919F8D052B94C89D003E735A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		919F8D062B94C8A9003E735A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		919F8D072B94C8B1003E735A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		919F8D082B94C8BD003E735A /* DependencyContainer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DependencyContainer;
+			sourceTree = "<group>";
+		};
+		919F8D092B94C8CC003E735A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				919F8D0A2B94C905003E735A /* IntroRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		91C5CB802B8B58E300132C1E /* DependencyContainer */ = {
@@ -490,6 +541,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91C5CB8B2B8B630800132C1E /* SessionFactory.swift in Sources */,
+				919F8D0B2B94C905003E735A /* IntroRouter.swift in Sources */,
 				91ECF9272B93E51E00517B67 /* TokenizedString.swift in Sources */,
 				91ECF9232B93E51E00517B67 /* BERT.swift in Sources */,
 				91ECF92D2B93E62300517B67 /* TextView.swift in Sources */,
