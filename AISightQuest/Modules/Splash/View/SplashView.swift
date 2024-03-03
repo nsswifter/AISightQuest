@@ -15,7 +15,20 @@ struct SplashView: View {
     @EnvironmentObject private var navigationState: NavigationState
     
     var body: some View {
-        Text("Hello, World!")
+        LottieView(name: "AI-Sight-Quest-Lottie")
+            .frame(width: 250, height: 250)
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline:.now() + 3) {
+                    withAnimation(.easeOut(duration: 0.5)) {
+                        if viewModel.isFirstTimeOpen {
+                            viewModel.isFirstTimeOpen = false
+                            navigationState.routes.append(Routes.splash(.intro(modelContext: viewModel.modelContext)))
+                        } else {
+                            navigationState.routes.append(Routes.splash(.mainframe(modelContext: viewModel.modelContext)))
+                        }
+                    }
+                }
+            }
     }
 }
 
@@ -25,6 +38,6 @@ struct SplashView: View {
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let modelContainer = try! ModelContainer(for: Session.self, configurations: config)
-    return SplashView(viewModel: SplashView.ViewModel(modelContext: modelContainer.mainContext, sessionIndex: 1))
+    return SplashView(viewModel: SplashView.ViewModel(modelContext: modelContainer.mainContext))
 }
 #endif

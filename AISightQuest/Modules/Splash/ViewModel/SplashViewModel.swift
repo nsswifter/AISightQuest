@@ -15,12 +15,11 @@ extension SplashView {
     @Observable
     class ViewModel {
         var modelContext: ModelContext
-        let sessionIndex: Int
         var sessions: [Session] = []
+        var isFirstTimeOpen = true
 
-        init(modelContext: ModelContext, sessionIndex: Int) {
+        init(modelContext: ModelContext) {
             self.modelContext = modelContext
-            self.sessionIndex = sessionIndex
             fetchData()
         }
         

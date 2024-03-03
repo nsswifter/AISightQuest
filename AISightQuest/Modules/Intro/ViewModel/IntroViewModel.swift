@@ -15,12 +15,10 @@ extension IntroView {
     @Observable
     class ViewModel {
         var modelContext: ModelContext
-        let sessionIndex: Int
         var sessions: [Session] = []
 
-        init(modelContext: ModelContext, sessionIndex: Int) {
+        init(modelContext: ModelContext) {
             self.modelContext = modelContext
-            self.sessionIndex = sessionIndex
             fetchData()
         }
         

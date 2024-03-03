@@ -8,7 +8,7 @@
 import SwiftData
 
 final class IntroDependencyContainer {
-    @MainActor func makeIntroView(modelContext: ModelContext, sessionIndex: Int) -> IntroView {
-        IntroView(viewModel: IntroView.ViewModel(modelContext: modelContext, sessionIndex: sessionIndex))
+    @MainActor func makeIntroView(modelContext: ModelContext) -> IntroView {
+        IntroView(viewModel: IntroView.ViewModel(modelContext: modelContext))
     }
 }

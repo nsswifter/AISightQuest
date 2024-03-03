@@ -6,6 +6,8 @@
 //
 
 enum Routes: Equatable, Hashable {
+    case splash(SplashRoutes)
+    case intro(IntroRoutes)
     case mainframe(MainframeRoutes)
     case session(SessionRoutes)
 }

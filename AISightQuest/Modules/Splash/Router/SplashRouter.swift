@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
-enum SplashRoutes: Hashable { }
+enum SplashRoutes: Hashable { 
+    case intro(modelContext: ModelContext)
+    case mainframe(modelContext: ModelContext)
+}
 
 struct SplashRouter {
     let routes: SplashRoutes
@@ -15,8 +19,11 @@ struct SplashRouter {
     @MainActor @ViewBuilder
     func configure() -> some View {
         switch routes {
-        default:
-            EmptyView()
+        case .intro(let modelContext):
+            IntroDependencyContainer().makeIntroView(modelContext: modelContext)
+        case .mainframe(let modelContext):
+            MainframeDependencyContainer().makeMainframeView(modelContext: modelContext)
+            
         }
     }
 }
