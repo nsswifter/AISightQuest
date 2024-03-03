@@ -20,6 +20,10 @@
 		918391A52B8B95960085FF17 /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918391A42B8B95960085FF17 /* TextRecognizer.swift */; };
 		919439C42B88DEA4006654C2 /* MainframeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919439C32B88DEA4006654C2 /* MainframeViewModel.swift */; };
 		919F8D0B2B94C905003E735A /* IntroRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D0A2B94C905003E735A /* IntroRouter.swift */; };
+		919F8D0D2B94CA80003E735A /* IntroFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D0C2B94CA80003E735A /* IntroFactory.swift */; };
+		919F8D0F2B94CA90003E735A /* IntroDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D0E2B94CA90003E735A /* IntroDependencyContainer.swift */; };
+		919F8D112B94CB01003E735A /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D102B94CB01003E735A /* IntroView.swift */; };
+		919F8D132B94CB28003E735A /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D122B94CB28003E735A /* IntroViewModel.swift */; };
 		91C5CB7B2B8B581100132C1E /* MainframeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7A2B8B581100132C1E /* MainframeRouter.swift */; };
 		91C5CB7D2B8B589F00132C1E /* MainframeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7C2B8B589F00132C1E /* MainframeFactory.swift */; };
 		91C5CB7F2B8B58E000132C1E /* MainframeDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7E2B8B58E000132C1E /* MainframeDependencyContainer.swift */; };
@@ -77,6 +81,10 @@
 		918391A42B8B95960085FF17 /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
 		919439C32B88DEA4006654C2 /* MainframeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeViewModel.swift; sourceTree = "<group>"; };
 		919F8D0A2B94C905003E735A /* IntroRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroRouter.swift; sourceTree = "<group>"; };
+		919F8D0C2B94CA80003E735A /* IntroFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroFactory.swift; sourceTree = "<group>"; };
+		919F8D0E2B94CA90003E735A /* IntroDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroDependencyContainer.swift; sourceTree = "<group>"; };
+		919F8D102B94CB01003E735A /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		919F8D122B94CB28003E735A /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
 		91C5CB7A2B8B581100132C1E /* MainframeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeRouter.swift; sourceTree = "<group>"; };
 		91C5CB7C2B8B589F00132C1E /* MainframeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeFactory.swift; sourceTree = "<group>"; };
 		91C5CB7E2B8B58E000132C1E /* MainframeDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeDependencyContainer.swift; sourceTree = "<group>"; };
@@ -283,6 +291,7 @@
 		919F8D062B94C8A9003E735A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				919F8D102B94CB01003E735A /* IntroView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,6 +299,7 @@
 		919F8D072B94C8B1003E735A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				919F8D122B94CB28003E735A /* IntroViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -297,6 +307,8 @@
 		919F8D082B94C8BD003E735A /* DependencyContainer */ = {
 			isa = PBXGroup;
 			children = (
+				919F8D0E2B94CA90003E735A /* IntroDependencyContainer.swift */,
+				919F8D0C2B94CA80003E735A /* IntroFactory.swift */,
 			);
 			path = DependencyContainer;
 			sourceTree = "<group>";
@@ -542,10 +554,12 @@
 			files = (
 				91C5CB8B2B8B630800132C1E /* SessionFactory.swift in Sources */,
 				919F8D0B2B94C905003E735A /* IntroRouter.swift in Sources */,
+				919F8D0D2B94CA80003E735A /* IntroFactory.swift in Sources */,
 				91ECF9272B93E51E00517B67 /* TokenizedString.swift in Sources */,
 				91ECF9232B93E51E00517B67 /* BERT.swift in Sources */,
 				91ECF92D2B93E62300517B67 /* TextView.swift in Sources */,
 				91ECF9252B93E51E00517B67 /* BERTOutput.swift in Sources */,
+				919F8D132B94CB28003E735A /* IntroViewModel.swift in Sources */,
 				91ECF91C2B93E48600517B67 /* Routes.swift in Sources */,
 				91ECF9262B93E51E00517B67 /* BERTVocabulary.swift in Sources */,
 				918391A22B8B94990085FF17 /* ScannerView.swift in Sources */,
@@ -562,11 +576,13 @@
 				918391A52B8B95960085FF17 /* TextRecognizer.swift in Sources */,
 				91C5CB962B8B6D2A00132C1E /* ModelContextExtension.swift in Sources */,
 				91C5CB7B2B8B581100132C1E /* MainframeRouter.swift in Sources */,
+				919F8D112B94CB01003E735A /* IntroView.swift in Sources */,
 				919439C42B88DEA4006654C2 /* MainframeViewModel.swift in Sources */,
 				91C5CB992B8B757700132C1E /* View.swift in Sources */,
 				91C5CB7F2B8B58E000132C1E /* MainframeDependencyContainer.swift in Sources */,
 				91C5CB842B8B5A2900132C1E /* ViewFactory.swift in Sources */,
 				91C5CB822B8B5A1300132C1E /* NavigationState.swift in Sources */,
+				919F8D0F2B94CA90003E735A /* IntroDependencyContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
