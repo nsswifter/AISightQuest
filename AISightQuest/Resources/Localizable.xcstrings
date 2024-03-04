@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Hello, World!" : {
+
+    },
     "New Session" : {
       "localizations" : {
         "en" : {

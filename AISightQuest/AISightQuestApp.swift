@@ -28,7 +28,7 @@ struct AISightQuestApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack(path: $navigationState.routes) {
-                MainframeDependencyContainer().makeMainframeView(modelContext: sharedModelContainer.mainContext)
+                SplashDependencyContainer().makeSplashView(modelContext: sharedModelContainer.mainContext)
                     .navigationDestination(for: AnyHashable.self) { route in
                         if let route = route as? Routes {
                             ViewFactory.viewForDestination(route)
