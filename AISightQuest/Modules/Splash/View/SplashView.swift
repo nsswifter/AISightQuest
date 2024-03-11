@@ -14,24 +14,28 @@ struct SplashView: View {
     @State private(set) var viewModel: ViewModel
     @EnvironmentObject private var navigationState: NavigationState
     
+    @State private(set) var isFirstOpen = true
+    
     var body: some View {
-        Group {
-            if viewModel.getIsFirstOpen() {
-                Color.clear
-                    .onAppear {
-                        navigationState.routes.append(Routes.splash(.intro(modelContext: viewModel.modelContext)))
-                    }
-            } else {
+        ZStack {
+            Color.clear
+            
+            if !isFirstOpen {
                 LottieView(name: "AI-Sight-Quest-Lottie")
                     .frame(width: 250, height: 250)
-                    .onAppear {
-                        Task {
-                            try? await Task.sleep(nanoseconds: 3 * 1_000_000_000) // Convert seconds to nanoseconds
-                            withAnimation(.easeOut(duration: 0.5)) {
-                                navigationState.routes.append(Routes.splash(.mainframe(modelContext: viewModel.modelContext)))
-                            }
-                        }
+            }
+        }
+        .onAppear {
+            if viewModel.isFirstOpen {
+                navigationState.routes.append(Routes.splash(.intro(modelContext: viewModel.modelContext)))
+            } else {
+                isFirstOpen = false
+                Task {
+                    try? await Task.sleep(nanoseconds: 3 * 1_000_000_000) // Convert seconds to nanoseconds
+                    withAnimation(.easeOut(duration: 0.5)) {
+                        navigationState.routes.append(Routes.splash(.mainframe(modelContext: viewModel.modelContext)))
                     }
+                }
             }
         }
     }
