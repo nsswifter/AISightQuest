@@ -142,7 +142,8 @@ private extension IntroView {
                     // MARK: Update Current Index
                     if currentIndex == Intro.Data.intros.count {
                         // MARK: Moving To Home Screen
-                        navigationState.routes.append(Routes.splash(.mainframe(modelContext: viewModel.modelContext)))
+                        navigationState.routes.append(Routes.intro(.mainframe(modelContext: viewModel.modelContext)))
+                        viewModel.isFirstOpen = true
                     } else {
                         currentIndex += 1
                     }

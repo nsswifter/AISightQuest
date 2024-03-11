@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
-enum IntroRoutes: Hashable { }
+enum IntroRoutes: Hashable { 
+    case mainframe(modelContext: ModelContext)
+}
 
 struct IntroRouter {
     let routes: IntroRoutes
@@ -15,8 +18,8 @@ struct IntroRouter {
     @MainActor @ViewBuilder
     func configure() -> some View {
         switch routes {
-        default:
-            EmptyView()
+        case .mainframe(let modelContext):
+            MainframeDependencyContainer().makeMainframeView(modelContext: modelContext)
         }
     }
 }

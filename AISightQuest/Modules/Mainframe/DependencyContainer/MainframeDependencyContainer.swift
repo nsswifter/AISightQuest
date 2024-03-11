@@ -9,6 +9,7 @@ import SwiftData
 
 final class MainframeDependencyContainer {
     @MainActor func makeMainframeView(modelContext: ModelContext) -> MainframeView {
-        MainframeView(viewModel: MainframeView.ViewModel(modelContext: modelContext))
+        MainframeView(viewModel: MainframeView.ViewModel(storageManager: StorageManager(),
+                                                         modelContext: modelContext))
     }
 }

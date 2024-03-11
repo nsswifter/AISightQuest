@@ -11,6 +11,16 @@
         }
       }
     },
+    "hidden reset button" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hidden Reset Button"
+          }
+        }
+      }
+    },
     "last intro button text" : {
       "localizations" : {
         "en" : {

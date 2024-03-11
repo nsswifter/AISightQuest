@@ -14,7 +14,7 @@ extension IntroView {
     
     @Observable
     class ViewModel {
-        var storageManager: StorageManagerProtocol
+        private var storageManager: StorageManagerProtocol
         var modelContext: ModelContext
         var sessions: [Session] = []
 
@@ -33,12 +33,13 @@ extension IntroView {
             }
         }
         
-        func getIsFirstOpen() -> Bool {
-            storageManager.getIsFirstOpen()
-        }
-        
-        func setIsFirstOpen(to value: Bool) {
-            storageManager.setIsFirstOpen(to: value)
+        var isFirstOpen: Bool {
+            get {
+                storageManager.getIsFirstOpen()
+            }
+            set {
+                storageManager.setIsFirstOpen(to: newValue)
+            }
         }
     }
 }

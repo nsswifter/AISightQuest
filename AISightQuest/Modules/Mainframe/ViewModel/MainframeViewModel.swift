@@ -14,10 +14,12 @@ extension MainframeView {
     
     @Observable
     class ViewModel {
+        private var storageManager: StorageManagerProtocol
         var modelContext: ModelContext
         var sessions: [Session] = []
 
-        init(modelContext: ModelContext) {
+        init(storageManager: StorageManagerProtocol, modelContext: ModelContext) {
+            self.storageManager = storageManager
             self.modelContext = modelContext
             fetchData()
         }
@@ -46,6 +48,27 @@ extension MainframeView {
                 modelContext.delete(sessions[index])
                 fetchData()
             }
+        }
+        
+        func deleteAllSessions() {
+            for session in sessions {
+                modelContext.delete(session)
+            }
+            fetchData()
+        }
+        
+        var isFirstOpen: Bool {
+            get {
+                storageManager.getIsFirstOpen()
+            }
+            set {
+                storageManager.setIsFirstOpen(to: newValue)
+            }
+        }
+        
+        func resetApplication() {
+            deleteAllSessions()
+            isFirstOpen = false
         }
     }
 }
