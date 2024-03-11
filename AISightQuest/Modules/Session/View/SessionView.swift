@@ -33,7 +33,7 @@ struct SessionView: View {
             Button {
                 isShowingScannerSheet = true
             } label: {
-                Label("Scan", systemImage: "camera.viewfinder")
+                Label("scan", systemImage: "camera.viewfinder")
                     .foregroundColor(.darkBlue900)
                     .font(.title2)
             }
@@ -44,7 +44,7 @@ struct SessionView: View {
             .shadow(color: .darkBlue500,radius: 15)
             
             HStack {
-                TextField("Question Text Field", text: $questionText)
+                TextField("question text field", text: $questionText)
                     .submitLabel(.search)
                     .padding([.vertical, .leading])
                     .onSubmit {

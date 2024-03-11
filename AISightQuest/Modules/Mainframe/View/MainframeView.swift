@@ -36,7 +36,7 @@ struct MainframeView: View {
                 } label: {
                     HStack {
                         Image(systemName: "plus")
-                        Text("New Session")
+                        Text("new session")
                     }
                     .foregroundStyle(.darkBlue500)
                 }

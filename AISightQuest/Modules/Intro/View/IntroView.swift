@@ -65,7 +65,7 @@ private extension IntroView {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 30)
                 
-                Text("Let's begin")
+                Text("first intro button text")
                     .font(.system(size: 14, weight: .semibold))
                     .padding(.horizontal, 40)
                     .padding(.vertical, 14)
@@ -115,7 +115,7 @@ private extension IntroView {
                         .opacity(!isLast ? 1 : 0)
                     
                     HStack {
-                        Text("Let's do it")
+                        Text("last intro button text")
                             .font(.system(size: 15, weight: .bold))
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity, alignment: .leading)

@@ -1,10 +1,27 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Hello, World!" : {
-
+    "first intro button text" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Let's begin"
+          }
+        }
+      }
     },
-    "New Session" : {
+    "last intro button text" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Let's do it"
+          }
+        }
+      }
+    },
+    "new session" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -14,7 +31,7 @@
         }
       }
     },
-    "Question Text Field" : {
+    "question text field" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -24,7 +41,7 @@
         }
       }
     },
-    "Rename" : {
+    "rename" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -34,12 +51,22 @@
         }
       }
     },
-    "Scan" : {
+    "scan" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Scan Document"
+          }
+        }
+      }
+    },
+    "skip" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skip"
           }
         }
       }
