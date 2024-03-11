@@ -15,19 +15,25 @@ struct SplashView: View {
     @EnvironmentObject private var navigationState: NavigationState
     
     var body: some View {
-        LottieView(name: "AI-Sight-Quest-Lottie")
-            .frame(width: 250, height: 250)
-            .onAppear {
-                DispatchQueue.main.asyncAfter(deadline:.now() + 3) {
-                    withAnimation(.easeOut(duration: 0.5)) {
-                        if viewModel.getIsFirstOpen() {
-                            navigationState.routes.append(Routes.splash(.intro(modelContext: viewModel.modelContext)))
-                        } else {
-                            navigationState.routes.append(Routes.splash(.mainframe(modelContext: viewModel.modelContext)))
+        Group {
+            if viewModel.getIsFirstOpen() {
+                Color.clear
+                    .onAppear {
+                        navigationState.routes.append(Routes.splash(.intro(modelContext: viewModel.modelContext)))
+                    }
+            } else {
+                LottieView(name: "AI-Sight-Quest-Lottie")
+                    .frame(width: 250, height: 250)
+                    .onAppear {
+                        Task {
+                            try? await Task.sleep(nanoseconds: 3 * 1_000_000_000) // Convert seconds to nanoseconds
+                            withAnimation(.easeOut(duration: 0.5)) {
+                                navigationState.routes.append(Routes.splash(.mainframe(modelContext: viewModel.modelContext)))
+                            }
                         }
                     }
-                }
             }
+        }
     }
 }
 

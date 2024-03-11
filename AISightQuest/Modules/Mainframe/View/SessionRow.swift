@@ -20,7 +20,7 @@ struct SessionRow: View {
                 .font(.title3)
 
             if shouldRename {
-                TextField("New Session", text: $session.name)
+                TextField("new session", text: $session.name)
                     .focused($isTextFieldFocused)
                     .submitLabel(.done)
                     .onSubmit() {
@@ -30,7 +30,7 @@ struct SessionRow: View {
                 Text(session.name)
                     .foregroundStyle(.black)
                     .contextMenu {
-                        Button("Rename") {
+                        Button("rename") {
                             shouldRename = true
                             isTextFieldFocused = true
                         }
