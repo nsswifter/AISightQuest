@@ -34,6 +34,7 @@
 		919F8D2A2B94CEB1003E735A /* AI-Sight-Quest-Lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 919F8D292B94CEB1003E735A /* AI-Sight-Quest-Lottie.json */; };
 		919F8D2C2B94D52F003E735A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D2B2B94D52F003E735A /* UserDefaults.swift */; };
 		919F8D2E2B94D579003E735A /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D2D2B94D579003E735A /* StorageManager.swift */; };
+		919F8D392B95085B003E735A /* Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D382B95085B003E735A /* Intro.swift */; };
 		91C5CB7B2B8B581100132C1E /* MainframeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7A2B8B581100132C1E /* MainframeRouter.swift */; };
 		91C5CB7D2B8B589F00132C1E /* MainframeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7C2B8B589F00132C1E /* MainframeFactory.swift */; };
 		91C5CB7F2B8B58E000132C1E /* MainframeDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7E2B8B58E000132C1E /* MainframeDependencyContainer.swift */; };
@@ -104,6 +105,7 @@
 		919F8D292B94CEB1003E735A /* AI-Sight-Quest-Lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "AI-Sight-Quest-Lottie.json"; sourceTree = "<group>"; };
 		919F8D2B2B94D52F003E735A /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		919F8D2D2B94D579003E735A /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		919F8D382B95085B003E735A /* Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro.swift; sourceTree = "<group>"; };
 		91C5CB7A2B8B581100132C1E /* MainframeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeRouter.swift; sourceTree = "<group>"; };
 		91C5CB7C2B8B589F00132C1E /* MainframeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeFactory.swift; sourceTree = "<group>"; };
 		91C5CB7E2B8B58E000132C1E /* MainframeDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeDependencyContainer.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 		919F8D052B94C89D003E735A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				919F8D382B95085B003E735A /* Intro.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -657,6 +660,7 @@
 				919F8D2C2B94D52F003E735A /* UserDefaults.swift in Sources */,
 				916128C92B890BEB001094E5 /* SessionRow.swift in Sources */,
 				91ECF9242B93E51E00517B67 /* BERTInput.swift in Sources */,
+				919F8D392B95085B003E735A /* Intro.swift in Sources */,
 				919F8D1D2B94CC85003E735A /* SplashView.swift in Sources */,
 				911E47D82B87363600796D1A /* Session.swift in Sources */,
 				911E47D42B87363600796D1A /* AISightQuestApp.swift in Sources */,
