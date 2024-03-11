@@ -30,6 +30,14 @@ struct MainframeView: View {
             }
         }
         .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Text("hidden reset button")
+                    .foregroundStyle(.clear)
+                    .onTapGesture(count: 8) {
+                        viewModel.resetApplication()
+                    }
+            }
+            
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
                     viewModel.addSession(name: "New Session", lastChange: Date())
@@ -52,6 +60,7 @@ struct MainframeView: View {
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let modelContainer = try! ModelContainer(for: Session.self, configurations: config)
-    return MainframeView(viewModel: MainframeView.ViewModel(modelContext: modelContainer.mainContext))
+    return MainframeView(viewModel: MainframeView.ViewModel(storageManager: StorageManager(),
+                                                            modelContext: modelContainer.mainContext))
 }
 #endif
