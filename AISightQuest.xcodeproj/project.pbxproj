@@ -383,7 +383,6 @@
 			isa = PBXGroup;
 			children = (
 				919F8D1C2B94CC85003E735A /* SplashView.swift */,
-				919F8D242B94CE24003E735A /* LottieView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -492,6 +491,7 @@
 		91ECF92B2B93E60E00517B67 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				919F8D242B94CE24003E735A /* LottieView.swift */,
 				91ECF92C2B93E62300517B67 /* TextView.swift */,
 			);
 			path = View;
