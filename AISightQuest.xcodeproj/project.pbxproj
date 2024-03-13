@@ -16,6 +16,9 @@
 		911E47F12B87363800796D1A /* AISightQuestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47F02B87363800796D1A /* AISightQuestUITests.swift */; };
 		911E47F32B87363800796D1A /* AISightQuestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47F22B87363800796D1A /* AISightQuestUITestsLaunchTests.swift */; };
 		916128C92B890BEB001094E5 /* SessionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916128C82B890BEB001094E5 /* SessionRow.swift */; };
+		917F76A72BA222DE003A7031 /* Education-Lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 917F76A62BA222DE003A7031 /* Education-Lottie.json */; };
+		917F76AA2BA22917003A7031 /* AI-Robot-Lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 917F76A82BA22916003A7031 /* AI-Robot-Lottie.json */; };
+		917F76B12BA22BD7003A7031 /* Privacy-Lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 917F76B02BA22BD7003A7031 /* Privacy-Lottie.json */; };
 		918391A22B8B94990085FF17 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918391A12B8B94990085FF17 /* ScannerView.swift */; };
 		918391A52B8B95960085FF17 /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918391A42B8B95960085FF17 /* TextRecognizer.swift */; };
 		919439C42B88DEA4006654C2 /* MainframeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919439C32B88DEA4006654C2 /* MainframeViewModel.swift */; };
@@ -88,6 +91,9 @@
 		911E47F02B87363800796D1A /* AISightQuestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISightQuestUITests.swift; sourceTree = "<group>"; };
 		911E47F22B87363800796D1A /* AISightQuestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISightQuestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		916128C82B890BEB001094E5 /* SessionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRow.swift; sourceTree = "<group>"; };
+		917F76A62BA222DE003A7031 /* Education-Lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Education-Lottie.json"; sourceTree = "<group>"; };
+		917F76A82BA22916003A7031 /* AI-Robot-Lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "AI-Robot-Lottie.json"; sourceTree = "<group>"; };
+		917F76B02BA22BD7003A7031 /* Privacy-Lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Privacy-Lottie.json"; sourceTree = "<group>"; };
 		918391A12B8B94990085FF17 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		918391A42B8B95960085FF17 /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
 		919439C32B88DEA4006654C2 /* MainframeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeViewModel.swift; sourceTree = "<group>"; };
@@ -211,6 +217,17 @@
 			path = AISightQuestUITests;
 			sourceTree = "<group>";
 		};
+		917F76B22BA22C0A003A7031 /* LottieAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				917F76A82BA22916003A7031 /* AI-Robot-Lottie.json */,
+				919F8D292B94CEB1003E735A /* AI-Sight-Quest-Lottie.json */,
+				917F76A62BA222DE003A7031 /* Education-Lottie.json */,
+				917F76B02BA22BD7003A7031 /* Privacy-Lottie.json */,
+			);
+			path = LottieAnimations;
+			sourceTree = "<group>";
+		};
 		918391A32B8B95880085FF17 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,10 +240,10 @@
 		918EFFA82B88A5EA0012BCE0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				919F8D292B94CEB1003E735A /* AI-Sight-Quest-Lottie.json */,
 				911E47D92B87363800796D1A /* Assets.xcassets */,
 				91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */,
 				91ECF9282B93E56F00517B67 /* BERT Core ML Model Resources */,
+				917F76B22BA22C0A003A7031 /* LottieAnimations */,
 				911E47DB2B87363800796D1A /* Preview Content */,
 			);
 			path = Resources;
@@ -612,9 +629,12 @@
 			files = (
 				911E47DD2B87363800796D1A /* Preview Assets.xcassets in Resources */,
 				911E47DA2B87363800796D1A /* Assets.xcassets in Resources */,
+				917F76AA2BA22917003A7031 /* AI-Robot-Lottie.json in Resources */,
+				917F76A72BA222DE003A7031 /* Education-Lottie.json in Resources */,
 				91ECF92A2B93E57000517B67 /* bert-base-uncased-vocab.txt in Resources */,
 				91EF21EC2B894AF700FBFEC3 /* Localizable.xcstrings in Resources */,
 				919F8D2A2B94CEB1003E735A /* AI-Sight-Quest-Lottie.json in Resources */,
+				917F76B12BA22BD7003A7031 /* Privacy-Lottie.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

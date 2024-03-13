@@ -185,7 +185,7 @@ private extension IntroView {
             
             LottieView(name: intro.imageName, loopMode: .loop)
                 .aspectRatio(contentMode: .fit)
-                .frame(height: 250, alignment: .top)
+                .frame(width: size.width * 0.7, alignment: .top)
                 .padding(.horizontal, 20)
                 .offset(x: -size.width * CGFloat(currentIndex - index))
                 .animation(.interactiveSpring(response: 0.9,
@@ -202,7 +202,7 @@ private extension IntroView {
         VStack(spacing: 10) {
             LottieView(name: Intro.Data.lastIntro.imageName, loopMode: .loop)
                 .aspectRatio(contentMode: .fit)
-                .frame(height: 250, alignment: .top)
+                .frame(width: size.width * 0.7, alignment: .top)
                 .padding(.horizontal, 20)
                 .offset(x: -size.width * CGFloat(currentIndex - index))
                 .animation(.interactiveSpring(response: 0.9,
