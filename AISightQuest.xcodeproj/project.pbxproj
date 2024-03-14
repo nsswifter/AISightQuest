@@ -59,6 +59,7 @@
 		91ECF92A2B93E57000517B67 /* bert-base-uncased-vocab.txt in Resources */ = {isa = PBXBuildFile; fileRef = 91ECF9292B93E56F00517B67 /* bert-base-uncased-vocab.txt */; };
 		91ECF92D2B93E62300517B67 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF92C2B93E62300517B67 /* TextView.swift */; };
 		91EF21EC2B894AF700FBFEC3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */; };
+		91FDF5A02BA38E5200180583 /* MainframeBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FDF59F2BA38E5200180583 /* MainframeBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,7 @@
 		91ECF9292B93E56F00517B67 /* bert-base-uncased-vocab.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "bert-base-uncased-vocab.txt"; sourceTree = "<group>"; };
 		91ECF92C2B93E62300517B67 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		91FDF59F2BA38E5200180583 /* MainframeBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				911E47D52B87363600796D1A /* MainframeView.swift */,
+				91FDF59F2BA38E5200180583 /* MainframeBackgroundView.swift */,
 				916128C82B890BEB001094E5 /* SessionRow.swift */,
 			);
 			path = View;
@@ -672,6 +675,7 @@
 				91ECF91C2B93E48600517B67 /* Routes.swift in Sources */,
 				91ECF9262B93E51E00517B67 /* BERTVocabulary.swift in Sources */,
 				918391A22B8B94990085FF17 /* ScannerView.swift in Sources */,
+				91FDF5A02BA38E5200180583 /* MainframeBackgroundView.swift in Sources */,
 				91C5CB912B8B654700132C1E /* SessionViewModel.swift in Sources */,
 				911E47D62B87363600796D1A /* MainframeView.swift in Sources */,
 				91C5CB942B8B662700132C1E /* SessionRouter.swift in Sources */,
