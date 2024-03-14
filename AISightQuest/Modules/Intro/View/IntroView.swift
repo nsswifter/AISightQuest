@@ -210,7 +210,7 @@ private extension IntroView {
                                               blendDuration: 0.5).delay(0),
                            value: currentIndex)
             
-            Text(Intro.Data.lastIntro.text)
+            Text(Intro.Data.lastIntro.title)
                 .font(.system(size: 28, weight: .bold))
                 .offset(x: -size.width * CGFloat(currentIndex - index))
                 .animation(.interactiveSpring(response: 0.9,
