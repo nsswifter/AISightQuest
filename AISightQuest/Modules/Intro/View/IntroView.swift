@@ -37,6 +37,9 @@ struct IntroView: View {
                                       dampingFraction: 0.85,
                                       blendDuration: 0.6),
                    value: showHomeView)
+        .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1), trigger: currentIndex)
+        .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1), trigger: showWalkThroughScreens)
+        .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1), trigger: navigationState.routes)
         .navigationBarBackButtonHidden()
     }
 }

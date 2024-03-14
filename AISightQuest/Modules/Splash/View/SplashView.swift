@@ -14,7 +14,7 @@ struct SplashView: View {
     @State private(set) var viewModel: ViewModel
     @EnvironmentObject private var navigationState: NavigationState
     
-    @State private(set) var isFirstOpen = true
+    @State private var isFirstOpen = true
     
     var body: some View {
         ZStack {

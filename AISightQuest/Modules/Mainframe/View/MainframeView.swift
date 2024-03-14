@@ -14,6 +14,8 @@ struct MainframeView: View {
     @State private(set) var viewModel: ViewModel
     @EnvironmentObject private var navigationState: NavigationState
 
+    @State private var sessionTapped = 0
+
     var body: some View {
         ZStack {
             MainframeBackgroundView()
@@ -23,11 +25,16 @@ struct MainframeView: View {
                     ForEach(Array($viewModel.sessions.enumerated()), id: \.element.id) { index, session in
                         Button {
                             navigationState.routes.append(Routes.mainframe(.session(modelContext: viewModel.modelContext, sessionIndex: index)))
+                            sessionTapped += 1
                         } label: {
                             SessionRow(session: session)
                         }
-                        .listRowBackground(Color.darkBlue500)
-                        .listRowSeparatorTint(Color.lilac400)
+                        .listRowBackground(LinearGradient(colors: [Color.darkBlue500,
+                                                                   .darkBlue500,
+                                                                   .darkBlue600],
+                                                          startPoint: .topLeading,
+                                                          endPoint: .bottomTrailing))                        .listRowSeparatorTint(Color.lilac400)
+                            .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1), trigger: sessionTapped)
                     }
                     .onDelete { indexSet in
                         withAnimation {
@@ -74,6 +81,7 @@ struct MainframeView: View {
                             .fill(.lilac500)
                             .shadow(color: .white, radius: 20, x: 0, y: 0)
                     }
+                    .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1), trigger: viewModel.sessions)
                 }
                 .padding()
             }
