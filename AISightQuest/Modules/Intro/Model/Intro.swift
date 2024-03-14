@@ -11,17 +11,17 @@ struct Intro {
     struct IntroItem: Identifiable {
         var id: String = UUID().uuidString
         var imageName: String
-        var title: String
-        var text: String
+        var title: LocalizedStringKey
+        var text: LocalizedStringKey
     }
     
     struct Data {
         static var intros: [IntroItem] = [
-            IntroItem(imageName: "Education-Lottie", title: "Sample", text: "Sample"),
-            IntroItem(imageName: "AI-Robot-Lottie", title: "Sample", text: "Sample")
+            IntroItem(imageName: "Education-Lottie", title: "Education View Title", text: "Education View Text"),
+            IntroItem(imageName: "AI-Robot-Lottie", title: "AI Robot View Title", text: "AI Robot View Text")
         ]
         
-        static var firstIntro = IntroItem(imageName: "AI-Sight-Quest-Lottie", title: "Sample", text: "Sample")
-        static var lastIntro = IntroItem(imageName: "Privacy-Lottie", title: "Sample", text: "Sample")
+        static var firstIntro = IntroItem(imageName: "AI-Sight-Quest-Lottie", title: "", text: "First View Text")
+        static var lastIntro = IntroItem(imageName: "Privacy-Lottie", title: "Privacy View Title", text: "Privacy View Text")
     }
 }

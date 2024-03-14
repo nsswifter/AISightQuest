@@ -62,6 +62,7 @@ private extension IntroView {
                 
                 Text(Intro.Data.firstIntro.text)
                     .font(.system(size: 14))
+                    .foregroundStyle(.darkBlue600)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 30)
                 
@@ -69,10 +70,10 @@ private extension IntroView {
                     .font(.system(size: 14, weight: .semibold))
                     .padding(.horizontal, 40)
                     .padding(.vertical, 14)
-                    .foregroundColor(.white)
+                    .foregroundColor(.lilac200)
                     .background {
                         Capsule()
-                            .fill(Color(.black))
+                            .fill(Color(.darkBlue500))
                     }
                     .padding(.top, 30)
                     .onTapGesture {
@@ -117,13 +118,13 @@ private extension IntroView {
                     HStack {
                         Text("last intro button text")
                             .font(.system(size: 15, weight: .bold))
-                            .foregroundColor(.white)
+                            .foregroundColor(.lilac200)
                             .frame(maxWidth: .infinity, alignment: .leading)
                         
                         Image(systemName: "arrow.right")
                             .font(.title3)
                             .fontWeight(.semibold)
-                            .foregroundColor(.white)
+                            .foregroundColor(.lilac200)
                     }
                     .padding(.horizontal, 15)
                     .scaleEffect(isLast ? 1 : 0.001)
@@ -132,11 +133,11 @@ private extension IntroView {
                 }
                 .frame(width: isLast ? (size.width / 1.5) : 55,
                        height: isLast ? 50 : 55)
-                .foregroundColor(.white)
+                .foregroundColor(.lilac200)
                 .background {
                     RoundedRectangle(cornerRadius: isLast ? 10 : 30,
                                      style: isLast ? .continuous : .circular)
-                    .fill(.black)
+                    .fill(.darkBlue500)
                 }
                 .onTapGesture {
                     // MARK: Update Current Index
@@ -193,6 +194,7 @@ private extension IntroView {
                                               blendDuration: 0.5).delay(0),
                            value: currentIndex)
         }
+        .foregroundStyle(.darkBlue600)
     }
     
     // MARK: - Welcome View
@@ -210,7 +212,7 @@ private extension IntroView {
                                               blendDuration: 0.5).delay(0),
                            value: currentIndex)
             
-            Text(Intro.Data.lastIntro.text)
+            Text(Intro.Data.lastIntro.title)
                 .font(.system(size: 28, weight: .bold))
                 .offset(x: -size.width * CGFloat(currentIndex - index))
                 .animation(.interactiveSpring(response: 0.9,
@@ -228,6 +230,7 @@ private extension IntroView {
                                               blendDuration: 0.5).delay(0.1),
                            value: currentIndex)
         }
+        .foregroundStyle(.darkBlue600)
     }
     
     // MARK: - Nav Bar
@@ -244,14 +247,14 @@ private extension IntroView {
                 Image(systemName: "chevron.left")
                     .font(.title3)
                     .fontWeight(.semibold)
-                    .foregroundColor(Color.black)
+                    .foregroundColor(Color.darkBlue500)
             }
             
             Spacer()
             
             Button("skip") { currentIndex = Intro.Data.intros.count }
                 .font(.system(size: 14, weight: .regular))
-                .foregroundColor(Color.black)
+                .foregroundColor(Color.darkBlue500)
                 .opacity(islast ? 0 : 1)
                 .animation(.easeInOut, value: islast)
         }

@@ -1,12 +1,65 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
+    "AI Robot View Text" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delve into the world of machine learning and witness its impact firsthand. Experience the cutting-edge technology behind this app, enhancing document interaction in ways you've never imagined."
+          }
+        }
+      }
+    },
+    "AI Robot View Title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powered by AI"
+          }
+        }
+      }
+    },
+    "Education View Text" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Discover a new dimension in studying with advanced scanning technology. Effortlessly extract text from documents to streamline your information retrieval process."
+          }
+        }
+      }
+    },
+    "Education View Title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elevate Your Studies"
+          }
+        }
+      }
+    },
     "first intro button text" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Let's begin"
+          }
+        }
+      }
+    },
+    "First View Text" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Experience a seamless blend of technology and productivity. Our platform offers innovative tools for efficient document handling. Step into a new era of work."
           }
         }
       }
@@ -37,6 +90,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "New Session"
+          }
+        }
+      }
+    },
+    "Privacy View Text" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rest assured knowing your data stays safe and private on your device. With no need for internet access, your documents remain strictly local, ensuring maximum privacy and confidentiality."
+          }
+        }
+      }
+    },
+    "Privacy View Title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Secure and Confidential"
           }
         }
       }
