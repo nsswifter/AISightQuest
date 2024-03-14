@@ -70,7 +70,7 @@ private extension IntroView {
                     .font(.system(size: 14, weight: .semibold))
                     .padding(.horizontal, 40)
                     .padding(.vertical, 14)
-                    .foregroundColor(.lilac200)
+                    .foregroundStyle(.lilac200)
                     .background {
                         Capsule()
                             .fill(Color(.darkBlue500))
@@ -118,13 +118,13 @@ private extension IntroView {
                     HStack {
                         Text("last intro button text")
                             .font(.system(size: 15, weight: .bold))
-                            .foregroundColor(.lilac200)
+                            .foregroundStyle(.lilac200)
                             .frame(maxWidth: .infinity, alignment: .leading)
                         
                         Image(systemName: "arrow.right")
                             .font(.title3)
                             .fontWeight(.semibold)
-                            .foregroundColor(.lilac200)
+                            .foregroundStyle(.lilac200)
                     }
                     .padding(.horizontal, 15)
                     .scaleEffect(isLast ? 1 : 0.001)
@@ -133,11 +133,10 @@ private extension IntroView {
                 }
                 .frame(width: isLast ? (size.width / 1.5) : 55,
                        height: isLast ? 50 : 55)
-                .foregroundColor(.lilac200)
+                .foregroundStyle(.lilac200)
                 .background {
-                    RoundedRectangle(cornerRadius: isLast ? 10 : 30,
-                                     style: isLast ? .continuous : .circular)
-                    .fill(.darkBlue500)
+                    Capsule()
+                        .fill(.darkBlue500)
                 }
                 .onTapGesture {
                     // MARK: Update Current Index
@@ -247,14 +246,14 @@ private extension IntroView {
                 Image(systemName: "chevron.left")
                     .font(.title3)
                     .fontWeight(.semibold)
-                    .foregroundColor(Color.darkBlue500)
+                    .foregroundStyle(Color.darkBlue500)
             }
             
             Spacer()
             
             Button("skip") { currentIndex = Intro.Data.intros.count }
                 .font(.system(size: 14, weight: .regular))
-                .foregroundColor(Color.darkBlue500)
+                .foregroundStyle(Color.darkBlue500)
                 .opacity(islast ? 0 : 1)
                 .animation(.easeInOut, value: islast)
         }

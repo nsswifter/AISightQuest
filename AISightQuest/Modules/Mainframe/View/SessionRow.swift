@@ -16,11 +16,12 @@ struct SessionRow: View {
     var body: some View {
         HStack {
             Image(systemName: shouldRename ? "square.and.pencil.circle" : "doc.viewfinder.fill")
-                .foregroundStyle(.lilac500)
+                .foregroundStyle(.lilac400)
                 .font(.title3)
 
             if shouldRename {
                 TextField("new session", text: $session.name)
+                    .foregroundStyle(.lilac100)
                     .focused($isTextFieldFocused)
                     .submitLabel(.done)
                     .onSubmit() {
@@ -28,7 +29,7 @@ struct SessionRow: View {
                     }
             } else {
                 Text(session.name)
-                    .foregroundStyle(.black)
+                    .foregroundStyle(.lilac100)
                     .contextMenu {
                         Button("rename") {
                             shouldRename = true
