@@ -21,31 +21,41 @@ struct MainframeView: View {
             MainframeBackgroundView()
             
             Group {
-                List {
-                    ForEach(Array($viewModel.sessions.enumerated()), id: \.element.id) { index, session in
-                        Button {
-                            navigationState.routes.append(Routes.mainframe(.session(modelContext: viewModel.modelContext, sessionIndex: index)))
-                            sessionTapped += 1
-                        } label: {
-                            SessionRow(session: session)
-                        }
-                        .listRowBackground(LinearGradient(colors: [Color.darkBlue500,
-                                                                   .darkBlue500,
-                                                                   .darkBlue600],
-                                                          startPoint: .topLeading,
-                                                          endPoint: .bottomTrailing))                        .listRowSeparatorTint(Color.lilac400)
-                            .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1), trigger: sessionTapped)
+                if viewModel.sessions.isEmpty {
+                    VStack {
+                        LottieView(name: "Mainframe-Lottie", loopMode: .loop)
+                            .aspectRatio(contentMode: .fit)
+                            .padding(.horizontal, 20)
+                        
+                        Spacer()
                     }
-                    .onDelete { indexSet in
-                        withAnimation {
-                            viewModel.deleteSession(indexSet: indexSet)
+                } else {
+                    List {
+                        ForEach(Array($viewModel.sessions.enumerated()), id: \.element.id) { index, session in
+                            Button {
+                                navigationState.routes.append(Routes.mainframe(.session(modelContext: viewModel.modelContext, sessionIndex: index)))
+                                sessionTapped += 1
+                            } label: {
+                                SessionRow(session: session)
+                            }
+                            .listRowBackground(LinearGradient(colors: [Color.darkBlue500,
+                                                                       .darkBlue500,
+                                                                       .darkBlue600],
+                                                              startPoint: .topLeading,
+                                                              endPoint: .bottomTrailing))                        .listRowSeparatorTint(Color.lilac400)
+                                .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1), trigger: sessionTapped)
+                        }
+                        .onDelete { indexSet in
+                            withAnimation {
+                                viewModel.deleteSession(indexSet: indexSet)
+                            }
                         }
                     }
+                    .padding(.bottom, 36)
+                    .scrollIndicators(.never)
+                    .scrollContentBackground(.hidden)
+                    .background(.clear)
                 }
-                .padding(.bottom, 36)
-                .scrollIndicators(.never)
-                .scrollContentBackground(.hidden)
-                .background(.clear)
                 
                 VStack {
                     Spacer()
@@ -57,7 +67,9 @@ struct MainframeView: View {
                         }
                     
                     Button {
-                        viewModel.addSession(name: "New Session", lastChange: Date())
+                        withAnimation(.smooth) {
+                            viewModel.addSession(name: "New Session", lastChange: Date())
+                        }
                     } label: {
                         HStack {
                             Image(systemName: "plus")

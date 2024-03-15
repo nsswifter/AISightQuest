@@ -17,8 +17,8 @@ struct MainframeBackgroundView: View {
     var body: some View {
         LinearGradient(gradient: Gradient(colors: [
             .white, .darkBlue500, .lilac400, .white,
-            .darkBlue500, .white, .white, .lilac400,
-            .white, .darkBlue500, .lilac200, .white
+            .darkBlue500, .white, .lilac300, .white,
+            .white, .darkBlue300, .lilac200, .white
         ]), startPoint: start, endPoint: end)
         .animation(Animation.easeInOut(duration: 30)
             .repeatForever(autoreverses: true)

@@ -60,6 +60,7 @@
 		91ECF92D2B93E62300517B67 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF92C2B93E62300517B67 /* TextView.swift */; };
 		91EF21EC2B894AF700FBFEC3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */; };
 		91FDF5A02BA38E5200180583 /* MainframeBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FDF59F2BA38E5200180583 /* MainframeBackgroundView.swift */; };
+		91FDF5A22BA3A87200180583 /* Mainframe-Lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 91FDF5A12BA3A87200180583 /* Mainframe-Lottie.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +136,7 @@
 		91ECF92C2B93E62300517B67 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		91FDF59F2BA38E5200180583 /* MainframeBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeBackgroundView.swift; sourceTree = "<group>"; };
+		91FDF5A12BA3A87200180583 /* Mainframe-Lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Mainframe-Lottie.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,7 @@
 			children = (
 				914CA7232BA3119E00AF7ED8 /* AI-Robot-Lottie.json */,
 				919F8D292B94CEB1003E735A /* AI-Sight-Quest-Lottie.json */,
+				91FDF5A12BA3A87200180583 /* Mainframe-Lottie.json */,
 				917F76A62BA222DE003A7031 /* Education-Lottie.json */,
 				917F76B02BA22BD7003A7031 /* Privacy-Lottie.json */,
 			);
@@ -631,6 +634,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				911E47DD2B87363800796D1A /* Preview Assets.xcassets in Resources */,
+				91FDF5A22BA3A87200180583 /* Mainframe-Lottie.json in Resources */,
 				911E47DA2B87363800796D1A /* Assets.xcassets in Resources */,
 				917F76A72BA222DE003A7031 /* Education-Lottie.json in Resources */,
 				91ECF92A2B93E57000517B67 /* bert-base-uncased-vocab.txt in Resources */,
