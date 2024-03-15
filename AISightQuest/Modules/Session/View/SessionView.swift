@@ -34,7 +34,7 @@ struct SessionView: View {
                 isShowingScannerSheet = true
             } label: {
                 Label("scan", systemImage: "camera.viewfinder")
-                    .foregroundColor(.darkBlue900)
+                    .foregroundStyle(.darkBlue900)
                     .font(.title2)
             }
             .padding()
@@ -61,7 +61,7 @@ struct SessionView: View {
                     questionText = ""
                 } label: {
                     Image(systemName: "xmark.square")
-                        .foregroundColor(.darkBlue500)
+                        .foregroundStyle(.darkBlue500)
                         .font(.title2)
                         .padding(.trailing)
                 }
