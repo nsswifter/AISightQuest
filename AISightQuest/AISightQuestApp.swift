@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import TipKit
 
 @main
 struct AISightQuestApp: App {
@@ -34,6 +35,12 @@ struct AISightQuestApp: App {
                             ViewFactory.viewForDestination(route)
                         }
                     }
+            }
+            .task {
+                try? Tips.configure([
+                    .displayFrequency(.immediate),
+                    .datastoreLocation(.applicationDefault)
+                ])
             }
             .tint(.darkBlue500)
             .environmentObject(navigationState)

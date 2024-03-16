@@ -59,6 +59,7 @@
 		91ECF92A2B93E57000517B67 /* bert-base-uncased-vocab.txt in Resources */ = {isa = PBXBuildFile; fileRef = 91ECF9292B93E56F00517B67 /* bert-base-uncased-vocab.txt */; };
 		91ECF92D2B93E62300517B67 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF92C2B93E62300517B67 /* TextView.swift */; };
 		91EF21EC2B894AF700FBFEC3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */; };
+		91FB811A2BA622F50052C15F /* NewSessionTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FB81192BA622F50052C15F /* NewSessionTip.swift */; };
 		91FDF5A02BA38E5200180583 /* MainframeBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FDF59F2BA38E5200180583 /* MainframeBackgroundView.swift */; };
 		91FDF5A22BA3A87200180583 /* Mainframe-Lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 91FDF5A12BA3A87200180583 /* Mainframe-Lottie.json */; };
 /* End PBXBuildFile section */
@@ -135,6 +136,7 @@
 		91ECF9292B93E56F00517B67 /* bert-base-uncased-vocab.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "bert-base-uncased-vocab.txt"; sourceTree = "<group>"; };
 		91ECF92C2B93E62300517B67 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		91FB81192BA622F50052C15F /* NewSessionTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSessionTip.swift; sourceTree = "<group>"; };
 		91FDF59F2BA38E5200180583 /* MainframeBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeBackgroundView.swift; sourceTree = "<group>"; };
 		91FDF5A12BA3A87200180583 /* Mainframe-Lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Mainframe-Lottie.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -304,6 +306,7 @@
 				911E47D52B87363600796D1A /* MainframeView.swift */,
 				91FDF59F2BA38E5200180583 /* MainframeBackgroundView.swift */,
 				916128C82B890BEB001094E5 /* SessionRow.swift */,
+				91FB81192BA622F50052C15F /* NewSessionTip.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -695,6 +698,7 @@
 				91C5CB8E2B8B651800132C1E /* SessionView.swift in Sources */,
 				91C5CB892B8B62FC00132C1E /* SessionDependencyContainer.swift in Sources */,
 				918391A52B8B95960085FF17 /* TextRecognizer.swift in Sources */,
+				91FB811A2BA622F50052C15F /* NewSessionTip.swift in Sources */,
 				919F8D212B94CC9B003E735A /* SplashFactory.swift in Sources */,
 				91C5CB962B8B6D2A00132C1E /* ModelContextExtension.swift in Sources */,
 				91C5CB7B2B8B581100132C1E /* MainframeRouter.swift in Sources */,
