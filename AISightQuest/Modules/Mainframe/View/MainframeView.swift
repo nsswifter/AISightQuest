@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import TipKit
 
 // MARK: - Mainframe View
 
@@ -60,11 +61,8 @@ struct MainframeView: View {
                 VStack {
                     Spacer()
                     
-                    Text("hidden reset button")
-                        .foregroundStyle(.clear)
-                        .onTapGesture(count: 8) {
-                            viewModel.resetApplication()
-                        }
+                    TipView(NewSessionTip(), arrowEdge: .bottom)
+                        .tint(.darkBlue300)
                     
                     Button {
                         withAnimation(.smooth) {
@@ -79,7 +77,7 @@ struct MainframeView: View {
                         }
                         .bold()
                         .frame(maxWidth: .infinity)
-                        .padding(16)
+                        .padding(8)
                         .background {
                             Capsule()
                                 .fill(LinearGradient(colors: [Color.darkBlue500,
@@ -94,6 +92,12 @@ struct MainframeView: View {
                             .shadow(color: .white, radius: 20, x: 0, y: 0)
                     }
                     .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1), trigger: viewModel.sessions)
+                    
+                    Text("hidden reset button")
+                        .foregroundStyle(.clear)
+                        .onTapGesture(count: 8) {
+                            viewModel.resetApplication()
+                        }
                 }
                 .padding()
             }
