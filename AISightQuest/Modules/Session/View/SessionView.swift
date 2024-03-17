@@ -48,8 +48,8 @@ struct SessionView: View {
                     .submitLabel(.search)
                     .padding([.vertical, .leading])
                     .onSubmit {
-                        let result = searchButtonTapped(question: questionText,
-                                                        context: viewModel.sessions[viewModel.sessionIndex].text)
+                        let result = viewModel.findAnswer(for: questionText,
+                                                          in: viewModel.sessions[viewModel.sessionIndex].text)
                         
                         if let attributedString = result.attributedText {
                             attributedText = attributedString
@@ -97,32 +97,6 @@ struct SessionView: View {
             }
             isShowingScannerSheet = false
         }
-    }
-    
-    // TODO: Should be Move to The View Model
-    private func searchButtonTapped(question: String, context: String) -> (attributedText: NSAttributedString?, questionText: String){
-        // Use the BERT model to search for the answer.
-        let answer = BERT().findAnswer(for: question, in: context)
-        
-        // Highlight the answer substring in the original text.
-        var attributedText: NSAttributedString?
-        if answer.base == context {
-            let mutableAttributedText = NSMutableAttributedString(string: context,
-                                                                  attributes: [.foregroundColor: UIColor.black,
-                                                                               .font: UIFontMetrics(forTextStyle: .body)
-                                                                               .scaledFont(for: UIFont.systemFont(ofSize: 17))])
-            
-            let location = answer.startIndex.utf16Offset(in: context)
-            let length = answer.endIndex.utf16Offset(in: context) - location
-            let answerRange = NSRange(location: location, length: length)
-            
-            mutableAttributedText.addAttributes([.foregroundColor: UIColor.darkBlue600,
-                                                 .font: UIFontMetrics(forTextStyle: .body)
-                                                 .scaledFont(for: UIFont.boldSystemFont(ofSize: 17))],
-                                                range: answerRange)
-            attributedText = mutableAttributedText
-        }
-        return (attributedText, String(answer))
     }
 }
 
