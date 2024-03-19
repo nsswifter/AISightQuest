@@ -38,7 +38,7 @@ struct SessionView: View {
                     .font(.title2)
             }
             .padding()
-            .background(.lilac100)
+            .background(.lilac200)
             .clipShape(RoundedRectangle(cornerRadius: 32))
             .shadow(color: .lilac500,radius: 10)
             .shadow(color: .darkBlue600,radius: 15)
