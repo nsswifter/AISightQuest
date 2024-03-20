@@ -78,6 +78,7 @@ struct MainframeView: View {
                         .bold()
                         .frame(maxWidth: .infinity)
                         .padding(8)
+                        .frame(height: 40)
                         .background {
                             Capsule()
                                 .fill(LinearGradient(colors: [Color.darkBlue500,

@@ -19,29 +19,83 @@ struct SessionView: View {
     @State private var attributedText = NSAttributedString(string: "")
     
     var body: some View {
-        VStack(spacing: 18) {
+        VStack(spacing: 8) {
             TextView(attributedText: $attributedText)
                 .padding()
-                .background(LinearGradient(colors: [.lilac500, .darkBlue500, .lilac400, .darkBlue600],
-                                           startPoint: .topLeading,
-                                           endPoint: .bottomTrailing)
-                    .opacity(0.7)
-                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                .padding(.bottom, 52)
+                .background {
+                    LinearGradient(colors: [.darkBlue300, .lilac100,
+                                            .darkBlue300, .lilac200],
+                                   startPoint: .topLeading,
+                                   endPoint: .bottomTrailing)
+                }
+                .clipShape(RoundedRectangle(cornerRadius: 36))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 36)                        .stroke(.darkBlue300, lineWidth: 1)
                 )
                 .padding()
-            
-            Button {
-                isShowingScannerSheet = true
-            } label: {
-                Label("scan", systemImage: "camera.viewfinder")
-                    .foregroundStyle(.darkBlue900)
-                    .font(.title2)
-            }
-            .padding()
-            .background(.lilac200)
-            .clipShape(RoundedRectangle(cornerRadius: 32))
-            .shadow(color: .lilac500,radius: 10)
-            .shadow(color: .darkBlue600,radius: 15)
+                .overlay {
+                    VStack {
+                        Spacer()
+                        
+                        HStack {
+                            Spacer()
+                            
+                            Button {
+                                isShowingScannerSheet = true
+                            } label: {
+                                HStack {
+                                    Image(systemName: "camera.circle.fill")
+                                        .foregroundStyle(.lilac200)
+                                        .font(.title2)
+                                    Text("scan")
+                                        .foregroundStyle(.lilac100)
+                                }
+                                .bold()
+                                .padding()
+                                .frame(height: 40)
+                                .background {
+                                    Capsule()
+                                        .fill(LinearGradient(colors: [Color.darkBlue500,
+                                                                      .darkBlue900],
+                                                             startPoint: .top,
+                                                             endPoint: .bottom))
+                                }
+                            }
+                            .background {
+                                Capsule()
+                                    .fill(.lilac500)
+                                    .shadow(color: .lilac100, radius: 20, x: 0, y: 0)
+                            }
+                            .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1), trigger: isShowingScannerSheet)
+                            
+                            Button {
+                                setAttributedText("")
+                            } label: {
+                                Image(systemName: "xmark")
+                                    .foregroundStyle(.lilac200)
+                                    .bold()
+                                    .padding()
+                                    .frame(height: 40)
+                                    .background {
+                                        Circle()
+                                            .fill(LinearGradient(colors: [Color.darkBlue500,
+                                                                          .darkBlue900],
+                                                                 startPoint: .top,
+                                                                 endPoint: .bottom))
+                                    }
+                            }
+                            .background {
+                                Circle()
+                                    .fill(.lilac500)
+                                    .shadow(color: .lilac100, radius: 20, x: 0, y: 0)
+                            }
+                            .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1), trigger: isShowingScannerSheet)
+                        }
+                    }
+                    .padding(28)
+                    .padding(.vertical, 4)
+                }
             
             HStack {
                 TextField("question text field", text: $questionText)
@@ -60,14 +114,14 @@ struct SessionView: View {
                 Button {
                     questionText = ""
                 } label: {
-                    Image(systemName: "xmark.square")
+                    Image(systemName: "xmark.circle")
                         .foregroundStyle(.darkBlue500)
-                        .font(.title2)
+                        .font(.title)
                         .padding(.trailing)
                 }
             }
             .overlay(
-                RoundedRectangle(cornerRadius: 16)
+                Capsule()
                     .stroke(.lilac200, lineWidth: 2)
             )
             .padding()
@@ -95,6 +149,7 @@ struct SessionView: View {
                 .trimmingCharacters(in: .whitespacesAndNewlines) {
                 setAttributedText(text)
             }
+            hideKeyboard()
             isShowingScannerSheet = false
         }
     }
