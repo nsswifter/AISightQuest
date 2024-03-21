@@ -15,6 +15,9 @@ struct SessionView: View {
     @EnvironmentObject private var navigationState: NavigationState
     
     @State private var isShowingScannerSheet = false
+    @State private var clearAttributedTextButtonTapped = 0
+    @State private var clearQuestionButtonTapped = 0
+
     @State private var questionText = ""
     @State private var attributedText = NSAttributedString(string: "")
     
@@ -67,10 +70,12 @@ struct SessionView: View {
                                     .fill(.lilac500)
                                     .shadow(color: .lilac100, radius: 20, x: 0, y: 0)
                             }
-                            .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1), trigger: isShowingScannerSheet)
+                            .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
+                                             trigger: isShowingScannerSheet)
                             
                             Button {
                                 setAttributedText("")
+                                clearAttributedTextButtonTapped += 1
                             } label: {
                                 Image(systemName: "xmark")
                                     .foregroundStyle(.lilac200)
@@ -90,7 +95,8 @@ struct SessionView: View {
                                     .fill(.lilac500)
                                     .shadow(color: .lilac100, radius: 20, x: 0, y: 0)
                             }
-                            .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1), trigger: isShowingScannerSheet)
+                            .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
+                                             trigger: clearAttributedTextButtonTapped)
                         }
                     }
                     .padding(28)
@@ -113,12 +119,15 @@ struct SessionView: View {
                 
                 Button {
                     questionText = ""
+                    clearQuestionButtonTapped += 1
                 } label: {
                     Image(systemName: "xmark.circle")
                         .foregroundStyle(.darkBlue500)
                         .font(.title)
                         .padding(.trailing)
                 }
+                .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
+                                 trigger: clearQuestionButtonTapped)
             }
             .overlay(
                 Capsule()
@@ -149,7 +158,6 @@ struct SessionView: View {
                 .trimmingCharacters(in: .whitespacesAndNewlines) {
                 setAttributedText(text)
             }
-            hideKeyboard()
             isShowingScannerSheet = false
         }
     }
