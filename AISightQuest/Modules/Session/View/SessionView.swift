@@ -56,10 +56,7 @@ struct SessionView: View {
                                    startPoint: .topLeading,
                                    endPoint: .bottomTrailing)
                 }
-                .clipShape(RoundedRectangle(cornerRadius: 36))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 36)                        .stroke(.darkBlue300, lineWidth: 1)
-                )
+                .clipShape(RoundedRectangle(cornerRadius: 24))
                 .padding()
                 .overlay {
                     VStack {
