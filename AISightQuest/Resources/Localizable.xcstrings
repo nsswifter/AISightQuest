@@ -24,6 +24,19 @@
         }
       }
     },
+    "back" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back"
+          }
+        }
+      }
+    },
+    "By creating New Sessions you can scan articles and ask them questions!" : {
+
+    },
     "Education View Text" : {
       "localizations" : {
         "en" : {
