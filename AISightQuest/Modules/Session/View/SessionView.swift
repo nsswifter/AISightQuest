@@ -11,18 +11,42 @@ import SwiftData
 // MARK: - Session View
 
 struct SessionView: View {
+    @Environment(\.dismiss) private var dismiss
     @State private(set) var viewModel: ViewModel
     @EnvironmentObject private var navigationState: NavigationState
     
     @State private var isShowingScannerSheet = false
     @State private var clearAttributedTextButtonTapped = 0
     @State private var clearQuestionButtonTapped = 0
+    @State private var dismissButtonTapped = 0
 
     @State private var questionText = ""
     @State private var attributedText = NSAttributedString(string: "")
     
     var body: some View {
         VStack(spacing: 8) {
+            HStack {
+                Button {
+                    dismiss()
+                    dismissButtonTapped += 1
+                } label: {
+                    HStack {
+                        Image(systemName: "arrowshape.turn.up.backward.fill")
+                            .rotationEffect(.degrees(90))
+                            .scaleEffect(x: -1, y: 1)
+                            .bold()
+                        
+                        Text("Back")
+                            .foregroundStyle(.darkBlue500)
+                    }
+                    .padding(.leading)
+                }
+                .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
+                                 trigger: dismissButtonTapped)
+                
+                Spacer()
+            }
+            
             TextView(attributedText: $attributedText)
                 .padding()
                 .padding(.bottom, 52)
