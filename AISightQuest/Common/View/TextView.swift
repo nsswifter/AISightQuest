@@ -19,6 +19,8 @@ struct TextView: UIViewRepresentable {
         textView.isSelectable = true
         textView.isUserInteractionEnabled = true
         textView.backgroundColor = .clear
+        textView.showsHorizontalScrollIndicator = false
+        textView.showsVerticalScrollIndicator = false
         textView.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: UIFont.systemFont(ofSize: 17))
         return textView
     }

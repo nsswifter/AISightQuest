@@ -11,37 +11,121 @@ import SwiftData
 // MARK: - Session View
 
 struct SessionView: View {
+    @Environment(\.dismiss) private var dismiss
     @State private(set) var viewModel: ViewModel
     @EnvironmentObject private var navigationState: NavigationState
     
     @State private var isShowingScannerSheet = false
+    @State private var clearAttributedTextButtonTapped = 0
+    @State private var clearQuestionButtonTapped = 0
+    @State private var dismissButtonTapped = 0
+
     @State private var questionText = ""
     @State private var attributedText = NSAttributedString(string: "")
     
     var body: some View {
-        VStack(spacing: 18) {
+        VStack(spacing: 8) {
+            HStack {
+                Button {
+                    dismiss()
+                    dismissButtonTapped += 1
+                } label: {
+                    HStack {
+                        Image(systemName: "arrowshape.turn.up.backward.fill")
+                            .rotationEffect(.degrees(90))
+                            .scaleEffect(x: -1, y: 1)
+                            .bold()
+                        
+                        Text("Back")
+                            .foregroundStyle(.darkBlue500)
+                    }
+                    .padding(.leading)
+                }
+                .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
+                                 trigger: dismissButtonTapped)
+                
+                Spacer()
+            }
+            
             TextView(attributedText: $attributedText)
                 .padding()
-                .background(LinearGradient(colors: [.lilac500, .darkBlue500, .lilac400, .darkBlue600],
-                                           startPoint: .topLeading,
-                                           endPoint: .bottomTrailing)
-                    .opacity(0.7)
-                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                .padding(.bottom, 52)
+                .background {
+                    LinearGradient(colors: [.darkBlue300, .lilac100,
+                                            .darkBlue300, .lilac200],
+                                   startPoint: .topLeading,
+                                   endPoint: .bottomTrailing)
+                }
+                .clipShape(RoundedRectangle(cornerRadius: 36))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 36)                        .stroke(.darkBlue300, lineWidth: 1)
                 )
                 .padding()
-            
-            Button {
-                isShowingScannerSheet = true
-            } label: {
-                Label("scan", systemImage: "camera.viewfinder")
-                    .foregroundStyle(.darkBlue900)
-                    .font(.title2)
-            }
-            .padding()
-            .background(.lilac200)
-            .clipShape(RoundedRectangle(cornerRadius: 32))
-            .shadow(color: .lilac500,radius: 10)
-            .shadow(color: .darkBlue600,radius: 15)
+                .overlay {
+                    VStack {
+                        Spacer()
+                        
+                        HStack {
+                            Spacer()
+                            
+                            Button {
+                                isShowingScannerSheet = true
+                            } label: {
+                                HStack {
+                                    Image(systemName: "camera.circle.fill")
+                                        .foregroundStyle(.lilac200)
+                                        .font(.title2)
+                                    Text("scan")
+                                        .foregroundStyle(.lilac100)
+                                }
+                                .bold()
+                                .padding()
+                                .frame(height: 40)
+                                .background {
+                                    Capsule()
+                                        .fill(LinearGradient(colors: [Color.darkBlue500,
+                                                                      .darkBlue900],
+                                                             startPoint: .top,
+                                                             endPoint: .bottom))
+                                }
+                            }
+                            .background {
+                                Capsule()
+                                    .fill(.lilac500)
+                                    .shadow(color: .lilac100, radius: 20, x: 0, y: 0)
+                            }
+                            .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
+                                             trigger: isShowingScannerSheet)
+                            
+                            Button {
+                                setAttributedText("")
+                                clearAttributedTextButtonTapped += 1
+                            } label: {
+                                Image(systemName: "xmark")
+                                    .foregroundStyle(.lilac200)
+                                    .bold()
+                                    .padding()
+                                    .frame(height: 40)
+                                    .background {
+                                        Circle()
+                                            .fill(LinearGradient(colors: [Color.darkBlue500,
+                                                                          .darkBlue900],
+                                                                 startPoint: .top,
+                                                                 endPoint: .bottom))
+                                    }
+                            }
+                            .background {
+                                Circle()
+                                    .fill(.lilac500)
+                                    .shadow(color: .lilac100, radius: 20, x: 0, y: 0)
+                            }
+                            .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
+                                             trigger: clearAttributedTextButtonTapped)
+                        }
+                    }
+                    .padding(28)
+                    .padding(.vertical, 4)
+                }
             
             HStack {
                 TextField("question text field", text: $questionText)
@@ -59,15 +143,18 @@ struct SessionView: View {
                 
                 Button {
                     questionText = ""
+                    clearQuestionButtonTapped += 1
                 } label: {
-                    Image(systemName: "xmark.square")
+                    Image(systemName: "xmark.circle")
                         .foregroundStyle(.darkBlue500)
-                        .font(.title2)
+                        .font(.title)
                         .padding(.trailing)
                 }
+                .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
+                                 trigger: clearQuestionButtonTapped)
             }
             .overlay(
-                RoundedRectangle(cornerRadius: 16)
+                Capsule()
                     .stroke(.lilac200, lineWidth: 2)
             )
             .padding()

@@ -16,6 +16,8 @@ struct MainframeView: View {
     @EnvironmentObject private var navigationState: NavigationState
 
     @State private var sessionTapped = 0
+    @State private var isShowingSessionSheet = false
+    @State private var index = 0
 
     var body: some View {
         ZStack {
@@ -34,7 +36,8 @@ struct MainframeView: View {
                     List {
                         ForEach(Array($viewModel.sessions.enumerated()), id: \.element.id) { index, session in
                             Button {
-                                navigationState.routes.append(Routes.mainframe(.session(modelContext: viewModel.modelContext, sessionIndex: index)))
+                                self.index = index
+                                isShowingSessionSheet = true
                                 sessionTapped += 1
                             } label: {
                                 SessionRow(session: session)
@@ -78,6 +81,7 @@ struct MainframeView: View {
                         .bold()
                         .frame(maxWidth: .infinity)
                         .padding(8)
+                        .frame(height: 40)
                         .background {
                             Capsule()
                                 .fill(LinearGradient(colors: [Color.darkBlue500,
@@ -102,6 +106,10 @@ struct MainframeView: View {
                 .padding()
             }
             .padding(.horizontal, 16)
+        }
+        .fullScreenCover(isPresented: $isShowingSessionSheet) {
+            MainframeRouter(routes: .session(modelContext: viewModel.modelContext, sessionIndex: index))
+                .configure()
         }
         .navigationBarBackButtonHidden()
     }
