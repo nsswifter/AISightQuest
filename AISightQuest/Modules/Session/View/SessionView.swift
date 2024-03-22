@@ -19,33 +19,38 @@ struct SessionView: View {
     @State private var clearAttributedTextButtonTapped = 0
     @State private var clearQuestionButtonTapped = 0
     @State private var dismissButtonTapped = 0
+    @State private var dismissButtonOffset = -100.0
 
     @State private var questionText = ""
     @State private var attributedText = NSAttributedString(string: "")
     
     var body: some View {
         VStack(spacing: 8) {
-            HStack {
-                Button {
-                    dismiss()
-                    dismissButtonTapped += 1
-                } label: {
-                    HStack {
-                        Image(systemName: "arrowshape.turn.up.backward.fill")
-                            .rotationEffect(.degrees(90))
-                            .scaleEffect(x: -1, y: 1)
-                            .bold()
-                        
-                        Text("Back")
-                            .foregroundStyle(.darkBlue500)
-                    }
-                    .padding(.leading)
+            Button {
+                dismiss()
+                dismissButtonTapped += 1
+            } label: {
+                HStack {
+                    Image(systemName: "arrowshape.turn.up.backward.fill")
+                        .rotationEffect(.degrees(90))
+                        .scaleEffect(x: -1, y: 1)
+                        .bold()
+                    
+                    Text("back")
+                        .foregroundStyle(.darkBlue500)
+                    
+                    Spacer()
                 }
-                .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
-                                 trigger: dismissButtonTapped)
-                
-                Spacer()
+                .padding(.leading)
             }
+            .offset(x: dismissButtonOffset)
+            .onAppear {
+                withAnimation(.bouncy(duration: 1)) {
+                    dismissButtonOffset = 0
+                }
+            }
+            .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
+                             trigger: dismissButtonTapped)
             
             TextView(attributedText: $attributedText)
                 .padding()
@@ -56,10 +61,7 @@ struct SessionView: View {
                                    startPoint: .topLeading,
                                    endPoint: .bottomTrailing)
                 }
-                .clipShape(RoundedRectangle(cornerRadius: 36))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 36)                        .stroke(.darkBlue300, lineWidth: 1)
-                )
+                .clipShape(RoundedRectangle(cornerRadius: 24))
                 .padding()
                 .overlay {
                     VStack {
