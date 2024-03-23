@@ -42,7 +42,6 @@ struct AISightQuestApp: App {
                     .datastoreLocation(.applicationDefault)
                 ])
             }
-            .tint(.darkBlue500)
             .environmentObject(navigationState)
         }
     }
