@@ -34,7 +34,15 @@ extension MainframeView {
         }
         
         func addSession(name: String, lastChange: Date) {
-            modelContext.insert(Session(name: name, lastChange: lastChange))
+            var newName = name
+            var count = 2
+            
+            while sessions.contains(where: { $0.name == newName }) {
+                newName = "\(name) \(count)"
+                count += 1
+            }
+            
+            modelContext.insert(Session(name: newName, lastChange: lastChange))
             fetchData()
         }
         
