@@ -37,10 +37,10 @@ struct SessionView: View {
                         .bold()
                     
                     Text("back")
-                        .foregroundStyle(.darkBlue500)
                     
                     Spacer()
                 }
+                .foregroundStyle(.darkBlue500)
                 .padding(.leading)
             }
             .offset(x: dismissButtonOffset)
@@ -131,6 +131,7 @@ struct SessionView: View {
             
             HStack {
                 TextField("question text field", text: $questionText)
+                    .tint(.lilac400)
                     .submitLabel(.search)
                     .padding([.vertical, .leading])
                     .onSubmit {
