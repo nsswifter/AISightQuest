@@ -16,6 +16,7 @@ struct MainframeView: View {
     @EnvironmentObject private var navigationState: NavigationState
 
     @State private var sessionTapped = 0
+    @State private var addSessionButtonTapped = 0
     @State private var isShowingSessionSheet = false
     @State private var index = 0
 
@@ -46,8 +47,9 @@ struct MainframeView: View {
                                                                        .darkBlue500,
                                                                        .darkBlue600],
                                                               startPoint: .topLeading,
-                                                              endPoint: .bottomTrailing))                        .listRowSeparatorTint(Color.lilac400)
-                                .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1), trigger: sessionTapped)
+                                                              endPoint: .bottomTrailing).opacity(0.9))
+                            .listRowSeparatorTint(Color.lilac400)
+                            .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1), trigger: sessionTapped)
                         }
                         .onDelete { indexSet in
                             withAnimation {
@@ -70,6 +72,7 @@ struct MainframeView: View {
                     Button {
                         withAnimation(.smooth) {
                             viewModel.addSession(name: "New Session", lastChange: Date())
+                            addSessionButtonTapped += 1
                         }
                     } label: {
                         HStack {
@@ -95,7 +98,7 @@ struct MainframeView: View {
                             .fill(.lilac500)
                             .shadow(color: .white, radius: 20, x: 0, y: 0)
                     }
-                    .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1), trigger: viewModel.sessions)
+                    .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1), trigger: addSessionButtonTapped)
                     
                     Text("hidden reset button")
                         .foregroundStyle(.clear)
