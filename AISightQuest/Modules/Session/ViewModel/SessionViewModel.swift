@@ -49,9 +49,9 @@ extension SessionView {
                 let length = answer.endIndex.utf16Offset(in: context) - location
                 let answerRange = NSRange(location: location, length: length)
                 
-                mutableAttributedText.addAttributes([.foregroundColor: UIColor.darkBlue300,
+                mutableAttributedText.addAttributes([.foregroundColor: UIColor.darkBlue500,
                                                      .font: UIFontMetrics(forTextStyle: .body)
-                                                     .scaledFont(for: UIFont.boldSystemFont(ofSize: 17))],
+                                                     .scaledFont(for: UIFont(name: "Avenir-HeavyOblique", size: 17) ?? UIFont.boldSystemFont(ofSize: 17))],
                                                     range: answerRange)
                 attributedText = mutableAttributedText
             }
