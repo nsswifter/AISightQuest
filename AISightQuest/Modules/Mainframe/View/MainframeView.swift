@@ -65,10 +65,7 @@ struct MainframeView: View {
                 
                 VStack {
                     Spacer()
-                    
-                    TipView(NewSessionTip(), arrowEdge: .bottom)
-                        .tint(.darkBlue300)
-                    
+                                        
                     Button {
                         withAnimation(.smooth) {
                             viewModel.addSession(name: "New Session", lastChange: Date())
@@ -99,6 +96,7 @@ struct MainframeView: View {
                             .shadow(color: .white, radius: 20, x: 0, y: 0)
                     }
                     .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1), trigger: addSessionButtonTapped)
+                    .popoverTip(NewSessionTip())
                     
                     Text("hidden reset button")
                         .foregroundStyle(.clear)
