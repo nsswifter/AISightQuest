@@ -41,6 +41,9 @@ struct AISightQuestApp: App {
                     .displayFrequency(.immediate),
                     .datastoreLocation(.applicationDefault)
                 ])
+                
+                // Set the default tint color for tips on the popover
+                UIView.appearance(whenContainedInInstancesOf: [TipUIPopoverViewController.self]).tintColor = .darkBlue300
             }
             .environmentObject(navigationState)
         }

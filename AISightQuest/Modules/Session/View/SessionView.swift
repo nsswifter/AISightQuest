@@ -98,6 +98,7 @@ struct SessionView: View {
                             }
                             .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
                                              trigger: isShowingScannerSheet)
+                            .popoverTip(ScanDocumentTip())
                             
                             Button {
                                 setAttributedText("")
