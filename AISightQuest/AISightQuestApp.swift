@@ -35,6 +35,11 @@ struct AISightQuestApp: App {
                     }
             }
             .task {
+                // Reset Data Store of Tips on First Open
+                if StorageManager().getIsFirstOpen() {
+                    try? Tips.resetDatastore()
+                }
+                
                 try? Tips.configure([
                     .displayFrequency(.immediate),
                     .datastoreLocation(.applicationDefault)
