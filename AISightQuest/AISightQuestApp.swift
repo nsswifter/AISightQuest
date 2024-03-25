@@ -11,12 +11,10 @@ import TipKit
 
 @main
 struct AISightQuestApp: App {
-    @ObservedObject var navigationState = NavigationState()
+    @ObservedObject private var navigationState = NavigationState()
     
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Session.self,
-        ])
+    private var sharedModelContainer: ModelContainer = {
+        let schema = Schema([Session.self])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
         
         do {

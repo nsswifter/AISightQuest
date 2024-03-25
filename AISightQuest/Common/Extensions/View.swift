@@ -13,14 +13,13 @@ extension View {
     /// A convenience method for hiding the keyboard when editing ends on a view that is currently the first responder.
     func hideKeyboard() {
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-            let window = windowScene.windows.filter { $0.isKeyWindow }.first
-            window?.endEditing(true)
+            windowScene.windows.filter { $0.isKeyWindow }.first?.endEditing(true)
         }
     }
     
     /// A modifier to detect when the keyboard is closed and perform an action.
     func onKeyboardHide(perform action: @escaping () -> Void) -> some View {
-        return self.modifier(KeyboardHidingModifier(action: action))
+        modifier(KeyboardHidingModifier(action: action))
     }
 }
 

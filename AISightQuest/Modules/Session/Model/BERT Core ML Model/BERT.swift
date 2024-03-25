@@ -11,8 +11,7 @@ class BERT {
     /// The underlying Core ML Model.
     var bertModel: BERTQAFP16 {
         do {
-            let defaultConfig = MLModelConfiguration()
-            return try BERTQAFP16(configuration: defaultConfig)
+            return try BERTQAFP16(configuration: MLModelConfiguration())
         } catch {
             fatalError("Couldn't load BERT model due to: \(error.localizedDescription)")
         }
