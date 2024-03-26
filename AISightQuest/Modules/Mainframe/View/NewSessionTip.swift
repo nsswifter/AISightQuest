@@ -10,12 +10,12 @@ import TipKit
 
 struct NewSessionTip: Tip {
     var title: Text {
-        Text("Add New Secure Session")
+        Text("new session tip title")
             .foregroundStyle(.darkBlue600)
     }
 
     var message: Text? {
-        Text("By creating New Sessions you can scan articles and ask them questions!")
+        Text("new session tip message")
             .foregroundStyle(.darkBlue600)
     }
 

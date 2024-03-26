@@ -10,12 +10,12 @@ import TipKit
 
 struct ScanDocumentTip: Tip {
     var title: Text {
-        Text("Scan and Capture")
+        Text("scan document tip title")
             .foregroundStyle(.darkBlue600)
     }
 
     var message: Text? {
-        Text("By scanning documents, you can obtain their content as plain text.")
+        Text("scan document tip message")
             .foregroundStyle(.darkBlue600)
     }
 
