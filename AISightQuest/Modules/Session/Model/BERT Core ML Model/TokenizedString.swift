@@ -12,8 +12,8 @@ struct TokenizedString {
     private let _tokenIDs: [Int]
     
     let original: String
-    public var tokens: [Substring] { return _tokens }
-    public var tokenIDs: [Int] { return _tokenIDs }
+    public var tokens: [Substring] { _tokens }
+    public var tokenIDs: [Int] { _tokenIDs }
     
     init(_ string: String) {
         original = string
@@ -29,8 +29,7 @@ struct TokenizedString {
     ///     - string: A body of text.
     /// - returns: A tuple of an two arrays: one for tokens and another for their IDs.
     private static func tokenize(_ string: String) -> (tokens: [Substring], tokenIDs: [Int]) {
-        let tokens = wordTokens(from: string)
-        return wordpieceTokens(from: tokens)
+        wordpieceTokens(from: wordTokens(from: string))
     }
     
     /// Splits the given raw text into an array of word tokens.

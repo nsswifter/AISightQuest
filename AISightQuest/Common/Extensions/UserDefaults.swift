@@ -14,7 +14,7 @@ enum UserDefaultsKey: String {
 extension UserDefaults {
     var isFirstOpen: Bool {
         get {
-            return UserDefaults.standard.bool(forKey: UserDefaultsKey.isFirstOpen.rawValue)
+            UserDefaults.standard.bool(forKey: UserDefaultsKey.isFirstOpen.rawValue)
         }
         set {
             UserDefaults.standard.setValue(newValue, forKey: UserDefaultsKey.isFirstOpen.rawValue)

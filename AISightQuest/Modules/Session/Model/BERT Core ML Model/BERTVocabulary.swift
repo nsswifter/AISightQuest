@@ -19,8 +19,7 @@ struct BERTVocabulary {
     ///     - string: A word or wordpiece string.
     /// - returns: A token ID.
     static func tokenID(of string: String) -> Int {
-        let token = Substring(string)
-        return tokenID(of: token)
+        tokenID(of: Substring(string))
     }
 
     /// Searches for a token ID for the given word or wordpiece token.
@@ -29,8 +28,7 @@ struct BERTVocabulary {
     ///     - string: A word or wordpiece token (Substring).
     /// - returns: A token ID.
     static func tokenID(of token: Substring) -> Int {
-        let unkownTokenID = BERTVocabulary.unkownTokenID
-        return BERTVocabulary.lookupDictionary[token] ?? unkownTokenID
+        BERTVocabulary.lookupDictionary[token] ?? BERTVocabulary.unkownTokenID
     }
 
     private init() { }

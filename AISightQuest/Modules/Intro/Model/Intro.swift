@@ -17,11 +17,11 @@ struct Intro {
     
     struct Data {
         static var intros: [IntroItem] = [
-            IntroItem(imageName: "Education-Lottie", title: "Education View Title", text: "Education View Text"),
-            IntroItem(imageName: "AI-Robot-Lottie", title: "AI Robot View Title", text: "AI Robot View Text")
+            IntroItem(imageName: "Education-Lottie", title: "education view title", text: "education view text"),
+            IntroItem(imageName: "AI-Robot-Lottie", title: "ai robot view title", text: "ai robot view text")
         ]
         
-        static var firstIntro = IntroItem(imageName: "AI-Sight-Quest-Lottie", title: "", text: "First View Text")
-        static var lastIntro = IntroItem(imageName: "Privacy-Lottie", title: "Privacy View Title", text: "Privacy View Text")
+        static var firstIntro = IntroItem(imageName: "AI-Sight-Quest-Lottie", title: "first view title", text: "first view text")
+        static var lastIntro = IntroItem(imageName: "Privacy-Lottie", title: "privacy view title", text: "privacy view text")
     }
 }

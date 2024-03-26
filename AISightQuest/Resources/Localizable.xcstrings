@@ -1,10 +1,7 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "" : {
-
-    },
-    "AI Robot View Text" : {
+    "ai robot view text" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -14,7 +11,7 @@
         }
       }
     },
-    "AI Robot View Title" : {
+    "ai robot view title" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -34,10 +31,7 @@
         }
       }
     },
-    "By creating New Sessions you can scan articles and ask them questions!" : {
-
-    },
-    "Education View Text" : {
+    "education view text" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -47,7 +41,7 @@
         }
       }
     },
-    "Education View Title" : {
+    "education view title" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -67,12 +61,22 @@
         }
       }
     },
-    "First View Text" : {
+    "first view text" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Experience a seamless blend of technology and productivity. Our platform offers innovative tools for efficient document handling. Step into a new era of work."
+          }
+        }
+      }
+    },
+    "first view title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
           }
         }
       }
@@ -107,7 +111,27 @@
         }
       }
     },
-    "Privacy View Text" : {
+    "new session tip message" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "By creating New Sessions you can scan articles and ask them questions!"
+          }
+        }
+      }
+    },
+    "new session tip title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add New Secure Session"
+          }
+        }
+      }
+    },
+    "privacy view text" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -117,7 +141,7 @@
         }
       }
     },
-    "Privacy View Title" : {
+    "privacy view title" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -153,6 +177,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Scan Document"
+          }
+        }
+      }
+    },
+    "scan document tip message" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "By scanning documents, you can obtain their content as plain text."
+          }
+        }
+      }
+    },
+    "scan document tip title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scan and Capture"
           }
         }
       }
