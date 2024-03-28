@@ -82,26 +82,12 @@ struct MainframeView: View {
                             Text("new session")
                                 .foregroundStyle(.lilac100)
                         }
-                        .bold()
                         .frame(maxWidth: .infinity)
-                        .padding(8)
-                        .frame(height: 40)
-                        .background {
-                            Capsule()
-                                .fill(LinearGradient(colors: [Color.darkBlue500,
-                                                              .darkBlue900],
-                                                     startPoint: .top,
-                                                     endPoint: .bottom))
-                        }
                     }
-                    .background {
-                        Capsule()
-                            .fill(.lilac500)
-                            .shadow(color: .white, radius: 20, x: 0, y: 0)
-                    }
+                    .padding()
+                    .buttonStyle(CustomButtonStyle())
                     .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1), trigger: addSessionButtonTapped)
                     .popoverTip(NewSessionTip())
-                    .padding()
                 }
             }
             .padding(.horizontal, 16)
