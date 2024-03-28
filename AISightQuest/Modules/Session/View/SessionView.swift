@@ -80,22 +80,9 @@ struct SessionView: View {
                                     Text("scan")
                                         .foregroundStyle(.lilac100)
                                 }
-                                .bold()
                                 .padding()
-                                .frame(height: 40)
-                                .background {
-                                    Capsule()
-                                        .fill(LinearGradient(colors: [Color.darkBlue500,
-                                                                      .darkBlue900],
-                                                             startPoint: .top,
-                                                             endPoint: .bottom))
-                                }
                             }
-                            .background {
-                                Capsule()
-                                    .fill(.lilac500)
-                                    .shadow(color: .lilac100, radius: 20, x: 0, y: 0)
-                            }
+                            .buttonStyle(CustomButtonStyle())
                             .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
                                              trigger: isShowingScannerSheet)
                             .popoverTip(ScanDocumentTip())
@@ -106,22 +93,8 @@ struct SessionView: View {
                             } label: {
                                 Image(systemName: "xmark")
                                     .foregroundStyle(.lilac200)
-                                    .bold()
-                                    .padding()
-                                    .frame(height: 40)
-                                    .background {
-                                        Circle()
-                                            .fill(LinearGradient(colors: [Color.darkBlue500,
-                                                                          .darkBlue900],
-                                                                 startPoint: .top,
-                                                                 endPoint: .bottom))
-                                    }
                             }
-                            .background {
-                                Circle()
-                                    .fill(.lilac500)
-                                    .shadow(color: .lilac100, radius: 20, x: 0, y: 0)
-                            }
+                            .buttonStyle(CustomButtonStyle())
                             .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
                                              trigger: clearAttributedTextButtonTapped)
                         }

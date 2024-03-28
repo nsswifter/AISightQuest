@@ -16,6 +16,7 @@
 		911E47F12B87363800796D1A /* AISightQuestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47F02B87363800796D1A /* AISightQuestUITests.swift */; };
 		911E47F32B87363800796D1A /* AISightQuestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47F22B87363800796D1A /* AISightQuestUITestsLaunchTests.swift */; };
 		914CA7242BA3119E00AF7ED8 /* AI-Robot-Lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 914CA7232BA3119E00AF7ED8 /* AI-Robot-Lottie.json */; };
+		91591E562BB626E100A72E1B /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91591E552BB626E100A72E1B /* CustomButtonStyle.swift */; };
 		916128C92B890BEB001094E5 /* SessionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916128C82B890BEB001094E5 /* SessionRow.swift */; };
 		917F76A72BA222DE003A7031 /* Education-Lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 917F76A62BA222DE003A7031 /* Education-Lottie.json */; };
 		917F76B12BA22BD7003A7031 /* Privacy-Lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 917F76B02BA22BD7003A7031 /* Privacy-Lottie.json */; };
@@ -58,6 +59,7 @@
 		91ECF9272B93E51E00517B67 /* TokenizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF9222B93E51E00517B67 /* TokenizedString.swift */; };
 		91ECF92A2B93E57000517B67 /* bert-base-uncased-vocab.txt in Resources */ = {isa = PBXBuildFile; fileRef = 91ECF9292B93E56F00517B67 /* bert-base-uncased-vocab.txt */; };
 		91ECF92D2B93E62300517B67 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF92C2B93E62300517B67 /* TextView.swift */; };
+		91ECF92F2B93E74000517B67 /* BERTQAFP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF92E2B93E74000517B67 /* BERTQAFP16.mlmodel */; };
 		91EF21EC2B894AF700FBFEC3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 91EF21EB2B894AF700FBFEC3 /* Localizable.xcstrings */; };
 		91F7B0E32BB0B5D400136241 /* ScanDocumentTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F7B0E22BB0B5D400136241 /* ScanDocumentTip.swift */; };
 		91FB811A2BA622F50052C15F /* NewSessionTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FB81192BA622F50052C15F /* NewSessionTip.swift */; };
@@ -524,6 +526,7 @@
 			isa = PBXGroup;
 			children = (
 				919F8D242B94CE24003E735A /* LottieView.swift */,
+				91591E552BB626E100A72E1B /* CustomButtonStyle.swift */,
 				91ECF92C2B93E62300517B67 /* TextView.swift */,
 			);
 			path = View;
@@ -698,6 +701,7 @@
 				919F8D1D2B94CC85003E735A /* SplashView.swift in Sources */,
 				911E47D82B87363600796D1A /* Session.swift in Sources */,
 				911E47D42B87363600796D1A /* AISightQuestApp.swift in Sources */,
+				91591E562BB626E100A72E1B /* CustomButtonStyle.swift in Sources */,
 				91C5CB8E2B8B651800132C1E /* SessionView.swift in Sources */,
 				91C5CB892B8B62FC00132C1E /* SessionDependencyContainer.swift in Sources */,
 				91F7B0E32BB0B5D400136241 /* ScanDocumentTip.swift in Sources */,
