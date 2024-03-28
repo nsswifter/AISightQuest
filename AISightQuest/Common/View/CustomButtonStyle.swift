@@ -7,12 +7,32 @@
 
 import SwiftUI
 
-struct CustomButtonStyle: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct CustomButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .bold()
+            .frame(height: 40)
+            .frame(minWidth: 40)
+            .background {
+                Capsule()
+                    .fill(LinearGradient(colors: configuration.isPressed ? [Color.lilac500]
+                                         : [Color.darkBlue500, .darkBlue900],
+                                         startPoint: .top,
+                                         endPoint: .bottom))
+            }
     }
 }
 
 #Preview {
-    CustomButtonStyle()
+    Button { 
+        print("Pressed")
+    } label: {
+        HStack {
+            Image(systemName: "plus")
+                .foregroundStyle(.lilac200)
+            Text("new session")
+                .foregroundStyle(.lilac100)
+        }
+    }
+    .buttonStyle(CustomButtonStyle())
 }
