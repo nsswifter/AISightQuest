@@ -69,19 +69,18 @@ private extension IntroView {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 30)
                 
-                Text("first intro button text")
-                    .font(.system(size: 14, weight: .semibold))
-                    .padding(.horizontal, 40)
-                    .padding(.vertical, 14)
-                    .foregroundStyle(.lilac200)
-                    .background {
-                        Capsule()
-                            .fill(Color(.darkBlue500))
-                    }
-                    .padding(.top, 30)
-                    .onTapGesture {
-                        showWalkThroughScreens.toggle()
-                    }
+                Button {
+                    showWalkThroughScreens.toggle()
+                } label: {
+                    Text("first intro button text")
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(.lilac100)
+                        .padding()
+                }
+                .padding(.top, 30)
+                .padding(.vertical, 14)
+                .padding(.horizontal, 40)
+                .buttonStyle(CustomButtonStyle())
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             // MARK: Moving Up When Click
@@ -110,52 +109,53 @@ private extension IntroView {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             // MARK: Next Button
             .overlay(alignment: .bottom) {
-                // MARK: Converting Next Button Into  SignUp Button
-                ZStack {
-                    Image(systemName: "chevron.right")
-                        .font(.title3)
-                        .fontWeight(.semibold)
-                        .scaleEffect(!isLast ? 1 : 0.001)
-                        .opacity(!isLast ? 1 : 0)
+                // MARK: Converting Next Button Into SignUp Button
+                HStack {
+                    Spacer()
                     
-                    HStack {
-                        Text("last intro button text")
-                            .font(.system(size: 15, weight: .bold))
-                            .foregroundStyle(.lilac200)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        
-                        Image(systemName: "arrow.right")
-                            .font(.title3)
-                            .fontWeight(.semibold)
-                            .foregroundStyle(.lilac200)
+                    Button {
+                        // MARK: Update Current Index
+                        if currentIndex == Intro.Data.intros.count {
+                            // MARK: Moving To Home Screen
+                            navigationState.routes.append(Routes.intro(.mainframe(modelContext: viewModel.modelContext)))
+                            viewModel.isFirstOpen = true
+                        } else {
+                            currentIndex += 1
+                        }
+                    } label: {
+                        ZStack {
+                            Image(systemName: "chevron.right")
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                                .foregroundStyle(.lilac200)
+                                .hidden(isLast, remove: isLast)
+                                .scaleEffect(!isLast ? 1 : 0.0001)
+                            
+                            HStack(spacing: 48) {
+                                Text("last intro button text")
+                                    .font(.system(size: 15, weight: .bold))
+                                    .foregroundStyle(.lilac100)
+                                
+                                Image(systemName: "arrow.right")
+                                    .font(.title3)
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(.lilac200)
+                            }
+                            .padding(.horizontal)
+                            .hidden(!isLast, remove: !isLast)
+                            .scaleEffect(isLast ? 1 : 0.0001)
+                        }
                     }
-                    .padding(.horizontal, 15)
-                    .scaleEffect(isLast ? 1 : 0.001)
-                    .frame(height: isLast ? nil : 0)
-                    .opacity(isLast ? 1 : 0)
+                    .padding()
+                    .offset(y: isLast ? -20 : -50)
+                    .animation(.interactiveSpring(response: 0.8,
+                                                  dampingFraction: 0.8,
+                                                  blendDuration: 0.5),
+                               value: isLast)
+                    .buttonStyle(CustomButtonStyle())
+                    
+                    Spacer()
                 }
-                .frame(width: isLast ? (size.width / 1.5) : 55,
-                       height: isLast ? 50 : 55)
-                .foregroundStyle(.lilac200)
-                .background {
-                    Capsule()
-                        .fill(.darkBlue500)
-                }
-                .onTapGesture {
-                    // MARK: Update Current Index
-                    if currentIndex == Intro.Data.intros.count {
-                        // MARK: Moving To Home Screen
-                        navigationState.routes.append(Routes.intro(.mainframe(modelContext: viewModel.modelContext)))
-                        viewModel.isFirstOpen = true
-                    } else {
-                        currentIndex += 1
-                    }
-                }
-                .offset(y: isLast ? -40 : -90)
-                .animation(.interactiveSpring(response: 0.8,
-                                              dampingFraction: 0.8,
-                                              blendDuration: 0.5),
-                           value: isLast)
             }
             .offset(y: showWalkThroughScreens ? 0 : size.height)
         }
