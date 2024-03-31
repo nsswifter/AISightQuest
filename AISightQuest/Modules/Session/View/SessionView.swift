@@ -15,6 +15,7 @@ struct SessionView: View {
     @State private(set) var viewModel: ViewModel
     @EnvironmentObject private var navigationState: NavigationState
     
+    @State private var onAppearUpdatedAttributedText = false
     @State private var isShowingScannerSheet = false
     @State private var clearAttributedTextButtonTapped = 0
     @State private var clearQuestionButtonTapped = 0
@@ -22,7 +23,7 @@ struct SessionView: View {
     @State private var dismissButtonOffset = -100.0
     
     @State private var questionText = ""
-    @State private var attributedText = NSAttributedString(string: "")
+    @State private var attributedText = NSAttributedString()
     
     var body: some View {
         VStack {
@@ -112,15 +113,21 @@ struct SessionView: View {
             }
         }
         .onChange(of: attributedText.string) { _, newValue in
-            viewModel.sessions[viewModel.sessionIndex].text = newValue
+            setUpdatedSessionData(newValue)
         }
         .onAppear {
-            setAttributedText(viewModel.sessions[viewModel.sessionIndex].text)
+            let text = viewModel.sessions[viewModel.sessionIndex].text
+            onAppearUpdatedAttributedText = text.isEmpty
+            setAttributedText(text)
         }
         .sheet(isPresented: $isShowingScannerSheet) { makeScannerView().ignoresSafeArea() }
     }
-    
-    private func setAttributedText(_ text: String) {
+}
+
+// MARK: - Private Methods
+
+private extension SessionView {
+    func setAttributedText(_ text: String) {
         withAnimation(.bouncy(duration: 1)) {
             attributedText = NSMutableAttributedString(string: text,
                                                        attributes: [.foregroundColor: UIColor.black,
@@ -129,7 +136,25 @@ struct SessionView: View {
         }
     }
     
-    private func makeScannerView() -> ScannerView {
+    func setUpdatedSessionData(_ text: String) {
+        withAnimation(.bouncy(duration: 1)) {
+            if onAppearUpdatedAttributedText {
+                viewModel.sessions[viewModel.sessionIndex].text = text
+                viewModel.sessions[viewModel.sessionIndex].lastChange = Date()
+            }
+            onAppearUpdatedAttributedText = true
+        }
+    }
+}
+
+// MARK: - Session View Content Views
+
+private extension SessionView {
+    
+    // MARK: - Scanner View
+    
+    @ViewBuilder
+    func makeScannerView() -> ScannerView {
         ScannerView { textPerPage in
             if let text = textPerPage?
                 .joined(separator: "\n")
@@ -139,15 +164,9 @@ struct SessionView: View {
             isShowingScannerSheet = false
         }
     }
-}
-
-
-// MARK: - Session View Content Views
-
-private extension SessionView {
     
     // MARK: - Question Text Field
-    
+        
     @ViewBuilder
     func QuestionTextField() -> some View {
         HStack {

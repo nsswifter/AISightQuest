@@ -93,6 +93,8 @@ struct MainframeView: View {
             .padding(.horizontal, 16)
         }
         .fullScreenCover(isPresented: $isShowingSessionSheet) {
+            viewModel.fetchData()
+        } content: {
             MainframeRouter(routes: .session(modelContext: viewModel.modelContext, sessionIndex: index))
                 .configure()
         }

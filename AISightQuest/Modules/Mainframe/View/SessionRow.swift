@@ -47,6 +47,12 @@ struct SessionRow: View {
                     UIApplication.shared.sendAction(#selector(UIResponder.selectAll(_:)), to: nil, from: nil, for: nil)
                 }
             }
+            
+            Spacer()
+            
+            Text(session.lastChange.formatted(date: .abbreviated, time: .shortened))
+                .font(.caption2)
+                .foregroundStyle(.lilac100.opacity(0.8))
         }
         .onKeyboardHide {
             shouldRename = false
