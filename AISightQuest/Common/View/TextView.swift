@@ -27,7 +27,7 @@ struct TextView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UITextView, context: Context) {
-        uiView.attributedText = attributedText
+            uiView.attributedText = attributedText
     }
     
     func makeCoordinator() -> Coordinator {
@@ -45,7 +45,9 @@ struct TextView: UIViewRepresentable {
         func textViewDidChangeSelection(_ textView: UITextView) {
             textViewDidChangeSelectionTask?.cancel()
             textViewDidChangeSelectionTask = Task {
-                innerAttributedText = textView.attributedText
+                withAnimation(.bouncy(duration: 1)) {
+                    innerAttributedText = textView.attributedText
+                }
             }
         }
     }

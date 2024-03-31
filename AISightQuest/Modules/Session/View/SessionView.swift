@@ -95,6 +95,7 @@ struct SessionView: View {
                                     .foregroundStyle(.lilac200)
                             }
                             .buttonStyle(CustomButtonStyle())
+                            .hidden(attributedText.string.isEmpty, remove: attributedText.string.isEmpty)
                             .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
                                              trigger: clearAttributedTextButtonTapped)
                         }
@@ -104,7 +105,7 @@ struct SessionView: View {
                 }
             
             HStack {
-                TextField("question text field", text: $questionText)
+                TextField("question text field", text: $questionText.animation(.bouncy(duration: 1)))
                     .tint(.lilac400)
                     .submitLabel(.search)
                     .padding([.vertical, .leading])
@@ -127,6 +128,7 @@ struct SessionView: View {
                         .font(.title)
                         .padding(.trailing)
                 }
+                .hidden(questionText.isEmpty, remove: questionText.isEmpty)
                 .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
                                  trigger: clearQuestionButtonTapped)
             }
@@ -146,10 +148,12 @@ struct SessionView: View {
     }
     
     private func setAttributedText(_ text: String) {
-        attributedText = NSMutableAttributedString(string: text,
-                                                   attributes: [.foregroundColor: UIColor.black,
-                                                                .font: UIFontMetrics(forTextStyle: .body)
-                                                                .scaledFont(for: UIFont.systemFont(ofSize: 17))])
+        withAnimation(.bouncy(duration: 1)) {
+            attributedText = NSMutableAttributedString(string: text,
+                                                       attributes: [.foregroundColor: UIColor.black,
+                                                                    .font: UIFontMetrics(forTextStyle: .body)
+                                                                    .scaledFont(for: UIFont.systemFont(ofSize: 17))])
+        }
     }
     
     private func makeScannerView() -> ScannerView {
