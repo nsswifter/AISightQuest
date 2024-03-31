@@ -20,12 +20,12 @@ struct SessionView: View {
     @State private var clearQuestionButtonTapped = 0
     @State private var dismissButtonTapped = 0
     @State private var dismissButtonOffset = -100.0
-
+    
     @State private var questionText = ""
     @State private var attributedText = NSAttributedString(string: "")
     
     var body: some View {
-        VStack(spacing: 8) {
+        VStack {
             Button {
                 dismiss()
                 dismissButtonTapped += 1
@@ -68,7 +68,9 @@ struct SessionView: View {
                         Spacer()
                         
                         HStack {
-                            Spacer()
+                            if !attributedText.isEmpty {
+                                Spacer()
+                            }
                             
                             Button {
                                 isShowingScannerSheet = true
@@ -95,7 +97,7 @@ struct SessionView: View {
                                     .foregroundStyle(.lilac200)
                             }
                             .buttonStyle(CustomButtonStyle())
-                            .hidden(attributedText.string.isEmpty, remove: attributedText.string.isEmpty)
+                            .hidden(attributedText.isEmpty, remove: attributedText.isEmpty)
                             .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
                                              trigger: clearAttributedTextButtonTapped)
                         }
@@ -104,39 +106,10 @@ struct SessionView: View {
                     .padding(.vertical, 4)
                 }
             
-            HStack {
-                TextField("question text field", text: $questionText.animation(.bouncy(duration: 1)))
-                    .tint(.lilac400)
-                    .submitLabel(.search)
-                    .padding([.vertical, .leading])
-                    .onSubmit {
-                        let result = viewModel.findAnswer(for: questionText,
-                                                          in: viewModel.sessions[viewModel.sessionIndex].text)
-                        
-                        if let attributedString = result.attributedText {
-                            attributedText = attributedString
-                        }
-                        questionText = result.questionText
-                    }
-                
-                Button {
-                    questionText = ""
-                    clearQuestionButtonTapped += 1
-                } label: {
-                    Image(systemName: "xmark.circle")
-                        .foregroundStyle(.darkBlue500)
-                        .font(.title)
-                        .padding(.trailing)
-                }
-                .hidden(questionText.isEmpty, remove: questionText.isEmpty)
-                .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
-                                 trigger: clearQuestionButtonTapped)
+            if !attributedText.isEmpty {
+                QuestionTextField()
+                    .padding()
             }
-            .overlay(
-                Capsule()
-                    .stroke(.lilac200, lineWidth: 2)
-            )
-            .padding()
         }
         .onChange(of: attributedText.string) { _, newValue in
             viewModel.sessions[viewModel.sessionIndex].text = newValue
@@ -165,6 +138,50 @@ struct SessionView: View {
             }
             isShowingScannerSheet = false
         }
+    }
+}
+
+
+// MARK: - Session View Content Views
+
+private extension SessionView {
+    
+    // MARK: - Question Text Field
+    
+    @ViewBuilder
+    func QuestionTextField() -> some View {
+        HStack {
+            TextField("question text field", text: $questionText.animation(.bouncy(duration: 1)))
+                .tint(.lilac400)
+                .submitLabel(.search)
+                .padding([.vertical, .leading])
+                .onSubmit {
+                    let result = viewModel.findAnswer(for: questionText,
+                                                      in: viewModel.sessions[viewModel.sessionIndex].text)
+                    
+                    if let attributedString = result.attributedText {
+                        attributedText = attributedString
+                    }
+                    questionText = result.questionText
+                }
+            
+            Button {
+                questionText = ""
+                clearQuestionButtonTapped += 1
+            } label: {
+                Image(systemName: "xmark.circle")
+                    .foregroundStyle(.darkBlue500)
+                    .font(.title)
+                    .padding(.trailing)
+            }
+            .hidden(questionText.isEmpty, remove: questionText.isEmpty)
+            .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
+                             trigger: clearQuestionButtonTapped)
+        }
+        .overlay(
+            Capsule()
+                .stroke(.lilac200, lineWidth: 2)
+        )
     }
 }
 

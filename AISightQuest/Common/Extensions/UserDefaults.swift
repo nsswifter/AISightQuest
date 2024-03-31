@@ -7,9 +7,13 @@
 
 import Foundation
 
+// MARK: - User Defaults Key
+
 enum UserDefaultsKey: String {
     case isFirstOpen = "is_first_open"
 }
+
+// MARK: - User Defaults
 
 extension UserDefaults {
     var isFirstOpen: Bool {

@@ -54,6 +54,8 @@ struct LottieView: UIViewRepresentable {
 
 // MARK: - Lottie View Preview
 
+#if DEBUG
 #Preview {
     LottieView(name: "AI-Sight-Quest-Lottie")
 }
+#endif

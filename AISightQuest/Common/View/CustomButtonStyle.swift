@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Custom Button Style
+
 struct CustomButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
@@ -23,6 +25,9 @@ struct CustomButtonStyle: ButtonStyle {
     }
 }
 
+// MARK: - Custom Button Style Preview
+
+#if DEBUG
 #Preview {
     Button { 
         print("Pressed")
@@ -36,3 +41,4 @@ struct CustomButtonStyle: ButtonStyle {
     }
     .buttonStyle(CustomButtonStyle())
 }
+#endif

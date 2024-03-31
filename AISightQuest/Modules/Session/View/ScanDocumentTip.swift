@@ -8,6 +8,8 @@
 import SwiftUI
 import TipKit
 
+// MARK: - Scan Document Tip
+
 struct ScanDocumentTip: Tip {
     var title: Text {
         Text("scan document tip title")

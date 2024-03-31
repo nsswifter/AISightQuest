@@ -84,10 +84,10 @@ struct MainframeView: View {
                         }
                         .frame(maxWidth: .infinity)
                     }
+                    .popoverTip(NewSessionTip())
                     .padding()
                     .buttonStyle(CustomButtonStyle())
                     .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1), trigger: addSessionButtonTapped)
-                    .popoverTip(NewSessionTip())
                 }
             }
             .padding(.horizontal, 16)
