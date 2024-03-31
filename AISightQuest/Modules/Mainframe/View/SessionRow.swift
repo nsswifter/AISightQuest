@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Session Row View
+
 struct SessionRow: View {
     @Binding var session: Session
     
@@ -52,6 +54,10 @@ struct SessionRow: View {
     }
 }
 
+// MARK: - Session Row Preview
+
+#if DEBUG
 #Preview {
     SessionRow(session: .constant(Session(name: "New Session", lastChange: Date())))
 }
+#endif

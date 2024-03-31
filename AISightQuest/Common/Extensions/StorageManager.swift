@@ -7,10 +7,14 @@
 
 import Foundation
 
+// MARK: - Storage Manager Protocol
+
 protocol StorageManagerProtocol {
     func getIsFirstOpen() -> Bool
     func setIsFirstOpen(to value: Bool)
 }
+
+// MARK: - Storage Manager
 
 final class StorageManager: StorageManagerProtocol, ObservableObject {
     func getIsFirstOpen() -> Bool { !UserDefaults.standard.isFirstOpen }

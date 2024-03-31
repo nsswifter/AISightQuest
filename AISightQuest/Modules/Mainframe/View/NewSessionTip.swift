@@ -8,6 +8,8 @@
 import SwiftUI
 import TipKit
 
+// MARK: - New Session Tip
+
 struct NewSessionTip: Tip {
     var title: Text {
         Text("new session tip title")
