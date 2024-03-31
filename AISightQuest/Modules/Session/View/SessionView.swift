@@ -113,6 +113,7 @@ struct SessionView: View {
         }
         .onChange(of: attributedText.string) { _, newValue in
             viewModel.sessions[viewModel.sessionIndex].text = newValue
+            viewModel.sessions[viewModel.sessionIndex].lastChange = Date()
         }
         .onAppear {
             setAttributedText(viewModel.sessions[viewModel.sessionIndex].text)
