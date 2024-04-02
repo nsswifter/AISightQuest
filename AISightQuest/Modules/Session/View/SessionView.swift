@@ -44,7 +44,7 @@ struct SessionView: View {
                     Spacer()
                 }
                 .foregroundStyle(.darkBlue500)
-                .padding(.leading)
+                .padding(.top)
             }
             .offset(x: dismissButtonOffset)
             .onAppear {
@@ -65,7 +65,7 @@ struct SessionView: View {
                                    endPoint: .bottomTrailing)
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 24))
-                .padding()
+                .padding(.vertical)
                 .overlay {
                     VStack {
                         Spacer()
@@ -105,15 +105,16 @@ struct SessionView: View {
                                              trigger: clearAttributedTextButtonTapped)
                         }
                     }
-                    .padding(28)
-                    .padding(.vertical, 4)
+                    .padding(.vertical, 32)
+                    .padding(.horizontal, 18)
                 }
             
             if !attributedText.isEmpty {
                 QuestionTextField()
-                    .padding()
+                    .padding(.bottom)
             }
         }
+        .padding(.horizontal)
         .onChange(of: attributedText.string) { _, newValue in
             setUpdatedSessionData(newValue)
         }
@@ -176,7 +177,7 @@ private extension SessionView {
             TextField("question text field", text: $questionText.animation(.bouncy(duration: 1)))
                 .tint(.lilac400)
                 .submitLabel(.search)
-                .padding([.vertical, .leading])
+                .padding()
                 .onSubmit {
                     let result = viewModel.findAnswer(for: questionText,
                                                       in: viewModel.sessions[viewModel.sessionIndex].text,
@@ -197,7 +198,7 @@ private extension SessionView {
                     .font(.title)
                     .padding(.trailing)
             }
-            .hidden(questionText.isEmpty, remove: questionText.isEmpty)
+            .hidden(questionText.isEmpty/*, remove: questionText.isEmpty*/)
             .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
                              trigger: clearQuestionButtonTapped)
         }
