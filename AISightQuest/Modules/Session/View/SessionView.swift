@@ -204,7 +204,10 @@ private extension SessionView {
         }
         .overlay(
             Capsule()
-                .stroke(.lilac200, lineWidth: 2)
+                .stroke(LinearGradient(colors: [.darkBlue300, .lilac200],
+                                       startPoint: .topLeading,
+                                       endPoint: .topTrailing),
+                        lineWidth: 2)
         )
     }
 }
