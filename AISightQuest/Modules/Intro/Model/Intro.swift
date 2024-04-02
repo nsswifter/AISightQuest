@@ -21,7 +21,11 @@ struct Intro {
             IntroItem(imageName: "AI-Robot-Lottie", title: "ai robot view title", text: "ai robot view text")
         ]
         
-        static var firstIntro = IntroItem(imageName: "AI-Sight-Quest-Lottie", title: "first view title", text: "first view text")
+        static func getFirstIntro(colorScheme: ColorScheme) -> IntroItem {
+            IntroItem(imageName: colorScheme == .dark
+                      ? "AI-Sight-Quest-Lottie-Dark-Mode"
+                      : "AI-Sight-Quest-Lottie-Light-Mode", title: "first view title", text: "first view text")
+        }
         static var lastIntro = IntroItem(imageName: "Privacy-Lottie", title: "privacy view title", text: "privacy view text")
     }
 }

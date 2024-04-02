@@ -14,6 +14,8 @@ struct IntroView: View {
     @State private(set) var viewModel: ViewModel
     @EnvironmentObject private var navigationState: NavigationState
     
+    @Environment(\.colorScheme) private var colorScheme
+
     @State private var showWalkThroughScreens = false
     @State private var currentIndex = 0
     @State private var showHomeView = false
@@ -54,16 +56,17 @@ private extension IntroView {
     func IntroScreen() -> some View {
         GeometryReader {
             let size = $0.size
+            let firstIntro = Intro.Data.getFirstIntro(colorScheme: colorScheme)
             
             VStack(spacing: 10) {
-                LottieView(name: Intro.Data.firstIntro.imageName)
+                LottieView(name: firstIntro.imageName)
                     .padding(90)
                     .aspectRatio(contentMode: .fill)
                     .frame(width: size.width, height: size.height / 2)
                     .padding(.vertical, 60)
                 
                 
-                Text(Intro.Data.firstIntro.text)
+                Text(firstIntro.text)
                     .font(.system(size: 14))
                     .foregroundStyle(.darkBlue600)
                     .multilineTextAlignment(.center)

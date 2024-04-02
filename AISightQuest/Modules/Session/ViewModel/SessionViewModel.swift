@@ -33,7 +33,9 @@ extension SessionView {
             }
         }
         
-        func findAnswer(for question: String, in context: String) -> (attributedText: NSAttributedString?, questionText: String){
+        func findAnswer(for question: String,
+                        in context: String,
+                        colorScheme: ColorScheme) -> (attributedText: NSAttributedString?, questionText: String){
             // Use the BERT model to search for the answer.
             let answer = BERT().findAnswer(for: question, in: context)
             
@@ -41,7 +43,8 @@ extension SessionView {
             var attributedText: NSAttributedString?
             if answer.base == context {
                 let mutableAttributedText = NSMutableAttributedString(string: context,
-                                                                      attributes: [.foregroundColor: UIColor.black,
+                                                                      attributes: [.foregroundColor: colorScheme == .dark
+                                                                                   ? UIColor.white : UIColor.black,
                                                                                    .font: UIFontMetrics(forTextStyle: .body)
                                                                                    .scaledFont(for: UIFont.systemFont(ofSize: 17))])
                 

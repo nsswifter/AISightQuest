@@ -15,6 +15,8 @@ struct MainframeView: View {
     @State private(set) var viewModel: ViewModel
     @EnvironmentObject private var navigationState: NavigationState
     
+    @Environment(\.colorScheme) private var colorScheme
+
     @State private var sessionTapped = 0
     @State private var addSessionButtonTapped = 0
     @State private var isShowingSessionSheet = false
@@ -28,7 +30,10 @@ struct MainframeView: View {
                 Group {
                     if viewModel.sessions.isEmpty {
                         VStack {
-                            LottieView(name: "Mainframe-Lottie", loopMode: .loop)
+                            LottieView(name: colorScheme == .dark
+                                       ? "Mainframe-Lottie-Dark-Mode"
+                                       : "Mainframe-Lottie-Light-Mode"
+                                       , loopMode: .loop)
                                 .aspectRatio(contentMode: .fit)
                                 .padding(.horizontal, 20)
                             

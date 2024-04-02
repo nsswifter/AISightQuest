@@ -11,6 +11,7 @@ import SwiftData
 // MARK: - Splash View
 
 struct SplashView: View {
+    @Environment(\.colorScheme) private var colorScheme
     @State private(set) var viewModel: ViewModel
     @EnvironmentObject private var navigationState: NavigationState
     
@@ -21,7 +22,9 @@ struct SplashView: View {
             Color.clear
             
             if !isFirstOpen {
-                LottieView(name: "AI-Sight-Quest-Lottie")
+                LottieView(name: colorScheme == .dark
+                           ? "AI-Sight-Quest-Lottie-Dark-Mode"
+                           : "AI-Sight-Quest-Lottie-Light-Mode")
                     .frame(width: 250, height: 250)
             }
         }
