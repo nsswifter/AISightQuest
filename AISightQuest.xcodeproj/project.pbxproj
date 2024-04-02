@@ -24,6 +24,7 @@
 		917F76B12BA22BD7003A7031 /* Privacy-Lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 917F76B02BA22BD7003A7031 /* Privacy-Lottie.json */; };
 		918391A22B8B94990085FF17 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918391A12B8B94990085FF17 /* ScannerView.swift */; };
 		918391A52B8B95960085FF17 /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918391A42B8B95960085FF17 /* TextRecognizer.swift */; };
+		91897A422BBC8D9200002F32 /* AI-Sight-Quest-Lottie-Dark-Mode.json in Resources */ = {isa = PBXBuildFile; fileRef = 91897A412BBC8D9200002F32 /* AI-Sight-Quest-Lottie-Dark-Mode.json */; };
 		919439C42B88DEA4006654C2 /* MainframeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919439C32B88DEA4006654C2 /* MainframeViewModel.swift */; };
 		919F8D0B2B94C905003E735A /* IntroRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D0A2B94C905003E735A /* IntroRouter.swift */; };
 		919F8D0D2B94CA80003E735A /* IntroFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D0C2B94CA80003E735A /* IntroFactory.swift */; };
@@ -37,7 +38,7 @@
 		919F8D232B94CCA5003E735A /* SplashDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D222B94CCA5003E735A /* SplashDependencyContainer.swift */; };
 		919F8D252B94CE24003E735A /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D242B94CE24003E735A /* LottieView.swift */; };
 		919F8D282B94CE73003E735A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 919F8D272B94CE73003E735A /* Lottie */; };
-		919F8D2A2B94CEB1003E735A /* AI-Sight-Quest-Lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 919F8D292B94CEB1003E735A /* AI-Sight-Quest-Lottie.json */; };
+		919F8D2A2B94CEB1003E735A /* AI-Sight-Quest-Lottie-Light-Mode.json in Resources */ = {isa = PBXBuildFile; fileRef = 919F8D292B94CEB1003E735A /* AI-Sight-Quest-Lottie-Light-Mode.json */; };
 		919F8D2C2B94D52F003E735A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D2B2B94D52F003E735A /* UserDefaults.swift */; };
 		919F8D2E2B94D579003E735A /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D2D2B94D579003E735A /* StorageManager.swift */; };
 		919F8D392B95085B003E735A /* Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D382B95085B003E735A /* Intro.swift */; };
@@ -105,6 +106,7 @@
 		917F76B02BA22BD7003A7031 /* Privacy-Lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Privacy-Lottie.json"; sourceTree = "<group>"; };
 		918391A12B8B94990085FF17 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		918391A42B8B95960085FF17 /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
+		91897A412BBC8D9200002F32 /* AI-Sight-Quest-Lottie-Dark-Mode.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "AI-Sight-Quest-Lottie-Dark-Mode.json"; sourceTree = "<group>"; };
 		919439C32B88DEA4006654C2 /* MainframeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeViewModel.swift; sourceTree = "<group>"; };
 		919F8D0A2B94C905003E735A /* IntroRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroRouter.swift; sourceTree = "<group>"; };
 		919F8D0C2B94CA80003E735A /* IntroFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroFactory.swift; sourceTree = "<group>"; };
@@ -117,7 +119,7 @@
 		919F8D202B94CC9B003E735A /* SplashFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFactory.swift; sourceTree = "<group>"; };
 		919F8D222B94CCA5003E735A /* SplashDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDependencyContainer.swift; sourceTree = "<group>"; };
 		919F8D242B94CE24003E735A /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
-		919F8D292B94CEB1003E735A /* AI-Sight-Quest-Lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "AI-Sight-Quest-Lottie.json"; sourceTree = "<group>"; };
+		919F8D292B94CEB1003E735A /* AI-Sight-Quest-Lottie-Light-Mode.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "AI-Sight-Quest-Lottie-Light-Mode.json"; sourceTree = "<group>"; };
 		919F8D2B2B94D52F003E735A /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		919F8D2D2B94D579003E735A /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		919F8D382B95085B003E735A /* Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro.swift; sourceTree = "<group>"; };
@@ -234,9 +236,10 @@
 			isa = PBXGroup;
 			children = (
 				914CA7232BA3119E00AF7ED8 /* AI-Robot-Lottie.json */,
-				919F8D292B94CEB1003E735A /* AI-Sight-Quest-Lottie.json */,
-				91FDF5A12BA3A87200180583 /* Mainframe-Lottie.json */,
+				91897A412BBC8D9200002F32 /* AI-Sight-Quest-Lottie-Dark-Mode.json */,
+				919F8D292B94CEB1003E735A /* AI-Sight-Quest-Lottie-Light-Mode.json */,
 				917F76A62BA222DE003A7031 /* Education-Lottie.json */,
+				91FDF5A12BA3A87200180583 /* Mainframe-Lottie.json */,
 				917F76B02BA22BD7003A7031 /* Privacy-Lottie.json */,
 			);
 			path = LottieAnimations;
@@ -652,7 +655,8 @@
 				917F76A72BA222DE003A7031 /* Education-Lottie.json in Resources */,
 				91ECF92A2B93E57000517B67 /* bert-base-uncased-vocab.txt in Resources */,
 				91EF21EC2B894AF700FBFEC3 /* Localizable.xcstrings in Resources */,
-				919F8D2A2B94CEB1003E735A /* AI-Sight-Quest-Lottie.json in Resources */,
+				91897A422BBC8D9200002F32 /* AI-Sight-Quest-Lottie-Dark-Mode.json in Resources */,
+				919F8D2A2B94CEB1003E735A /* AI-Sight-Quest-Lottie-Light-Mode.json in Resources */,
 				917F76B12BA22BD7003A7031 /* Privacy-Lottie.json in Resources */,
 				914CA7242BA3119E00AF7ED8 /* AI-Robot-Lottie.json in Resources */,
 			);
