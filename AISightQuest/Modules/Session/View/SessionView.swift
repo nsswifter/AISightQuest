@@ -11,10 +11,12 @@ import SwiftData
 // MARK: - Session View
 
 struct SessionView: View {
-    @Environment(\.dismiss) private var dismiss
     @State private(set) var viewModel: ViewModel
     @EnvironmentObject private var navigationState: NavigationState
     
+    @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.dismiss) private var dismiss
+
     @State private var onAppearUpdatedAttributedText = false
     @State private var isShowingScannerSheet = false
     @State private var clearAttributedTextButtonTapped = 0
@@ -130,7 +132,8 @@ private extension SessionView {
     func setAttributedText(_ text: String) {
         withAnimation(.bouncy(duration: 1)) {
             attributedText = NSMutableAttributedString(string: text,
-                                                       attributes: [.foregroundColor: UIColor.black,
+                                                       attributes: [.foregroundColor: colorScheme == .dark
+                                                                    ? UIColor.white : UIColor.black,
                                                                     .font: UIFontMetrics(forTextStyle: .body)
                                                                     .scaledFont(for: UIFont.systemFont(ofSize: 17))])
         }
@@ -176,7 +179,8 @@ private extension SessionView {
                 .padding([.vertical, .leading])
                 .onSubmit {
                     let result = viewModel.findAnswer(for: questionText,
-                                                      in: viewModel.sessions[viewModel.sessionIndex].text)
+                                                      in: viewModel.sessions[viewModel.sessionIndex].text,
+                                                      colorScheme: colorScheme)
                     
                     if let attributedString = result.attributedText {
                         attributedText = attributedString
