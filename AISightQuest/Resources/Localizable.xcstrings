@@ -201,6 +201,16 @@
         }
       }
     },
+    "session" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Session"
+          }
+        }
+      }
+    },
     "skip" : {
       "localizations" : {
         "en" : {
