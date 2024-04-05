@@ -33,8 +33,9 @@ struct SessionView: View {
                 dismiss()
                 dismissButtonTapped += 1
             } label: {
-                HStack {     
-                    Text("back")
+                HStack {
+                    Image(systemName: "arrowshape.turn.up.backward.fill")
+                        .bold()
                     
                     Spacer()
                 }
