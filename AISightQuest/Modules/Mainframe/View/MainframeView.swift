@@ -84,7 +84,7 @@ struct MainframeView: View {
                         HStack {
                             Image(systemName: "plus")
                                 .foregroundStyle(.lilac200)
-                            Text("new session")
+                            Text("session")
                                 .foregroundStyle(.lilac100)
                         }
                         .frame(maxWidth: .infinity)
