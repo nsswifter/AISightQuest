@@ -21,16 +21,6 @@
         }
       }
     },
-    "back" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Back"
-          }
-        }
-      }
-    },
     "education view text" : {
       "localizations" : {
         "en" : {
