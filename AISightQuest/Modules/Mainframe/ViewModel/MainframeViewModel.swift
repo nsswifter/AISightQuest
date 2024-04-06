@@ -33,6 +33,27 @@ extension MainframeView {
             }
         }
         
+        func renameSession(currentName: String, into desiredName: String) -> String {
+            var newName = desiredName
+            
+            if newName.isEmpty { newName = "New Session" }
+            
+            var count = 2
+            while sessions.contains(where: { $0.name == newName }) {
+                newName = "\(desiredName.isEmpty ? "New Session" : desiredName) \(count)"
+                count += 1
+            }
+            
+            return newName
+        }
+        
+        func updateSession(sessionIndex: Int, name: String, lastChange: Date) {
+            sessions[sessionIndex].name = name
+            sessions[sessionIndex].lastChange = lastChange
+            
+            fetchData()
+        }
+        
         func addSession(name: String, lastChange: Date) {
             var newName = name
             var count = 2
