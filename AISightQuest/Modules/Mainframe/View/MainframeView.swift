@@ -47,7 +47,12 @@ struct MainframeView: View {
                                     isShowingSessionSheet = true
                                     sessionTapped += 1
                                 } label: {
-                                    SessionRow(session: session)
+                                    SessionRow(session: session) { newName in
+                                        let newName = viewModel.renameSession(currentName: session.name.wrappedValue,
+                                                                              into: newName)
+                                        
+                                        viewModel.updateSession(sessionIndex: index, name: newName, lastChange: Date())
+                                    }
                                 }
                                 .listRowBackground(LinearGradient(colors: [Color.darkBlue500,
                                                                            .darkBlue500,

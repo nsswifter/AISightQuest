@@ -11,8 +11,10 @@ import SwiftUI
 
 struct SessionRow: View {
     @Binding var session: Session
-    
+    var onSubmit: (String) -> Void
+
     @FocusState private var isTextFieldFocused
+    @State private var sessionName = ""
     @State private var shouldRename = false
 
     var body: some View {
@@ -24,11 +26,12 @@ struct SessionRow: View {
             
             Group {
                 if shouldRename {
-                    TextField("new session", text: $session.name)
+                    TextField("new session", text: $sessionName)
                         .tint(.lilac400)
                         .focused($isTextFieldFocused)
                         .submitLabel(.done)
                         .onSubmit() {
+                            onSubmit(sessionName)
                             shouldRename = false
                         }
                 } else {
@@ -54,6 +57,9 @@ struct SessionRow: View {
                 .font(.caption2)
                 .foregroundStyle(.lilac100.opacity(0.8))
         }
+        .onAppear {
+            sessionName = session.name
+        }
         .onKeyboardHide {
             shouldRename = false
         }
@@ -64,6 +70,8 @@ struct SessionRow: View {
 
 #if DEBUG
 #Preview {
-    SessionRow(session: .constant(Session(name: "New Session", lastChange: Date())))
+    SessionRow(session: .constant(Session(name: "New Session",
+                                          lastChange: Date())),
+               onSubmit: { name in print(name) })
 }
 #endif
