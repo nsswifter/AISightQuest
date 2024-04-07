@@ -133,7 +133,7 @@ private extension SessionView {
                                                        attributes: [.foregroundColor: colorScheme == .dark
                                                                     ? UIColor.white : UIColor.black,
                                                                     .font: UIFontMetrics(forTextStyle: .body)
-                                                                    .scaledFont(for: UIFont.systemFont(ofSize: 17))])
+                                                                    .scaledFont(for: .preferredFont(forTextStyle: .body))])
         }
     }
     

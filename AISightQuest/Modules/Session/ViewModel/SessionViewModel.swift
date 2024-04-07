@@ -42,19 +42,22 @@ extension SessionView {
             // Highlight the answer substring in the original text.
             var attributedText: NSAttributedString?
             if answer.base == context {
-                let mutableAttributedText = NSMutableAttributedString(string: context,
-                                                                      attributes: [.foregroundColor: colorScheme == .dark
-                                                                                   ? UIColor.white : UIColor.black,
-                                                                                   .font: UIFontMetrics(forTextStyle: .body)
-                                                                                   .scaledFont(for: UIFont.systemFont(ofSize: 17))])
+                let bodyFont = UIFont.preferredFont(forTextStyle: .body)
+                let boldFont = UIFont.systemFont(ofSize: bodyFont.pointSize, weight: .bold)
                 
+                let bodyScaledFont = UIFontMetrics(forTextStyle: .body).scaledFont(for: bodyFont)
+                let boldScaledFont = UIFontMetrics(forTextStyle: .body).scaledFont(for: boldFont)
+
+                let mutableAttributedText = NSMutableAttributedString(string: context,
+                                                                       attributes: [.foregroundColor: colorScheme == .dark ? UIColor.white : UIColor.black,
+                                                                                    .font: bodyScaledFont])
+
                 let location = answer.startIndex.utf16Offset(in: context)
                 let length = answer.endIndex.utf16Offset(in: context) - location
                 let answerRange = NSRange(location: location, length: length)
-                
+
                 mutableAttributedText.addAttributes([.foregroundColor: UIColor.darkBlue500,
-                                                     .font: UIFontMetrics(forTextStyle: .body)
-                                                     .scaledFont(for: UIFont(name: "Avenir-HeavyOblique", size: 17) ?? UIFont.boldSystemFont(ofSize: 17))],
+                                                     .font: boldScaledFont],
                                                     range: answerRange)
                 attributedText = mutableAttributedText
             }

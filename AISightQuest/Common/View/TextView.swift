@@ -22,7 +22,7 @@ struct TextView: UIViewRepresentable {
         textView.showsHorizontalScrollIndicator = false
         textView.showsVerticalScrollIndicator = false
         textView.tintColor = .darkBlue500
-        textView.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: UIFont.systemFont(ofSize: 17))
+        textView.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: .preferredFont(forTextStyle: .body))
         return textView
     }
     
