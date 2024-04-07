@@ -90,6 +90,7 @@ struct SessionView: View {
                             
                             Button {
                                 setAttributedText("")
+                                questionText = ""
                                 clearAttributedTextButtonTapped += 1
                             } label: {
                                 Image(systemName: "xmark")
@@ -194,7 +195,7 @@ private extension SessionView {
                     .font(.title)
                     .padding(.trailing)
             }
-            .hidden(questionText.isEmpty/*, remove: questionText.isEmpty*/)
+            .hidden(questionText.isEmpty)
             .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
                              trigger: clearQuestionButtonTapped)
         }
