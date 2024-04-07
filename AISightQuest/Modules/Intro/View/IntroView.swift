@@ -67,7 +67,7 @@ private extension IntroView {
                 
                 
                 Text(firstIntro.text)
-                    .font(.system(size: 14))
+                    .fontWidth(.condensed)
                     .foregroundStyle(.darkBlue600)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 30)
@@ -76,7 +76,7 @@ private extension IntroView {
                     showWalkThroughScreens.toggle()
                 } label: {
                     Text("first intro button text")
-                        .font(.system(size: 14, weight: .semibold))
+                        .fontWeight(.semibold)
                         .foregroundStyle(.lilac100)
                         .padding()
                 }
@@ -129,25 +129,23 @@ private extension IntroView {
                         ZStack {
                             Image(systemName: "chevron.right")
                                 .font(.title3)
-                                .fontWeight(.semibold)
                                 .foregroundStyle(.lilac200)
                                 .hidden(isLast, remove: isLast)
                                 .scaleEffect(!isLast ? 1 : 0.0001)
                             
                             HStack(spacing: 48) {
                                 Text("last intro button text")
-                                    .font(.system(size: 15, weight: .bold))
                                     .foregroundStyle(.lilac100)
                                 
                                 Image(systemName: "arrow.right")
                                     .font(.title3)
-                                    .fontWeight(.semibold)
                                     .foregroundStyle(.lilac200)
                             }
                             .padding(.horizontal)
                             .hidden(!isLast, remove: !isLast)
                             .scaleEffect(isLast ? 1 : 0.0001)
                         }
+                        .fontWeight(.semibold)
                     }
                     .padding()
                     .offset(y: isLast ? -20 : -50)
@@ -172,7 +170,9 @@ private extension IntroView {
         
         VStack(spacing: 10) {
             Text(intro.title)
-                .font(.system(size: 28, weight: .bold))
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .fontWidth(.compressed)
                 .offset(x: -size.width * CGFloat(currentIndex - index))
                 .animation(.interactiveSpring(response: 0.9,
                                               dampingFraction: 0.8,
@@ -180,7 +180,8 @@ private extension IntroView {
                            value: currentIndex)
             
             Text(intro.text)
-                .font(.system(size: 14, weight: .regular))
+                .fontWeight(.regular)
+                .fontWidth(.condensed)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 30)
                 .offset(x: -size.width * CGFloat(currentIndex - index))
@@ -218,7 +219,9 @@ private extension IntroView {
                            value: currentIndex)
             
             Text(Intro.Data.lastIntro.title)
-                .font(.system(size: 28, weight: .bold))
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .fontWidth(.compressed)
                 .offset(x: -size.width * CGFloat(currentIndex - index))
                 .animation(.interactiveSpring(response: 0.9,
                                               dampingFraction: 0.8,
@@ -226,7 +229,8 @@ private extension IntroView {
                            value: currentIndex)
             
             Text(Intro.Data.lastIntro.text)
-                .font(.system(size: 14, weight: .regular))
+                .fontWeight(.regular)
+                .fontWidth(.condensed)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 30)
                 .offset(x: -size.width * CGFloat(currentIndex - index))
@@ -258,7 +262,7 @@ private extension IntroView {
             Spacer()
             
             Button("skip") { currentIndex = Intro.Data.intros.count }
-                .font(.system(size: 14, weight: .regular))
+                .fontWeight(.regular)
                 .foregroundStyle(Color.darkBlue500)
                 .opacity(islast ? 0 : 1)
                 .animation(.easeInOut, value: islast)
