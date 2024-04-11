@@ -43,6 +43,7 @@
 		919F8D2C2B94D52F003E735A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D2B2B94D52F003E735A /* UserDefaults.swift */; };
 		919F8D2E2B94D579003E735A /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D2D2B94D579003E735A /* StorageManager.swift */; };
 		919F8D392B95085B003E735A /* Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8D382B95085B003E735A /* Intro.swift */; };
+		91A7A97A2BC8942B00F79CB6 /* SpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A7A9792BC8942B00F79CB6 /* SpeechManager.swift */; };
 		91C5CB7B2B8B581100132C1E /* MainframeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7A2B8B581100132C1E /* MainframeRouter.swift */; };
 		91C5CB7D2B8B589F00132C1E /* MainframeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7C2B8B589F00132C1E /* MainframeFactory.swift */; };
 		91C5CB7F2B8B58E000132C1E /* MainframeDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB7E2B8B58E000132C1E /* MainframeDependencyContainer.swift */; };
@@ -125,6 +126,7 @@
 		919F8D2B2B94D52F003E735A /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		919F8D2D2B94D579003E735A /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		919F8D382B95085B003E735A /* Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro.swift; sourceTree = "<group>"; };
+		91A7A9792BC8942B00F79CB6 /* SpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechManager.swift; sourceTree = "<group>"; };
 		91C5CB7A2B8B581100132C1E /* MainframeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeRouter.swift; sourceTree = "<group>"; };
 		91C5CB7C2B8B589F00132C1E /* MainframeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeFactory.swift; sourceTree = "<group>"; };
 		91C5CB7E2B8B58E000132C1E /* MainframeDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainframeDependencyContainer.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				918391A42B8B95960085FF17 /* TextRecognizer.swift */,
+				91A7A9792BC8942B00F79CB6 /* SpeechManager.swift */,
 				91ECF91D2B93E51E00517B67 /* BERT Core ML Model */,
 			);
 			path = Model;
@@ -688,6 +691,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91C5CB8B2B8B630800132C1E /* SessionFactory.swift in Sources */,
+				91A7A97A2BC8942B00F79CB6 /* SpeechManager.swift in Sources */,
 				919F8D252B94CE24003E735A /* LottieView.swift in Sources */,
 				919F8D0B2B94C905003E735A /* IntroRouter.swift in Sources */,
 				919F8D0D2B94CA80003E735A /* IntroFactory.swift in Sources */,
