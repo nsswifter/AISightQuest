@@ -14,10 +14,12 @@ extension SessionView {
     
     @Observable
     class ViewModel {
-        var modelContext: ModelContext
+        private var modelContext: ModelContext
+        private let speechManager = SpeechManager()
+
         let sessionIndex: Int
         var sessions: [Session] = []
-
+        
         init(modelContext: ModelContext, sessionIndex: Int) {
             self.modelContext = modelContext
             self.sessionIndex = sessionIndex
@@ -33,6 +35,16 @@ extension SessionView {
             }
         }
         
+        // MARK: - Speech Manager
+        
+        var isSpeaking: Bool { speechManager.isPlaying }
+        
+        func stopSpeaking() { speechManager.stop() }
+        
+        func speak(textToSpeak: String) { speechManager.speak(text: textToSpeak) }
+        
+        // MARK: - BERT Core ML Model
+
         func findAnswer(for question: String,
                         in context: String,
                         colorScheme: ColorScheme) -> (attributedText: NSAttributedString?, questionText: String){
