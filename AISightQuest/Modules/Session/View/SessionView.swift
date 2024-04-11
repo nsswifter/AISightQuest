@@ -19,6 +19,7 @@ struct SessionView: View {
 
     @State private var onAppearUpdatedAttributedText = false
     @State private var isShowingScannerSheet = false
+    @State private var micButtonTapped = 0
     @State private var clearAttributedTextButtonTapped = 0
     @State private var clearQuestionButtonTapped = 0
     @State private var dismissButtonTapped = 0
@@ -70,6 +71,18 @@ struct SessionView: View {
                             if !attributedText.isEmpty {
                                 Spacer()
                             }
+                            
+                            Button {
+                                playText(textToSpeak: attributedText.string)
+                                micButtonTapped += 1
+                            } label: {
+                                Image(systemName: viewModel.isSpeaking ? "mic.fill" : "mic")
+                                    .foregroundStyle(.lilac200)
+                            }
+                            .buttonStyle(CustomButtonStyle())
+                            .hidden(attributedText.isEmpty, remove: attributedText.isEmpty)
+                            .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
+                                             trigger: micButtonTapped)
                             
                             Button {
                                 isShowingScannerSheet = true
@@ -144,6 +157,14 @@ private extension SessionView {
                 viewModel.sessions[viewModel.sessionIndex].lastChange = Date()
             }
             onAppearUpdatedAttributedText = true
+        }
+    }
+    
+    func playText(textToSpeak: String) {
+        if viewModel.isSpeaking {
+            viewModel.stopSpeaking()
+        } else {
+            viewModel.speak(textToSpeak: textToSpeak)
         }
     }
 }
