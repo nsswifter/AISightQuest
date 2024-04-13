@@ -71,6 +71,7 @@ struct MainframeView: View {
                         .scrollIndicators(.never)
                         .scrollContentBackground(.hidden)
                         .background(.clear)
+                        .clipped()
                     }
                     
                     Text("hidden reset button")
