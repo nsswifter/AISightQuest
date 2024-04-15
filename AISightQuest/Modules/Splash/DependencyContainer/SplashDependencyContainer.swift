@@ -7,7 +7,7 @@
 
 import SwiftData
 
-final class SplashDependencyContainer {
+final class SplashDependencyContainer: SplashFactory {
     @MainActor func makeSplashView(modelContext: ModelContext) -> SplashView {
         SplashView(viewModel: SplashView.ViewModel(storageManager: StorageManager(),
                                                    modelContext: modelContext))

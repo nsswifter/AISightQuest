@@ -10,5 +10,5 @@ import SwiftData
 typealias SplashFactory = SplashViewFactory
 
 protocol SplashViewFactory {
-    func makeSplashView(modelContainer: ModelContainer) -> SplashView
+    func makeSplashView(modelContext: ModelContext) -> SplashView
 }
