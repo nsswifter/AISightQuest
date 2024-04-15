@@ -10,5 +10,5 @@ import SwiftData
 typealias MainframeFactory = MainframeViewFactory
 
 protocol MainframeViewFactory {
-    func makeMainframeView(modelContainer: ModelContainer) -> MainframeView
+    func makeMainframeView(modelContext: ModelContext) -> MainframeView
 }
