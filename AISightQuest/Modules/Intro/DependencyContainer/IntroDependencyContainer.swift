@@ -7,7 +7,7 @@
 
 import SwiftData
 
-final class IntroDependencyContainer {
+final class IntroDependencyContainer: IntroFactory {
     @MainActor func makeIntroView(modelContext: ModelContext) -> IntroView {
         IntroView(viewModel: IntroView.ViewModel(storageManager: StorageManager(),
                                                  modelContext: modelContext))

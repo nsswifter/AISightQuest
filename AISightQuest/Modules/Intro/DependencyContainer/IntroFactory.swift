@@ -10,5 +10,5 @@ import SwiftData
 typealias IntroFactory = IntroViewFactory
 
 protocol IntroViewFactory {
-    func makeIntroView(modelContainer: ModelContainer) -> IntroView
+    func makeIntroView(modelContext: ModelContext) -> IntroView
 }
