@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import Vision
 
 extension SessionView {
     
@@ -74,6 +75,18 @@ extension SessionView {
                 attributedText = mutableAttributedText
             }
             return (attributedText, String(answer))
+        }
+        
+        // MARK: - Vision Recognize Text
+
+        func recognizeText(of image: CGImage) throws -> String {
+            let request = VNRecognizeTextRequest()
+            request.recognitionLevel = .accurate
+            try VNImageRequestHandler(cgImage: image, options: [:]).perform([request])
+                        
+            return request.results?
+                .compactMap { $0.topCandidates(1).first?.string }
+                .joined(separator: "\n") ?? ""
         }
     }
 }

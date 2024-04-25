@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import PhotosUI
 
 // MARK: - Session View
 
@@ -16,7 +17,7 @@ struct SessionView: View {
     
     @Environment(\.colorScheme) private var colorScheme
     @Environment(\.dismiss) private var dismiss
-
+    
     @State private var onAppearUpdatedAttributedText = false
     @State private var isShowingScannerSheet = false
     @State private var micButtonTapped = 0
@@ -27,6 +28,8 @@ struct SessionView: View {
     
     @State private var questionText = ""
     @State private var attributedText = NSAttributedString()
+    
+    @State private var selectedItem: PhotosPickerItem?
     
     var body: some View {
         VStack {
@@ -84,17 +87,44 @@ struct SessionView: View {
                             .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
                                              trigger: micButtonTapped)
                             
+                            PhotosPicker(selection: $selectedItem, matching: .images) {
+                                HStack {
+                                    Image(systemName: "photo.circle.fill")
+                                        .foregroundStyle(.lilac200)
+                                        .font(.title2)
+                                    
+                                    if attributedText.isEmpty {
+                                        Text("Select an image")
+                                            .foregroundStyle(.lilac100)
+                                    }
+                                }
+                                .padding(attributedText.isEmpty)
+                            }
+                            .buttonStyle(CustomButtonStyle())
+                            .onChange(of: selectedItem) {
+                                Task {
+                                    if let data = try? await selectedItem?.loadTransferable(type: Data.self),
+                                       let image = UIImage(data: data)?.cgImage {
+                                        try setAttributedText(viewModel.recognizeText(of: image))
+                                    }
+                                }
+                            }
+                            
                             Button {
+                                print("Document Scanner Pressed")
                                 isShowingScannerSheet = true
                             } label: {
                                 HStack {
                                     Image(systemName: "camera.circle.fill")
                                         .foregroundStyle(.lilac200)
                                         .font(.title2)
-                                    Text("scan")
-                                        .foregroundStyle(.lilac100)
+                                    
+                                    if attributedText.isEmpty {
+                                        Text("scan")
+                                            .foregroundStyle(.lilac100)
+                                    }
                                 }
-                                .padding()
+                                .padding(attributedText.isEmpty)
                             }
                             .buttonStyle(CustomButtonStyle())
                             .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
@@ -188,7 +218,7 @@ private extension SessionView {
     }
     
     // MARK: - Question Text Field
-        
+    
     @ViewBuilder
     func QuestionTextField() -> some View {
         HStack {
