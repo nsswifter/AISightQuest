@@ -20,6 +20,7 @@
 		91591E562BB626E100A72E1B /* (null) in Sources */ = {isa = PBXBuildFile; };
 		916128C92B890BEB001094E5 /* SessionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916128C82B890BEB001094E5 /* SessionRow.swift */; };
 		91661E292BBA0E3000F114EE /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91661E282BBA0E3000F114EE /* NSAttributedString.swift */; };
+		9175871F2BDAF75A005BE5FB /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9175871E2BDAF75A005BE5FB /* Stack.swift */; };
 		917F76A72BA222DE003A7031 /* Education-Lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 917F76A62BA222DE003A7031 /* Education-Lottie.json */; };
 		917F76B12BA22BD7003A7031 /* Privacy-Lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 917F76B02BA22BD7003A7031 /* Privacy-Lottie.json */; };
 		918391A22B8B94990085FF17 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918391A12B8B94990085FF17 /* ScannerView.swift */; };
@@ -104,6 +105,7 @@
 		914CA7232BA3119E00AF7ED8 /* AI-Robot-Lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "AI-Robot-Lottie.json"; sourceTree = "<group>"; };
 		916128C82B890BEB001094E5 /* SessionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRow.swift; sourceTree = "<group>"; };
 		91661E282BBA0E3000F114EE /* NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
+		9175871E2BDAF75A005BE5FB /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		917F76A62BA222DE003A7031 /* Education-Lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Education-Lottie.json"; sourceTree = "<group>"; };
 		917F76B02BA22BD7003A7031 /* Privacy-Lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Privacy-Lottie.json"; sourceTree = "<group>"; };
 		918391A12B8B94990085FF17 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
@@ -540,6 +542,7 @@
 			children = (
 				914BFE142BB9B111007C911E /* CustomButtonStyle.swift */,
 				919F8D242B94CE24003E735A /* LottieView.swift */,
+				9175871E2BDAF75A005BE5FB /* Stack.swift */,
 				91ECF92C2B93E62300517B67 /* TextView.swift */,
 			);
 			path = View;
@@ -699,6 +702,7 @@
 				91ECF9232B93E51E00517B67 /* BERT.swift in Sources */,
 				91ECF92D2B93E62300517B67 /* TextView.swift in Sources */,
 				919F8D2E2B94D579003E735A /* StorageManager.swift in Sources */,
+				9175871F2BDAF75A005BE5FB /* Stack.swift in Sources */,
 				91ECF9252B93E51E00517B67 /* BERTOutput.swift in Sources */,
 				919F8D132B94CB28003E735A /* IntroViewModel.swift in Sources */,
 				91ECF91C2B93E48600517B67 /* Routes.swift in Sources */,
@@ -915,7 +919,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mehdi.AISightQuest;
+				PRODUCT_BUNDLE_IDENTIFIER = mehdi2003karami.AISightQuest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -946,7 +950,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mehdi.AISightQuest;
+				PRODUCT_BUNDLE_IDENTIFIER = mehdi2003karami.AISightQuest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
