@@ -73,10 +73,11 @@ struct SessionView: View {
                         Stack(orientation: attributedText.isEmpty ? .vertical : .horizontal) {
                             PhotosPicker(selection: $selectedItem, matching: .images) {
                                 HStack {
-                                    Image(systemName: "photo.circle.fill")
+                                    Image(systemName: "photo")
                                         .foregroundStyle(.lilac200)
                                         .font(.title2)
-                                    
+                                        .fontWeight(.regular)
+
                                     Text("select")
                                         .foregroundStyle(.lilac100)
                                         .hidden(!attributedText.isEmpty, remove: !attributedText.isEmpty)
@@ -99,10 +100,11 @@ struct SessionView: View {
                                 isShowingScannerSheet = true
                             } label: {
                                 HStack {
-                                    Image(systemName: "camera.circle.fill")
+                                    Image(systemName: "camera")
                                         .foregroundStyle(.lilac200)
                                         .font(.title2)
-                                    
+                                        .fontWeight(.regular)
+
                                     Text("scan")
                                         .foregroundStyle(.lilac100)
                                         .hidden(!attributedText.isEmpty, remove: !attributedText.isEmpty)
@@ -121,8 +123,10 @@ struct SessionView: View {
                                 viewModel.play(textToSpeak: attributedText.string)
                                 micButtonTapped += 1
                             } label: {
-                                Image(systemName: viewModel.isPlaying ? "mic.fill" : "mic")
+                                Image(systemName: viewModel.isPlaying ? "speaker.wave.2.fill" : "speaker.wave.2")
                                     .foregroundStyle(.lilac200)
+                                    .font(.title2)
+                                    .fontWeight(.regular)
                             }
                             .buttonStyle(CustomButtonStyle())
                             .hidden(attributedText.isEmpty, remove: attributedText.isEmpty)
@@ -137,6 +141,8 @@ struct SessionView: View {
                             } label: {
                                 Image(systemName: "xmark")
                                     .foregroundStyle(.lilac200)
+                                    .font(.title2)
+                                    .fontWeight(.regular)
                             }
                             .buttonStyle(CustomButtonStyle())
                             .hidden(attributedText.isEmpty, remove: attributedText.isEmpty)
