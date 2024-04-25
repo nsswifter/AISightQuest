@@ -38,11 +38,17 @@ extension SessionView {
         
         // MARK: - Speech Manager
         
-        var isSpeaking: Bool { speechManager.isPlaying }
+        var isPlaying: Bool { speechManager.isPlaying }
         
-        func stopSpeaking() { speechManager.stop() }
-        
-        func speak(textToSpeak: String) { speechManager.speak(text: textToSpeak) }
+        func stopPlaying() { speechManager.stop() }
+
+        func play(textToSpeak: String) {
+            if speechManager.isPlaying {
+                speechManager.stop()
+            } else {
+                speechManager.speak(text: textToSpeak)
+            }
+        }
         
         // MARK: - BERT Core ML Model
 
