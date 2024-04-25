@@ -70,35 +70,19 @@ struct SessionView: View {
                     VStack {
                         Spacer()
                         
-                        HStack {
-                            if !attributedText.isEmpty {
-                                Spacer()
-                            }
-                            
-                            Button {
-                                playText(textToSpeak: attributedText.string)
-                                micButtonTapped += 1
-                            } label: {
-                                Image(systemName: viewModel.isSpeaking ? "mic.fill" : "mic")
-                                    .foregroundStyle(.lilac200)
-                            }
-                            .buttonStyle(CustomButtonStyle())
-                            .hidden(attributedText.isEmpty, remove: attributedText.isEmpty)
-                            .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
-                                             trigger: micButtonTapped)
-                            
+                        Stack(orientation: attributedText.isEmpty ? .vertical : .horizontal) {
                             PhotosPicker(selection: $selectedItem, matching: .images) {
                                 HStack {
-                                    Image(systemName: "photo.circle.fill")
+                                    Image(systemName: "photo")
                                         .foregroundStyle(.lilac200)
                                         .font(.title2)
-                                    
-                                    if attributedText.isEmpty {
-                                        Text("Select an image")
-                                            .foregroundStyle(.lilac100)
-                                    }
+                                        .fontWeight(.regular)
+
+                                    Text("select")
+                                        .foregroundStyle(.lilac100)
+                                        .hidden(!attributedText.isEmpty, remove: !attributedText.isEmpty)
                                 }
-                                .padding(attributedText.isEmpty)
+                                .padding(shouldAddPadding: attributedText.isEmpty)
                             }
                             .buttonStyle(CustomButtonStyle())
                             .onChange(of: selectedItem) {
@@ -106,6 +90,7 @@ struct SessionView: View {
                                     if let data = try? await selectedItem?.loadTransferable(type: Data.self),
                                        let image = UIImage(data: data)?.cgImage {
                                         try setAttributedText(viewModel.recognizeText(of: image))
+                                        selectedItem = nil
                                     }
                                 }
                             }
@@ -115,29 +100,49 @@ struct SessionView: View {
                                 isShowingScannerSheet = true
                             } label: {
                                 HStack {
-                                    Image(systemName: "camera.circle.fill")
+                                    Image(systemName: "camera")
                                         .foregroundStyle(.lilac200)
                                         .font(.title2)
-                                    
-                                    if attributedText.isEmpty {
-                                        Text("scan")
-                                            .foregroundStyle(.lilac100)
-                                    }
+                                        .fontWeight(.regular)
+
+                                    Text("scan")
+                                        .foregroundStyle(.lilac100)
+                                        .hidden(!attributedText.isEmpty, remove: !attributedText.isEmpty)
                                 }
-                                .padding(attributedText.isEmpty)
+                                .padding(shouldAddPadding: attributedText.isEmpty)
                             }
                             .buttonStyle(CustomButtonStyle())
                             .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
                                              trigger: isShowingScannerSheet)
                             .popoverTip(ScanDocumentTip())
                             
+                            Spacer()
+                                .hidden(attributedText.isEmpty, remove: attributedText.isEmpty)
+                            
+                            Button {
+                                viewModel.play(textToSpeak: attributedText.string)
+                                micButtonTapped += 1
+                            } label: {
+                                Image(systemName: viewModel.isPlaying ? "speaker.wave.2.fill" : "speaker.wave.2")
+                                    .foregroundStyle(.lilac200)
+                                    .font(.title2)
+                                    .fontWeight(.regular)
+                            }
+                            .buttonStyle(CustomButtonStyle())
+                            .hidden(attributedText.isEmpty, remove: attributedText.isEmpty)
+                            .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
+                                             trigger: micButtonTapped)
+                            
                             Button {
                                 setAttributedText("")
                                 questionText = ""
+                                viewModel.stopPlaying()
                                 clearAttributedTextButtonTapped += 1
                             } label: {
                                 Image(systemName: "xmark")
                                     .foregroundStyle(.lilac200)
+                                    .font(.title2)
+                                    .fontWeight(.regular)
                             }
                             .buttonStyle(CustomButtonStyle())
                             .hidden(attributedText.isEmpty, remove: attributedText.isEmpty)
@@ -149,10 +154,9 @@ struct SessionView: View {
                     .padding(.horizontal, 18)
                 }
             
-            if !attributedText.isEmpty {
-                QuestionTextField()
-                    .padding(.bottom)
-            }
+            QuestionTextField()
+                .padding(.bottom)
+                .hidden(attributedText.isEmpty, remove: attributedText.isEmpty)
         }
         .padding(.horizontal)
         .onChange(of: attributedText.string) { _, newValue in
@@ -187,14 +191,6 @@ private extension SessionView {
                 viewModel.sessions[viewModel.sessionIndex].lastChange = Date()
             }
             onAppearUpdatedAttributedText = true
-        }
-    }
-    
-    func playText(textToSpeak: String) {
-        if viewModel.isSpeaking {
-            viewModel.stopSpeaking()
-        } else {
-            viewModel.speak(textToSpeak: textToSpeak)
         }
     }
 }
