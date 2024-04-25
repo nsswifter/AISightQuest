@@ -46,6 +46,23 @@ extension View {
     func onKeyboardHide(perform action: @escaping () -> Void) -> some View {
         modifier(KeyboardHidingModifier(action: action))
     }
+    
+    /// Add padding to the view based on a boolean value.
+    ///
+    /// Example for addition:
+    ///
+    ///     Text("Label")
+    ///         .padding(true)
+    ///
+    /// - Parameters:
+    ///   - shouldBeAdded: Set to `true` to add padding to the view. In `false` state the raw view will return.
+    @ViewBuilder func padding(_ shouldBeAdded: Bool) -> some View {
+        if shouldBeAdded {
+            self.padding()
+        } else {
+            self
+        }
+    }
 }
 
 /// A view modifier that detects when the keyboard is about to be hidden and performs a specified action.
