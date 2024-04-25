@@ -191,6 +191,16 @@
         }
       }
     },
+    "select" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select an image"
+          }
+        }
+      }
+    },
     "session" : {
       "localizations" : {
         "en" : {
