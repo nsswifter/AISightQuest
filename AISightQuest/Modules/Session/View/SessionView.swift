@@ -84,6 +84,29 @@ struct SessionView: View {
                             .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
                                              trigger: micButtonTapped)
                             
+                            PhotosPicker(selection: $selectedItem, matching: .images) {
+                                    HStack {
+                                        Image(systemName: "photo.circle.fill")
+                                            .foregroundStyle(.lilac200)
+                                            .font(.title2)
+                                        
+                                        if attributedText.isEmpty {
+                                            Text("Select an image")
+                                                .foregroundStyle(.lilac100)
+                                        }
+                                    }
+                                    .padding(attributedText.isEmpty)
+                            }
+                        .buttonStyle(CustomButtonStyle())
+                            .onChange(of: selectedItem) {
+                                Task {
+                                    if let data = try? await selectedItem?.loadTransferable(type: Data.self),
+                                       let image = UIImage(data: data)?.cgImage {
+                                        try setAttributedText(viewModel.recognizeText(of: image))
+                                    }
+                                }
+                            }
+                            
                             Button {
                                 isShowingScannerSheet = true
                             } label: {
