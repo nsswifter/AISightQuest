@@ -47,18 +47,16 @@ extension View {
         modifier(KeyboardHidingModifier(action: action))
     }
     
-    /// Add padding to the view based on a boolean value.
-    ///
-    /// Example for addition:
-    ///
-    ///     Text("Label")
-    ///         .padding(true)
+    /// Adds padding to the view conditionally based on the `shouldAddPadding` parameter.
     ///
     /// - Parameters:
-    ///   - shouldBeAdded: Set to `true` to add padding to the view. In `false` state the raw view will return.
-    @ViewBuilder func padding(_ shouldBeAdded: Bool) -> some View {
-        if shouldBeAdded {
-            self.padding()
+    ///   - shouldAddPadding: A Boolean value indicating whether padding should be added to the view.
+    ///   - edges: The set of edges along which to add padding.
+    ///   - length: The amount of padding to apply to the specified edges.
+    /// - Returns: A view modified with padding if `shouldAddPadding` is `true`, otherwise returns the original view.
+    @ViewBuilder func padding(shouldAddPadding addPadding: Bool, _ edges: Edge.Set = .all, _ length: CGFloat? = nil) -> some View {
+        if addPadding {
+            self.padding(edges, length)
         } else {
             self
         }
