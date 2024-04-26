@@ -9,9 +9,11 @@ import SwiftUI
 
 // MARK: - Text View
 
+/// A SwiftUI view representing a UITextView with attributed text.
 struct TextView: UIViewRepresentable {
     @Binding var attributedText: NSAttributedString
     
+    // Creates the underlying UITextView instance.
     func makeUIView(context: Context) -> UITextView {
         let textView = UITextView()
         textView.delegate = context.coordinator
@@ -26,14 +28,17 @@ struct TextView: UIViewRepresentable {
         return textView
     }
     
+    // Updates the UITextView with the new attributed text.
     func updateUIView(_ uiView: UITextView, context: Context) {
         uiView.attributedText = attributedText
     }
     
+    // Creates a coordinator to manage interactions with the UITextView.
     func makeCoordinator() -> Coordinator {
         Coordinator(innerAttributedText: $attributedText)
     }
     
+    /// A coordinator that manages interactions with the UITextView.
     class Coordinator: NSObject, UITextViewDelegate {
         @Binding var innerAttributedText: NSAttributedString
         private var textViewDidChangeSelectionTask: Task<Void, Error>?
@@ -42,6 +47,7 @@ struct TextView: UIViewRepresentable {
             self._innerAttributedText = innerAttributedText
         }
         
+        // Notifies the delegate that the selection changed in the specified text view.
         func textViewDidChangeSelection(_ textView: UITextView) {
             textViewDidChangeSelectionTask?.cancel()
             textViewDidChangeSelectionTask = Task {

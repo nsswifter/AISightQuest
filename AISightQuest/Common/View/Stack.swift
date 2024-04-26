@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Stack View
+
 /// A custom stack view that arranges its child views horizontally or vertically based on the specified orientation.
 ///
 /// Use the `Stack` view to dynamically stack views either horizontally or vertically.
@@ -81,6 +83,7 @@ extension Stack {
 
 // MARK: - Stack View Preview
 
+#if DEBUG
 #Preview {
     Stack(orientation: .vertical) {
         Image(systemName: "camera")
@@ -88,3 +91,4 @@ extension Stack {
         Image(systemName: "photo")
     }
 }
+#endif
