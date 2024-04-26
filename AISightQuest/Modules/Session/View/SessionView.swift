@@ -89,7 +89,7 @@ struct SessionView: View {
                                         .foregroundStyle(.lilac200)
                                         .font(.title2)
                                         .fontWeight(.regular)
-
+                                    
                                     Text("select")
                                         .foregroundStyle(.lilac100)
                                         .hidden(!attributedText.isEmpty, remove: !attributedText.isEmpty)
@@ -116,7 +116,7 @@ struct SessionView: View {
                                         .foregroundStyle(.lilac200)
                                         .font(.title2)
                                         .fontWeight(.regular)
-
+                                    
                                     Text("scan")
                                         .foregroundStyle(.lilac100)
                                         .hidden(!attributedText.isEmpty, remove: !attributedText.isEmpty)
@@ -135,10 +135,11 @@ struct SessionView: View {
                                 viewModel.play(textToSpeak: attributedText.string)
                                 micButtonTapped += 1
                             } label: {
-                                Image(systemName: viewModel.isPlaying ? "speaker.wave.2.fill" : "speaker.wave.2")
+                                SpeakerImage(volumeLevel: viewModel.outputVolume, filled: viewModel.isPlaying)
                                     .foregroundStyle(.lilac200)
                                     .font(.title2)
                                     .fontWeight(.regular)
+                                    .contentTransition(.symbolEffect(.replace))
                             }
                             .buttonStyle(CustomButtonStyle())
                             .hidden(attributedText.isEmpty, remove: attributedText.isEmpty)

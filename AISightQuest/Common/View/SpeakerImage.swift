@@ -10,8 +10,8 @@ import SwiftUI
 // MARK: - Speaker Image View
 
 struct SpeakerImage: View {
-    let volumeLevel: Double
-    let filled: Bool
+    var volumeLevel: Float
+    var filled: Bool
     
     var body: some View {
         Image(systemName: speakerIcon)
@@ -26,7 +26,7 @@ struct SpeakerImage: View {
         case 0.01..<0.33:
             if filled { "speaker.wave.1.fill" } else { "speaker.wave.1" }
         default:
-            if filled { "speaker.wave.3.fill" } else { "speaker.wave.3" }
+            if filled { "speaker.slash.fill" } else { "speaker.slash" }
         }
     }
 }
