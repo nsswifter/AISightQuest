@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 import Vision
+import AVFoundation
 
 extension SessionView {
     
@@ -40,6 +41,8 @@ extension SessionView {
         
         var isPlaying: Bool { speechManager.isPlaying }
         
+        var playingProgress: Double { speechManager.playingProgress }
+
         func stopPlaying() { speechManager.stop() }
 
         func play(textToSpeak: String) {
@@ -93,6 +96,12 @@ extension SessionView {
             return request.results?
                 .compactMap { $0.topCandidates(1).first?.string }
                 .joined(separator: "\n") ?? ""
+        }
+        
+        // MARK: - AVFoundation Related Methods
+        
+        var outputVolume: Float {
+            AVAudioSession.sharedInstance().outputVolume
         }
     }
 }

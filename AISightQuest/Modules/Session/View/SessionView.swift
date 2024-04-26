@@ -59,12 +59,24 @@ struct SessionView: View {
                 .padding()
                 .padding(.bottom, 52)
                 .background {
-                    LinearGradient(colors: [.darkBlue300, .lilac100,
-                                            .darkBlue300, .lilac200],
-                                   startPoint: .topLeading,
-                                   endPoint: .bottomTrailing)
+                    ZStack {
+                        LinearGradient(colors: [.darkBlue300, .lilac100,
+                                                .darkBlue300, .lilac200],
+                                       startPoint: .topLeading,
+                                       endPoint: .bottomTrailing)
+                        
+                        VStack {
+                            Spacer()
+                            
+                            CustomProgressView(progress: viewModel.playingProgress,
+                                               height: 5,
+                                               progressColor: .darkBlue500,
+                                               backgroundColor: .clear)
+                        }
+                        .padding(.horizontal, 20)
+                    }
                 }
-                .clipShape(RoundedRectangle(cornerRadius: 24))
+                .clipShape(RoundedRectangle(cornerRadius: 36))
                 .padding(.vertical)
                 .overlay {
                     VStack {
@@ -77,7 +89,7 @@ struct SessionView: View {
                                         .foregroundStyle(.lilac200)
                                         .font(.title2)
                                         .fontWeight(.regular)
-
+                                    
                                     Text("select")
                                         .foregroundStyle(.lilac100)
                                         .hidden(!attributedText.isEmpty, remove: !attributedText.isEmpty)
@@ -104,7 +116,7 @@ struct SessionView: View {
                                         .foregroundStyle(.lilac200)
                                         .font(.title2)
                                         .fontWeight(.regular)
-
+                                    
                                     Text("scan")
                                         .foregroundStyle(.lilac100)
                                         .hidden(!attributedText.isEmpty, remove: !attributedText.isEmpty)
@@ -123,10 +135,11 @@ struct SessionView: View {
                                 viewModel.play(textToSpeak: attributedText.string)
                                 micButtonTapped += 1
                             } label: {
-                                Image(systemName: viewModel.isPlaying ? "speaker.wave.2.fill" : "speaker.wave.2")
+                                SpeakerImage(volumeLevel: viewModel.outputVolume, filled: viewModel.isPlaying)
                                     .foregroundStyle(.lilac200)
                                     .font(.title2)
                                     .fontWeight(.regular)
+                                    .contentTransition(.symbolEffect(.replace))
                             }
                             .buttonStyle(CustomButtonStyle())
                             .hidden(attributedText.isEmpty, remove: attributedText.isEmpty)

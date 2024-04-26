@@ -9,7 +9,9 @@ import SwiftUI
 
 // MARK: - Custom Button Style
 
+/// A custom button style that applies a bold font, sets a fixed height, and adds a capsule-shaped background with gradient colors.
 struct CustomButtonStyle: ButtonStyle {
+    /// Constructs the visual appearance and interaction behavior of the button.
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .bold()
