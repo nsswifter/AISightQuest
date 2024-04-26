@@ -15,6 +15,7 @@
 		911E47E72B87363800796D1A /* AISightQuestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47E62B87363800796D1A /* AISightQuestTests.swift */; };
 		911E47F12B87363800796D1A /* AISightQuestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47F02B87363800796D1A /* AISightQuestUITests.swift */; };
 		911E47F32B87363800796D1A /* AISightQuestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E47F22B87363800796D1A /* AISightQuestUITestsLaunchTests.swift */; };
+		9141CF062BDC451E00DFAD4B /* SpeakerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9141CF052BDC451E00DFAD4B /* SpeakerImage.swift */; };
 		914BFE152BB9B112007C911E /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914BFE142BB9B111007C911E /* CustomButtonStyle.swift */; };
 		914CA7242BA3119E00AF7ED8 /* AI-Robot-Lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 914CA7232BA3119E00AF7ED8 /* AI-Robot-Lottie.json */; };
 		91591E562BB626E100A72E1B /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -102,6 +103,7 @@
 		911E47EC2B87363800796D1A /* AISightQuestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AISightQuestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		911E47F02B87363800796D1A /* AISightQuestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISightQuestUITests.swift; sourceTree = "<group>"; };
 		911E47F22B87363800796D1A /* AISightQuestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISightQuestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9141CF052BDC451E00DFAD4B /* SpeakerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerImage.swift; sourceTree = "<group>"; };
 		914BFE142BB9B111007C911E /* CustomButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		914CA7232BA3119E00AF7ED8 /* AI-Robot-Lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "AI-Robot-Lottie.json"; sourceTree = "<group>"; };
 		916128C82B890BEB001094E5 /* SessionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRow.swift; sourceTree = "<group>"; };
@@ -545,6 +547,7 @@
 				914BFE142BB9B111007C911E /* CustomButtonStyle.swift */,
 				91C6B6FD2BDC272800BD42A3 /* CustomProgressView.swift */,
 				919F8D242B94CE24003E735A /* LottieView.swift */,
+				9141CF052BDC451E00DFAD4B /* SpeakerImage.swift */,
 				9175871E2BDAF75A005BE5FB /* Stack.swift */,
 				91ECF92C2B93E62300517B67 /* TextView.swift */,
 			);
@@ -745,6 +748,7 @@
 				91C5CB842B8B5A2900132C1E /* ViewFactory.swift in Sources */,
 				91C5CB822B8B5A1300132C1E /* NavigationState.swift in Sources */,
 				919F8D0F2B94CA90003E735A /* IntroDependencyContainer.swift in Sources */,
+				9141CF062BDC451E00DFAD4B /* SpeakerImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
