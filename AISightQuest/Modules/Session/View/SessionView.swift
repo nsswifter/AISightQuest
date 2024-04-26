@@ -59,12 +59,24 @@ struct SessionView: View {
                 .padding()
                 .padding(.bottom, 52)
                 .background {
-                    LinearGradient(colors: [.darkBlue300, .lilac100,
-                                            .darkBlue300, .lilac200],
-                                   startPoint: .topLeading,
-                                   endPoint: .bottomTrailing)
+                    ZStack {
+                        LinearGradient(colors: [.darkBlue300, .lilac100,
+                                                .darkBlue300, .lilac200],
+                                       startPoint: .topLeading,
+                                       endPoint: .bottomTrailing)
+                        
+                        VStack {
+                            Spacer()
+                            
+                            CustomProgressView(progress: viewModel.playingProgress,
+                                               height: 5,
+                                               progressColor: .darkBlue500,
+                                               backgroundColor: .clear)
+                        }
+                        .padding(.horizontal, 20)
+                    }
                 }
-                .clipShape(RoundedRectangle(cornerRadius: 24))
+                .clipShape(RoundedRectangle(cornerRadius: 36))
                 .padding(.vertical)
                 .overlay {
                     VStack {
