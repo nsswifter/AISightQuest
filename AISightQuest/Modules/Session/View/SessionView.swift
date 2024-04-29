@@ -209,14 +209,16 @@ private extension SessionView {
     }
     
     func submitQuestion() {
-        let result = viewModel.findAnswer(for: questionText,
-                                          in: viewModel.sessions[viewModel.sessionIndex].text,
-                                          colorScheme: colorScheme)
-        
-        if let attributedString = result.attributedText {
-            attributedText = attributedString
+        if !questionText.isEmpty {
+            let result = viewModel.findAnswer(for: questionText,
+                                              in: viewModel.sessions[viewModel.sessionIndex].text,
+                                              colorScheme: colorScheme)
+            
+            if let attributedString = result.attributedText {
+                attributedText = attributedString
+            }
+            questionText = result.questionText
         }
-        questionText = result.questionText
     }
 }
 
