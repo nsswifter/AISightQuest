@@ -23,6 +23,7 @@ struct SessionView: View {
     @State private var micButtonTapped = 0
     @State private var clearAttributedTextButtonTapped = 0
     @State private var clearQuestionButtonTapped = 0
+    @State private var submitQuestionButtonTapped = 0
     @State private var dismissButtonTapped = 0
     @State private var dismissButtonOffset = -100.0
     
@@ -206,6 +207,17 @@ private extension SessionView {
             onAppearUpdatedAttributedText = true
         }
     }
+    
+    func submitQuestion() {
+        let result = viewModel.findAnswer(for: questionText,
+                                          in: viewModel.sessions[viewModel.sessionIndex].text,
+                                          colorScheme: colorScheme)
+        
+        if let attributedString = result.attributedText {
+            attributedText = attributedString
+        }
+        questionText = result.questionText
+    }
 }
 
 // MARK: - Session View Content Views
@@ -234,16 +246,8 @@ private extension SessionView {
             TextField("question text field", text: $questionText.animation(.bouncy(duration: 1)))
                 .tint(.lilac400)
                 .submitLabel(.search)
-                .padding()
                 .onSubmit {
-                    let result = viewModel.findAnswer(for: questionText,
-                                                      in: viewModel.sessions[viewModel.sessionIndex].text,
-                                                      colorScheme: colorScheme)
-                    
-                    if let attributedString = result.attributedText {
-                        attributedText = attributedString
-                    }
-                    questionText = result.questionText
+                    submitQuestion()
                 }
             
             Button {
@@ -251,14 +255,26 @@ private extension SessionView {
                 clearQuestionButtonTapped += 1
             } label: {
                 Image(systemName: "xmark.circle")
-                    .foregroundStyle(.darkBlue500)
-                    .font(.title)
-                    .padding(.trailing)
+                    .foregroundStyle(.darkBlue500, .lilac400)
+                    .font(.largeTitle)
             }
             .hidden(questionText.isEmpty)
             .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
                              trigger: clearQuestionButtonTapped)
+            Button {
+                submitQuestion()
+                submitQuestionButtonTapped += 1
+            } label: {
+                Image(systemName: "magnifyingglass.circle")
+                    .foregroundStyle(.darkBlue500, .lilac400)
+                    .font(.largeTitle)
+            }
+            .hidden(questionText.isEmpty)
+            .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
+                             trigger: submitQuestionButtonTapped)
         }
+        .padding(.horizontal)
+        .padding(.vertical, 8)
         .overlay(
             Capsule()
                 .stroke(LinearGradient(colors: [.darkBlue300, .lilac200],
