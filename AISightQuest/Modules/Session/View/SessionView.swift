@@ -84,6 +84,27 @@ struct SessionView: View {
                         Spacer()
                         
                         Stack(orientation: attributedText.isEmpty ? .vertical : .horizontal) {
+                            Button {
+                                print("Document Scanner Pressed")
+                                isShowingScannerSheet = true
+                            } label: {
+                                HStack {
+                                    Image(systemName: "camera")
+                                        .foregroundStyle(.lilac200)
+                                        .font(.title2)
+                                        .fontWeight(.regular)
+                                    
+                                    Text("scan")
+                                        .foregroundStyle(.lilac100)
+                                        .hidden(!attributedText.isEmpty, remove: !attributedText.isEmpty)
+                                }
+                                .padding(shouldAddPadding: attributedText.isEmpty)
+                            }
+                            .buttonStyle(CustomButtonStyle())
+                            .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
+                                             trigger: isShowingScannerSheet)
+                            .popoverTip(ScanDocumentTip())
+                            
                             PhotosPicker(selection: $selectedItem, matching: .images) {
                                 HStack {
                                     Image(systemName: "photo")
@@ -107,27 +128,6 @@ struct SessionView: View {
                                     }
                                 }
                             }
-                            
-                            Button {
-                                print("Document Scanner Pressed")
-                                isShowingScannerSheet = true
-                            } label: {
-                                HStack {
-                                    Image(systemName: "camera")
-                                        .foregroundStyle(.lilac200)
-                                        .font(.title2)
-                                        .fontWeight(.regular)
-                                    
-                                    Text("scan")
-                                        .foregroundStyle(.lilac100)
-                                        .hidden(!attributedText.isEmpty, remove: !attributedText.isEmpty)
-                                }
-                                .padding(shouldAddPadding: attributedText.isEmpty)
-                            }
-                            .buttonStyle(CustomButtonStyle())
-                            .sensoryFeedback(.impact(flexibility: .rigid, intensity: 1),
-                                             trigger: isShowingScannerSheet)
-                            .popoverTip(ScanDocumentTip())
                             
                             Spacer()
                                 .hidden(attributedText.isEmpty, remove: attributedText.isEmpty)
