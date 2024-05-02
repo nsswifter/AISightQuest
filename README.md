@@ -1,4 +1,4 @@
-<p align="center"> <img src="AISightQuest/Resources/Assets.xcassets/AppIcon.appiconset/App%20Icon.png" width="200" height="200"/> </p>
+<p align="center"> <img src="Documentation/AISightQuest.png" width="380" height="380"/> </p>
 
 **AI Sight Quest** is an iOS application powered by Artificial Intelligence that leverages *Machine Learning models* and *Apple's Frameworks*. It enables users to take a photo and capture the text using [Apple's Vision Framework](https://developer.apple.com/documentation/vision) and locate relevant passages in a document by asking the **Bidirectional Encoder Representations from Transformers (BERT)** model a question.
 
