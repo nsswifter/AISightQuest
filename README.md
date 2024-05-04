@@ -35,4 +35,4 @@ For major changes, please open an issue first to discuss what you would like to 
 
 ## License
 
-`AI Sight Quest` is released under an MIT license. See [LICENSE](LICENSE) for more information.
+`AI Sight Quest` is released under the MIT license. See [LICENSE](LICENSE) for more information.
