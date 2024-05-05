@@ -128,3 +128,6 @@ xcuserdata
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,xcode,cocoapods,swiftpm,swiftpackagemanager,git
+
+# Core ML Model
+AISightQuest/Resources/BERT\ Core\ ML\ Model\ Resources/BERTQAFP16.mlmodel
