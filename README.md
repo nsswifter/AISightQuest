@@ -1,5 +1,7 @@
 <p align="center"> <img src="Documentation/AISightQuest.png" width="350" height="350"/> </p>
 
+<img src="https://badgen.net/static/Platform/iOS?color=4C5279"> <img src="https://badgen.net/github/tag/nsswifter/aisightquest?color=6D609E"> <img src="https://badgen.net/github/license/nsswifter/aisightquest?color=A292B1">
+
 **AI Sight Quest** is an iOS application powered by Artificial Intelligence that leverages *Machine Learning models* and *Apple's Frameworks*. It enables users to take a photo and capture the text using [Apple's Vision Framework](https://developer.apple.com/documentation/vision) and locate relevant passages in a document by asking the **Bidirectional Encoder Representations from Transformers (BERT)** model a question.
 
 ## Table of Contents
@@ -16,7 +18,7 @@ To set up and run the application, please follow these steps:
 1. Begin by cloning the repository onto your local machine.
 2. Owing to the substantial size of the BERT model, it is not directly integrated into the project. You may acquire it by downloading it from the following link:
 
-   <img src="https://github.com/nsswifter/nsswifter/blob/main/assets/core_ml.png" width="40" height="40"/> [BERT Model Download Link](https://ml-assets.apple.com/coreml/models/Text/QuestionAnswering/BERT_SQUAD/BERTSQUADFP16.mlmodel)
+<img src="https://github.com/nsswifter/nsswifter/blob/main/assets/core_ml.png" width="40" height="40"/> [BERT Model Download Link](https://ml-assets.apple.com/coreml/models/Text/QuestionAnswering/BERT_SQUAD/BERTSQUADFP16.mlmodel)
 
 3. Open the project in Xcode and integrate the downloaded model into the project structure at the designated location:
 
