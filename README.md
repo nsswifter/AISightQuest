@@ -2,16 +2,44 @@
 
 <p align="center"> <img src="Documentation/AISightQuest.png" width="350" height="350"/> </p>
 
-**AI Sight Quest** is an iOS application powered by Artificial Intelligence that leverages *Machine Learning models* and *Apple's Frameworks*. It enables users to take a photo and capture the text using [Apple's Vision Framework](https://developer.apple.com/documentation/vision) and locate relevant passages in a document by asking the **Bidirectional Encoder Representations from Transformers (BERT)** model a question.
+**AI Sight Quest** is an iOS application powered by Artificial Intelligence that leverages *Machine Learning models* and *Apple's Frameworks*. It enables users to take a photo or select them from their gallery within the app and capture the text using [Apple's Vision Framework](https://developer.apple.com/documentation/vision) and locate relevant passages in a document by asking the **Bidirectional Encoder Representations from Transformers (BERT)** model a question. <br> <br>
 
-![Demo In Light Mode](Documentation/demo-light-mode.mov)
-![Demo In Dark Mode](Documentation/demo-dark-mode.mov)
+<p align="center"> <img src="Documentation/main-view.png" height="500"/> </p>
+
 
 ## Table of Contents
 
+- [Demo](#demo)
+- [Overview](#overview)
 - [Installation and Requirements](#installation-and-requirements) <!-- - [References](#references) -->
 - [Contribution](#contribution)
 - [License](#license)
+
+## Demo
+
+Discover **AI Sight Quest**
+
+![Demo In Light Mode](Documentation/demo-light-mode.mov)
+
+## Overview
+
+All computations and processing are performed locally **on the device**, ensuring user *data privacy* and *security*. There's no reliance on external servers or network API calls. Every calculation and processing task is handled by the device itself, enhancing both performance and privacy. 
+
+The app generates answers directly within scanned documents using the Core ML Framework and a question-answering AI model. 
+
+Interacting with this captured text is easy; users can edit or even play it aloud, facilitated by text playback using [Apple Speech Framework](https://developer.apple.com/documentation/speech).
+
+<p align="center"> <img src="Documentation/intro-view.png" height="500"/> </p>
+
+Users can customize their reading experience.
+
+They can change the font size or switch between different dark or light color schemes, ensuring optimal readability in various environments.
+
+<p align="center"> <img src="Documentation/dark-mode.png" height="500"/> </p>
+
+By integrating [TipKit Framework](https://developer.apple.com/documentation/tipkit) into the application, users benefit from valuable tips and insights, enhancing their experience and effectively guiding them through the app's features.
+
+Also, to achieve our versatile app design, we opted for **vector-based** animations over traditional methods, prioritizing performance. Leveraging **Lottie** animations ensured seamless visuals while maintaining high efficiency.
 
 ## Installation and Requirements
 
