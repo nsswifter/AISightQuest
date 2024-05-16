@@ -31,15 +31,13 @@ Interacting with this captured text is easy; users can edit or even play it alou
 
 <p align="center"> <img src="Documentation/intro-view.png" height="500"/> </p>
 
-Users can customize their reading experience.
+Users can customize their reading experience. They can change the font size or switch between different dark or light color schemes, ensuring optimal readability in various environments.
 
-They can change the font size or switch between different dark or light color schemes, ensuring optimal readability in various environments.
+Also, to achieve our versatile app design, we opted for **vector-based** animations over traditional methods, prioritizing performance. Leveraging **Lottie** animations ensured seamless visuals while maintaining high efficiency.
 
 <p align="center"> <img src="Documentation/dark-mode.png" height="500"/> </p>
 
 By integrating [TipKit Framework](https://developer.apple.com/documentation/tipkit) into the application, users benefit from valuable tips and insights, enhancing their experience and effectively guiding them through the app's features.
-
-Also, to achieve our versatile app design, we opted for **vector-based** animations over traditional methods, prioritizing performance. Leveraging **Lottie** animations ensured seamless visuals while maintaining high efficiency.
 
 ## Installation and Requirements
 
