@@ -4,12 +4,12 @@
 
 **AI Sight Quest** is an iOS application powered by Artificial Intelligence that leverages *Machine Learning models* and *Apple's Frameworks*. It enables users to take a photo and capture the text using [Apple's Vision Framework](https://developer.apple.com/documentation/vision) and locate relevant passages in a document by asking the **Bidirectional Encoder Representations from Transformers (BERT)** model a question.
 
+![Demo In Light Mode](Documentation/demo-light-mode.mov)
 ![Demo In Dark Mode](Documentation/demo-dark-mode.mov)
 
 ## Table of Contents
 
-- [Installation and Requirements](#installation-and-requirements)
-- [References](#references)
+- [Installation and Requirements](#installation-and-requirements) <!-- - [References](#references) -->
 - [Contribution](#contribution)
 - [License](#license)
 
@@ -28,9 +28,9 @@ To set up and run the application, please follow these steps:
 
 4. Finally, build and launch the application either on the iOS simulator or a connected device.
 
-## References
+<!-- ## References
 
-<img src="https://github.com/devicons/devicon/blob/master/icons/figma/figma-original.svg" width="40" height="40"/> [Project's Figma Design](https://www.figma.com/file/PNYtxvPgMP7x5hdTZz7YIZ/AI-Sight-Quest?type=design&node-id=18%3A479&mode=design&t=LZixx9SKG5oeNCXc-1)
+<img src="https://github.com/devicons/devicon/blob/master/icons/figma/figma-original.svg" width="40" height="40"/> [Project's Figma Design](https://www.figma.com/file/PNYtxvPgMP7x5hdTZz7YIZ/AI-Sight-Quest?type=design&node-id=18%3A479&mode=design&t=LZixx9SKG5oeNCXc-1) -->
 
 ## Contribution
 
