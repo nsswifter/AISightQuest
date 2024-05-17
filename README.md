@@ -1,10 +1,10 @@
 <img src="https://badgen.net/static/Platform/iOS?color=4C5279"> <img src="https://badgen.net/github/tag/nsswifter/aisightquest?color=6D609E"> <img src="https://badgen.net/github/license/nsswifter/aisightquest?color=A292B1">
 
-<p align="center"> <img src="Documentation/AISightQuest.png" maxWidth="350" maxHeight="350"/> </p>
+<p align="center"> <img src="Documentation/AISightQuest.png" width="350" height="350"/> </p>
 
 **AI Sight Quest** is an iOS application powered by Artificial Intelligence that leverages *Machine Learning models* and *Apple's Frameworks*. It enables users to take a photo or select them from their gallery within the app and capture the text using [Apple's Vision Framework](https://developer.apple.com/documentation/vision) and locate relevant passages in a document by asking the **Bidirectional Encoder Representations from Transformers (BERT)** model a question. <br> <br>
 
-<p align="center"> <img src="Documentation/main-view.png" maxHeight="500"/> </p>
+<p align="center"> <img src="Documentation/main-view.png" height="500"/> </p>
 
 
 ## Table of Contents
@@ -29,13 +29,13 @@ The app generates answers directly within scanned documents using the Core ML Fr
 
 Interacting with this captured text is easy; users can edit or even play it aloud, facilitated by text playback using [Apple Speech Framework](https://developer.apple.com/documentation/speech).
 
-<p align="center"> <img src="Documentation/intro-view.png" maxHeight="500"/> </p>
+<p align="center"> <img src="Documentation/intro-view.png" height="500"/> </p>
 
 Users can customize their reading experience. They can change the font size or switch between different dark or light color schemes, ensuring optimal readability in various environments.
 
 Also, to achieve our versatile app design, we opted for **vector-based** animations over traditional methods, prioritizing performance. Leveraging **Lottie** animations ensured seamless visuals while maintaining high efficiency.
 
-<p align="center"> <img src="Documentation/dark-mode.png" maxHeight="500"/> </p>
+<p align="center"> <img src="Documentation/dark-mode.png" height="500"/> </p>
 
 By integrating [TipKit Framework](https://developer.apple.com/documentation/tipkit) into the application, users benefit from valuable tips and insights, enhancing their experience and effectively guiding them through the app's features.
 
@@ -46,7 +46,7 @@ To set up and run the application, please follow these steps:
 1. Begin by cloning the repository onto your local machine.
 2. Owing to the substantial size of the BERT model, it is not directly integrated into the project. You may acquire it by downloading it from the following link:
 
-<img src="https://github.com/nsswifter/nsswifter/blob/main/assets/core_ml.png" maxWidth="40" maxHeight="40"/> [BERT Model Download Link](https://ml-assets.apple.com/coreml/models/Text/QuestionAnswering/BERT_SQUAD/BERTSQUADFP16.mlmodel)
+<img src="https://github.com/nsswifter/nsswifter/blob/main/assets/core_ml.png" width="40" height="40"/> [BERT Model Download Link](https://ml-assets.apple.com/coreml/models/Text/QuestionAnswering/BERT_SQUAD/BERTSQUADFP16.mlmodel)
 
 3. Open the project in Xcode and integrate the downloaded model into the project structure at the designated location:
 
