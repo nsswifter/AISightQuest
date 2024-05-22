@@ -48,11 +48,12 @@ To set up and run the application, please follow these steps:
 
 <img src="https://github.com/nsswifter/nsswifter/blob/main/assets/core_ml.png" width="40" height="40"/> [BERT Model Download Link](https://ml-assets.apple.com/coreml/models/Text/QuestionAnswering/BERT_SQUAD/BERTSQUADFP16.mlmodel)
 
-3. Open the project in Xcode and integrate the downloaded model into the project structure at the designated location:
+3. Rename the downloaded BERT model to `BERTSQUAD.mlmodel`
+4. Open the project in Xcode and integrate the downloaded model into the project structure at the designated location:
 
    `./AISightQuest/Resources/BERT Core ML Model Resources`
 
-4. Finally, build and launch the application either on the iOS simulator or a connected device.
+5. Finally, build and launch the application either on the iOS simulator or a connected device.
 
 <!-- ## References
 
