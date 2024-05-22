@@ -40,9 +40,9 @@ extension BERT {
     /// - parameters:
     ///     - prediction: A feature provider that supplies the output MLMultiArrays from a BERT model.
     ///     - range: A range of the output tokens to search.
-    /// - returns: Description.
+    /// - returns: Best logit pair.
     /// - Tag: BestLogitIndices
-    func bestLogitsIndices(from prediction: BERTQAFP16Output, in range: Range<Int>) -> (start: Int, end: Int)? {
+    func bestLogitsIndices(from prediction: BERTSQUADOutput, in range: Range<Int>) -> (start: Int, end: Int)? {
         // Convert the logits MLMultiArrays to [Double].
         let startLogits = prediction.startLogits.doubleArray()
         let endLogits = prediction.endLogits.doubleArray()

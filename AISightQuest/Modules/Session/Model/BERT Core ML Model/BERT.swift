@@ -9,9 +9,9 @@ import CoreML
 
 class BERT {
     /// The underlying Core ML Model.
-    var bertModel: BERTQAFP16 {
+    var bertModel: BERTSQUAD {
         do {
-            return try BERTQAFP16(configuration: MLModelConfiguration())
+            return try BERTSQUAD(configuration: MLModelConfiguration())
         } catch {
             fatalError("Couldn't load BERT model due to: \(error.localizedDescription)")
         }

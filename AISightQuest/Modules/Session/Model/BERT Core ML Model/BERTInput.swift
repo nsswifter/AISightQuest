@@ -17,7 +17,7 @@ struct BERTInput {
     // There are 3 sentinel tokens total, 1 [CLS] token and 2 [SEP] tokens.
     static private let totalTokenOverhead = 3
 
-    var modelInput: BERTQAFP16Input?
+    var modelInput: BERTSQUADInput?
 
     let question: TokenizedString
     let document: TokenizedString
@@ -92,10 +92,10 @@ struct BERTInput {
         guard let tokenTypeInput = wordTypesMultiArray else {
             fatalError("Couldn't create wordType MLMultiArray input")
         }
-
+        
         // Create the BERT input MLFeatureProvider.
-        let modelInput = BERTQAFP16Input(wordIDs: tokenIDInput,
-                                         wordTypes: tokenTypeInput)
+        let modelInput = BERTSQUADInput(wordIDs: tokenIDInput,
+                                        wordTypes: tokenTypeInput)
         self.modelInput = modelInput
     }
 }
