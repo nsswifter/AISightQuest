@@ -27,7 +27,7 @@ All computations and processing are performed locally **on the device**, ensurin
 
 The app generates answers directly within scanned documents using the Core ML Framework and a question-answering AI model. 
 
-Interacting with this captured text is easy; users can edit or even play it aloud, facilitated by text playback using [Apple Speech Framework](https://developer.apple.com/documentation/speech).
+Interacting with this captured text is easy; users can edit or even play it aloud, facilitated by text playback using [Apple's Speech Framework](https://developer.apple.com/documentation/speech).
 
 <p align="center"> <img src="Documentation/intro-view.png" height="500"/> </p>
 
@@ -37,7 +37,7 @@ Also, to achieve our versatile app design, we opted for **vector-based** animati
 
 <p align="center"> <img src="Documentation/dark-mode.png" height="500"/> </p>
 
-By integrating [TipKit Framework](https://developer.apple.com/documentation/tipkit) into the application, users benefit from valuable tips and insights, enhancing their experience and effectively guiding them through the app's features.
+By integrating [Apple's TipKit Framework](https://developer.apple.com/documentation/tipkit) into the application, users benefit from valuable tips and insights, enhancing their experience and effectively guiding them through the app's features.
 
 ## Installation and Requirements
 
