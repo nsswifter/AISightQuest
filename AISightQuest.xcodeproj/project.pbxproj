@@ -330,9 +330,9 @@
 			isa = PBXGroup;
 			children = (
 				911E47D52B87363600796D1A /* MainframeView.swift */,
-				91FDF59F2BA38E5200180583 /* MainframeBackgroundView.swift */,
-				916128C82B890BEB001094E5 /* SessionRow.swift */,
 				91FB81192BA622F50052C15F /* NewSessionTip.swift */,
+				916128C82B890BEB001094E5 /* SessionRow.swift */,
+				91D4215B2C1C7D6500D337AC /* Background */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -523,6 +523,16 @@
 				919F8D2D2B94D579003E735A /* StorageManager.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		91D4215B2C1C7D6500D337AC /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				91FDF59F2BA38E5200180583 /* MainframeBackgroundView.swift */,
+				91D4215D2C1C7DA100D337AC /* LinearGradientBackgroundView.swift */,
+				91D4215F2C1C7DAA00D337AC /* MeshGradientBackgroundView.swift */,
+			);
+			path = Background;
 			sourceTree = "<group>";
 		};
 		91ECF91D2B93E51E00517B67 /* BERT Core ML Model */ = {
