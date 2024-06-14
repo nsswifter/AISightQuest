@@ -59,6 +59,7 @@
 		91C5CB962B8B6D2A00132C1E /* ModelContextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB952B8B6D2A00132C1E /* ModelContextExtension.swift */; };
 		91C5CB992B8B757700132C1E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5CB982B8B757700132C1E /* View.swift */; };
 		91C6B6FE2BDC272800BD42A3 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C6B6FD2BDC272800BD42A3 /* CustomProgressView.swift */; };
+		91D4215E2C1C7DA100D337AC /* LinearGradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D4215D2C1C7DA100D337AC /* LinearGradientBackgroundView.swift */; };
 		91ECF91C2B93E48600517B67 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF91B2B93E48600517B67 /* Routes.swift */; };
 		91ECF9232B93E51E00517B67 /* BERT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF91E2B93E51E00517B67 /* BERT.swift */; };
 		91ECF9242B93E51E00517B67 /* BERTInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECF91F2B93E51E00517B67 /* BERTInput.swift */; };
@@ -145,6 +146,7 @@
 		91C5CB952B8B6D2A00132C1E /* ModelContextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContextExtension.swift; sourceTree = "<group>"; };
 		91C5CB982B8B757700132C1E /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		91C6B6FD2BDC272800BD42A3 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
+		91D4215D2C1C7DA100D337AC /* LinearGradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradientBackgroundView.swift; sourceTree = "<group>"; };
 		91ECF91B2B93E48600517B67 /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		91ECF91E2B93E51E00517B67 /* BERT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BERT.swift; sourceTree = "<group>"; };
 		91ECF91F2B93E51E00517B67 /* BERTInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BERTInput.swift; sourceTree = "<group>"; };
@@ -728,6 +730,7 @@
 				919F8D392B95085B003E735A /* Intro.swift in Sources */,
 				919F8D1D2B94CC85003E735A /* SplashView.swift in Sources */,
 				911E47D82B87363600796D1A /* Session.swift in Sources */,
+				91D4215E2C1C7DA100D337AC /* LinearGradientBackgroundView.swift in Sources */,
 				911E47D42B87363600796D1A /* AISightQuestApp.swift in Sources */,
 				91591E562BB626E100A72E1B /* (null) in Sources */,
 				914BFE152BB9B112007C911E /* CustomButtonStyle.swift in Sources */,
