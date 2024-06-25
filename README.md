@@ -61,8 +61,8 @@ To set up and run the application, please follow these steps:
 
 ## Contribution
 
-Feel free to share your ideas or any other problems. Pull requests are welcome! 
-For major changes, please open an issue first to discuss what you would like to change.
+Feel free to share your ideas or any other problems. **Pull request**s are welcome! 
+For major changes, please open an **issue** first to discuss what you would like to change.
 
 ## License
 
