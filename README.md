@@ -6,7 +6,6 @@
 
 <p align="center"> <img src="Documentation/main-view.png" height="500"/> </p>
 
-
 ## Table of Contents
 
 - [Demo](#demo)
