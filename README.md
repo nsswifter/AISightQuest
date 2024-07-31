@@ -18,7 +18,7 @@
 
 Discover **AI Sight Quest**
 
-<p align="center"><img src="Documentation/demo-light-mode.mov"/></p>
+![Demo In Light Mode](Documentation/demo-light-mode.mov)
 
 ## Overview
 
